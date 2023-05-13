@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  </head>
+
+  <body class="font-Poppins bg-white min-h-[5000px] overflow-x-hidden">
+    <header class="fixed top-0 z-20" id="header">
+      <div class="w-screen px-8 md1:px-14">
+        <div class="h-20 w-full flex justify-between items-center">
+          <nav>
+            <div class="block md1:hidden" onclick="showHideMenu()">
+              <button id="ham" href="#" class="block absolute right-10 top-[30px] font-extrabold">
+                <span class="w-[29.5px] rounded-lg py-[1.5px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300 origin-top-left"></span>
+                <span class="w-[29px] rounded-lg py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
+                <span class="w-[29.5px] rounded-lg py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
+              </button>
+            </div>
+            <ul class="hidden md1:flex gap-2 dark:text-white md1:items-center">
+              <li><h1 class="text-3xl font-bold text-black mr-4">gatau</h1></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Works</a></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Service</a></li>
+              <div onclick="showDrop()" class="-ml-6">
+                <button id="drop" class="flex">
+                <span class="ml-1 w-2 h-[2px] bg-gray-500 origin-bottom-right mt-[9px] rotate-45"></span>
+                <span class="w-[8px] h-[2px] bg-gray-500 origin-bottom-left mt-[9px] -rotate-45"></span>
+                </button>
+              </div>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">About</a></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Careers</a></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">FAQ</a></li>
+              <li class="mt-2">
+                <button onclick="drop()" href="#" class="text-[16px] dark:text-white font-medium">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <a href="" class="md:hidden px-5 py-3 bg-[#EBF0FF] bg-opacity-70 text-[14px] rounded-full mt-2 font-medium text-[#6882D4] hover:ring-offset-[0.5px] hover:ring  transition ease-in-out">
+            Get Started</a>
+        </div>
+        <div class="hidden h-screen border-slate-500 mt-[-50px] justify-center items-center flex-col gap-4 md1:hidden px-3 py-3 rounded-sm" id="daftarMenu">
+          <a href="#" class="text-xl font-semibold border-gray-400">Home</a>
+          <a href="#" class="text-xl font-semibold border-gray-400">About</a>
+          <a href="#" class="text-xl font-semibold border-gray-400">Articles</a>
+          <a href="#" class="text-xl font-semibold border-gray-400">Project</a>
+          <a
+            ><button onclick="dark()" href="#" class="text-[16px] font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+                ></path>
+              </svg>
+            </button>
+          </a>
+          <a href="" class="px-5 py-3 bg-[#EBF0FF] hover:font-semibold bg-opacity-70 text-[14px] rounded-full mt-2 font-medium text-[#6882D4] hover:ring-offset-[0.5px] hover:ring  transition ease-in-out">
+            Get Started</a>
+        </div>
+      </div>
+    </header>
+    <main>
+        <section id="jumbotron" class="-mt-10">
+            <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[280px] z-20 fixed -mt-7 w-[10%]" id="daftarDrop">
+              <a href="">text</a>
+              <a href="">text</a>
+              <a href="">text</a>
+            </div>
+            <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[630px] z-20 fixed -mt-7 w-[10%]" id="dropMode">
+              <div class="flex flex-row gap-3">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
+                <a href="">Light</a>
+              </div>
+              <div class="flex flex-row gap-2 mt-2">
+                <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 mr-2"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
+                <a href="" class="-ml-1">Dark</a>
+              </div>
+            </div>
+            <div class="w-full h-[720px] md:h-[700px] px-14 md:px-8 mt-24  bg-opacity-50 flex flex-wrap md:flex-col-reverse md:gap-0 gap-8"> 
+              <div class="w-[45%] md:w-full flex flex-col items-start justify-center md:mt-28 mb-10">
+                <h1 class="text-slate-800 text-6xl md:text-5xl mb-8 md:w-full">One Stop Design Solution</h1>
+                <p class="text-[#1b1b1b] text-opacity-70 w-[85%] md:w-full mb-6">FanRay Digital helps make your business more characterful, tells stories and inspires through branding design services and creative content. The service starts from strategy preparation, logo design, brand support design, and implementation in various media. point for the next project</p>
+    
+                <div href="" class="py-3 text-lg rounded-lg px-4 bg-gray-300 text-gray-00 text-opacity-95 font-medium transition hover:text-slate-100 hover:bg-slate-700 flex flex-row gap-8 items-center shadow-md">
+                  <p class="">Service Consulting</p>
+                  <div class="flex w-6 h-6">
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="w-2/4 md:-mb-10 md:w-full flex flex-col justify-center items-end">
+                <div class="scale-110 md:scale-90">
+                  <img src="img/image 15.png" alt="" class="w-[700px] h-[417px]">
+                </div>
+              </div>
+            </div>
+          </section>
+
+      
+      <section>
+        <div class="w-full px-14 md:px-8 lg:px-10 mt-10 bg-opacity-50 bg-slate-100">
+          <div class="w-full pt-12 flex flex-row lg:flex-col lg:items-center">
+            <div id="scrol" class="w-2/4 h-[200px] md:w-full flex flex-col lg:items-center md:items-start">
+              <h1 class="text-xl my-4 md:text-left lg:text-center">How to Order</h1>
+              <p class="text-4xl font-medium mb-4 w-[401px] md:text-left lg:text-center">Website Development Process at FanRay</p>
+              <p class="text-base mb-4 text-opacity-70 w-[413px] md:text-left lg:text-center">4 easy steps you need to know when ordering a Website / Application with our services.
+              </p>
+            </div>
+            <div id="scrol2" class=""></div>
+            <div class="w-2/4 -ml-12 lg:w-3/4 justify-center items-center lg:justify-center lg:items-center md:ml-1 md:w-full lg:mt-10 flex-col flex">
+              <div class="flex flex-row gap-10 md:gap-8 md:mt-6 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">01</h1>
+                <div class="flex flex-col ml-4 md:mt-4 mt-5">
+                  <p class="text-xl font-medium">As Business Identity</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">Business needs an identity to be recognized by people. This identity can be visualized through design. This design will later be included in various media, such as brochures, banners, websites, social media, and others.</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">02</h1>
+                <div class="flex flex-col ml-1 md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Showing Business Professionalis</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">Apart from showing professionalism, a professional and attractive design has a big impalement in getting the attention of your potential business customers.</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">03</h1>
+                <div class="flex flex-col ml-1 md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Increase Sales Balance</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">The more attractive a design is, the greater the chance for your product or business service to be chosen by prospective customers, that way our business can be known by many people so that it can increase the sales balance.</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">04</h1>
+                <div class="flex flex-col  md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Big Impact First Impressions</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">Good design is not only attractive, but can also give the impression that is right on target, thus providing a different experience from its competitors.</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 md:gap-8 md:mt-6 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">05</h1>
+                <div class="flex flex-col md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Promotion & Sales Facilities</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">Good design is able to convey a message with its visuals. Promotion has become easier and potential customers can get to know our business through well-delivered messages</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">06</h1>
+                <div class="flex flex-col md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Differentiation creates Trust</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">A good design can help our potential business customers with similar businesses. A professional design helps a business gain the trust of potential customers.</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">07</h1>
+                <div class="flex flex-col ml-1 md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Loyalty Earning Tool</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">People find it easier to trust products with designs that look professional. Thus, our business has a greater chance of gaining their loyalty.</p>
+                </div>
+              </div>
+              <div class="flex flex-row gap-10 mb-12">
+                <h1 class="text-[77px] md:text-[54px] font-bold text-gray-300 text-opacity-100">08</h1>
+                <div class="flex flex-col  md:mt-4 mt-5">
+                  <p class="text-xl font-medium">Unlock opportunities to increase prices</p>
+                  <p class="text-base md:text-sm w-[95%] text-opacity-85 text-[#1b1b1b]">After getting loyalty, we can increase the selling price of products or services. In this phase, people do not only buy products, but also buy brands that are represented by professional designs.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="w-full px-14 md:px-8 lg:px-10 mt-20">
+        <div class="w-full flex flex-col">
+          <div class="flex flex-col w-full justify-center items-center mb-10">
+            <h1 class="text-2xl font-medium mb-4">Price Packages for Website & Application Development Services</h1>
+            <h1 class="text-base">Determine the website creation package according to your needs.</h1>
+          </div>
+          <div class="w-full flex flex-row justify-center items-center gap-5 mb-20 md:w-full md:snap-x md:px-0 mx-auto md:">
+            <button onclick="tombol1()" id="btn1" class="md:snap-center md:flex-shrink-0  py-3 px-5 bg-gray-600 text-base text-slate-50 rounded-lg ">Website Company Profile</button>
+            <button onclick="tombol2()" id="btn2" class="md:snap-center md:flex-shrink-0 py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">Online Store Website</button>
+            <button onclick="tombol3()" id="btn3" class="md:snap-center md:flex-shrink-0 py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">Website Custom</button>
+            <button onclick="tombol4()" id="btn4" class="md:snap-center md:flex-shrink-0 py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">Mobile Application</button>
+          </div>
+          <div id="item1" class="md:snap-x mx-auto flex flex-row md:flex-row justify-center items-center md:px-0 md:w-full gap-6 transition ease-in-out">
+            <div class="md:snap-center md:flex-shrink-0 w-[310px] md:w-[100%] md:mr-[950px] h-[450px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
+              <h1 class="text-4xl font-medium mb-6">IDR 499K</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .my.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capaticy 500mb</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+10 Featured Themes</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">5 Pages Website</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto">View More</a>
+            </div>
+            <div class="md:snap-center md:flex-shrink-0 w-[310px] md:w-[100%] h-[450px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
+              <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .my.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capaticy 500mb</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+10 Featured Themes</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">5 Pages Website</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto">View More</a>
+            </div>
+            <div class="md:snap-center md:flex-shrink-0 w-[310px] md:w-[100%] md: h-[450px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
+              <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .my.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capaticy 500mb</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+10 Featured Themes</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">5 Pages Website</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto">View More</a>
+            </div>
+            <div class="md:snap-center md:flex-shrink-0 w-[310px] md:w-[100%] h-[450px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
+              <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .my.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capaticy 500mb</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+10 Featured Themes</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">5 Pages Website</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto">View More</a>
+            </div>
+            <div class="hidden md:snap-center md:flex-shrink-0 w-[310px] md:w-[100%] h-[450px] md:flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
+              <h1 class="text-4xl font-medium mb-6">IDR 499K</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .my.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capaticy 500mb</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+10 Featured Themes</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">5 Pages Website</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto">View More</a>
+            </div>
+          </div>
+
+          <div id="item2" class="hidden md:snap-x mx-auto flex-row md:flex-row justify-center items-center md:px-0 md:w-full gap-6 group transition ease-in-out">
+            <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] md:mr-[950px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
+              <h1 class="text-4xl font-medium mb-6">IDR 1.999K</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .my.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">SSL Certificate</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capacity 1GB (Shared Hosting)</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">1 Email Professional</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+10 Featured Themes</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+Access to dashboard admin</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Fitur manajemen produk</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto mb-3">View More</a>
+            </div>
+            <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] md:mr-[950px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Business Package</h1>
+              <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .com</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">SSL Certificate</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capacity 10GB (Private Hosting)</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">10 Email Professional</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Request Design Website</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+Access to dashboard admin</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Access to Cpanel</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto mb-3">View More</a>
+            </div>
+            <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] md:mr-[950px] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+              <h1 class="text-2xl font-medium mb-[14px]">Corporate Package</h1>
+              <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+              <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7 fontme">Choose package</p>
+              <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Domain .com/.id/.co.id</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">SSL Certificate</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Capacity 40GB (Private Hosting)</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">30 Email Professional</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">20+ Website Page</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">+Access to dashboard admin</p>        
+                </div>
+                <div class="flex flex-row gap-4">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>          
+                  <p class="">Access to Cpanel</p>        
+                </div>
+              </div>  
+              <a href="#" class="mx-auto mb-3">View More</a>
+            </div>
+          </div>
+
+          <div id="item3" class="hidden w-[85%] mx-auto flex-col justify-center items-center bg-slate-100 py-20 px-6 rounded-2xl">
+            <h1 class="text-[32px] leading-[39px] font-medium mb-4 text-center">Sampaikan Kebutuhan Website Anda Pada Kami</h1>
+            <p class="text-lg mb-12 text-center">Fanray Siap Berdiskusi dan Memberikan Solusi!</p>
+            <button class="py-4 px-6 flex flex-row justify-center items-center bg-gray-300 rounded-lg gap-2">
+              <h1 class="text-[16px] font-medium ">Consult Now</h1>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.976 14.064C16.976 14.352 16.912 14.648 16.776 14.936C16.64 15.224 16.464 15.496 16.232 15.752C15.84 16.184 15.408 16.496 14.92 16.696C14.44 16.896 13.92 17 13.36 17C12.544 17 11.672 16.808 10.752 16.416C9.832 16.024 8.912 15.496 8 14.832C7.08 14.16 6.208 13.416 5.376 12.592C4.552 11.76 3.808 10.888 3.144 9.976C2.488 9.064 1.96 8.152 1.576 7.248C1.192 6.336 1 5.464 1 4.632C1 4.088 1.096 3.568 1.288 3.088C1.48 2.6 1.784 2.152 2.208 1.752C2.72 1.248 3.28 1 3.872 1C4.096 1 4.32 1.048 4.52 1.144C4.728 1.24 4.912 1.384 5.056 1.592L6.912 4.208C7.056 4.408 7.16 4.592 7.232 4.768C7.304 4.936 7.344 5.104 7.344 5.256C7.344 5.448 7.288 5.64 7.176 5.824C7.072 6.008 6.92 6.2 6.728 6.392L6.12 7.024C6.032 7.112 5.992 7.216 5.992 7.344C5.992 7.408 6 7.464 6.016 7.528C6.04 7.592 6.064 7.64 6.08 7.688C6.224 7.952 6.472 8.296 6.824 8.712C7.184 9.128 7.568 9.552 7.984 9.976C8.416 10.4 8.832 10.792 9.256 11.152C9.672 11.504 10.016 11.744 10.288 11.888C10.328 11.904 10.376 11.928 10.432 11.952C10.496 11.976 10.56 11.984 10.632 11.984C10.768 11.984 10.872 11.936 10.96 11.848L11.568 11.248C11.768 11.048 11.96 10.896 12.144 10.8C12.328 10.688 12.512 10.632 12.712 10.632C12.864 10.632 13.024 10.664 13.2 10.736C13.376 10.808 13.56 10.912 13.76 11.048L16.408 12.928C16.616 13.072 16.76 13.24 16.848 13.44C16.928 13.64 16.976 13.84 16.976 14.064Z" stroke="#292D32" stroke-width="1.7" stroke-miterlimit="10"/>
+                <path d="M14.1999 6.60005C14.1999 6.12005 13.8239 5.38405 13.2639 4.78405C12.7519 4.23205 12.0719 3.80005 11.3999 3.80005" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.9999 6.6C16.9999 3.504 14.4959 1 11.3999 1" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </button>
+          </div>
+
+          <div id="item4" class="hidden w-[85%] mx-auto flex-col justify-center items-center bg-slate-100 py-20 px-6 rounded-2xl">
+            <h1 class="text-[32px] leading-[39px] font-medium mb-4 text-center">Sampaikan Kebutuhan Aplikasi Anda Pada Kami</h1>
+            <p class="text-lg mb-12 text-center">Fanray Siap Berdiskusi dan Memberikan Solusi!</p>
+            <button class="py-4 px-6 flex flex-row justify-center items-center bg-gray-300 rounded-lg gap-2">
+              <h1 class="text-[16px] font-medium ">Consult Now</h1>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.976 14.064C16.976 14.352 16.912 14.648 16.776 14.936C16.64 15.224 16.464 15.496 16.232 15.752C15.84 16.184 15.408 16.496 14.92 16.696C14.44 16.896 13.92 17 13.36 17C12.544 17 11.672 16.808 10.752 16.416C9.832 16.024 8.912 15.496 8 14.832C7.08 14.16 6.208 13.416 5.376 12.592C4.552 11.76 3.808 10.888 3.144 9.976C2.488 9.064 1.96 8.152 1.576 7.248C1.192 6.336 1 5.464 1 4.632C1 4.088 1.096 3.568 1.288 3.088C1.48 2.6 1.784 2.152 2.208 1.752C2.72 1.248 3.28 1 3.872 1C4.096 1 4.32 1.048 4.52 1.144C4.728 1.24 4.912 1.384 5.056 1.592L6.912 4.208C7.056 4.408 7.16 4.592 7.232 4.768C7.304 4.936 7.344 5.104 7.344 5.256C7.344 5.448 7.288 5.64 7.176 5.824C7.072 6.008 6.92 6.2 6.728 6.392L6.12 7.024C6.032 7.112 5.992 7.216 5.992 7.344C5.992 7.408 6 7.464 6.016 7.528C6.04 7.592 6.064 7.64 6.08 7.688C6.224 7.952 6.472 8.296 6.824 8.712C7.184 9.128 7.568 9.552 7.984 9.976C8.416 10.4 8.832 10.792 9.256 11.152C9.672 11.504 10.016 11.744 10.288 11.888C10.328 11.904 10.376 11.928 10.432 11.952C10.496 11.976 10.56 11.984 10.632 11.984C10.768 11.984 10.872 11.936 10.96 11.848L11.568 11.248C11.768 11.048 11.96 10.896 12.144 10.8C12.328 10.688 12.512 10.632 12.712 10.632C12.864 10.632 13.024 10.664 13.2 10.736C13.376 10.808 13.56 10.912 13.76 11.048L16.408 12.928C16.616 13.072 16.76 13.24 16.848 13.44C16.928 13.64 16.976 13.84 16.976 14.064Z" stroke="#292D32" stroke-width="1.7" stroke-miterlimit="10"/>
+                <path d="M14.1999 6.60005C14.1999 6.12005 13.8239 5.38405 13.2639 4.78405C12.7519 4.23205 12.0719 3.80005 11.3999 3.80005" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.9999 6.6C16.9999 3.504 14.4959 1 11.3999 1" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </button>
+        </div>
+      </div>
+      
+    </main>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+
+        },
+      });
+    </script>
+
+    <script>
+      window.onscroll = function () {
+        Menu(),scrol();
+      };
+      var xstatus = false;
+      var hehe = false;
+
+      function scrol() {
+        if(document.documentElement.scrollTop > 700) {
+          document.getElementById("scrol").classList.add("fixed")
+          document.getElementById("scrol").classList.add("top-[100px]")
+          document.getElementById("scrol").classList.add("lg:static")
+          document.getElementById("scrol2").classList.add("w-2/4")
+            if (document.documentElement.scrollTop > 1400) {
+              document.getElementById("scrol").classList.add("top-[100px]")
+              document.getElementById("scrol").classList.add("sticky")
+              document.getElementById("scrol").classList.add("mb-12")
+              document.getElementById("scrol").innerHTML = `            <div id="scrol" class="w-2/4 h-[200px] md:w-full flex flex-col lg:items-center md:items-start">
+              <h1 class="text-xl my-4 md:text-left lg:text-center">How to Order</h1>
+              <p class="text-4xl font-medium mb-4 w-[401px] md:text-left lg:text-center">Website Development Process at FanRay</p>
+              <p class="text-base mb-4 text-opacity-70 w-[413px] md:text-left lg:text-center">4 easy steps you need to know when ordering a Website / Application with our services.
+              </p>
+            </div>`
+              document.getElementById("scrol2").classList.add("w-2/4")
+              document.getElementById("scrol2").classList.add("hidden")
+            }
+            
+        } else {
+          document.getElementById("scrol").classList.remove("fixed")
+          document.getElementById("scrol").classList.remove("top-[80px]")
+          document.getElementById("scrol2").classList.remove("w-2/4")
+        }
+      }
+
+      function Menu() {
+        if (document.documentElement.scrollTop > 20) {
+          document.getElementById("header").classList.add("bg-white");
+          document.getElementById("header").classList.add("shadow-lg");
+          document.getElementById("header").classList.add("bg-opacity-70");
+          document.getElementById("header").classList.add("backdrop-blur-[7px]");
+          document.getElementById("header").classList.add("dark:bg-opacity-70");
+          document.getElementById("header").classList.add("dark:backdrop-blur-[7px]");
+        } else if (document.documentElement.scrollTop > -5) {
+          document.getElementById("header").classList.remove("bg-white");
+          document.getElementById("header").classList.remove("shadow-lg");
+        } else {
+          document.getElementById("header").classList.remove("shadow-lg");
+          document.getElementById("header").classList.remove("bg-white");
+          document.getElementById("header").classList.remove("bg-opacity-70");
+          document.getElementById("header").classList.remove("backdrop-blur-[7px]");
+          document.getElementById("header").classList.remove("dark:bg-opacity-70");
+          document.getElementById("header").classList.remove("dark:backdrop-blur-[7px]");
+        }
+      }
+
+      function showHideMenu() {
+        var menu = document.getElementById("daftarMenu");
+        var dropMode = document.getElementById("")
+        if (xstatus) {
+          menu.classList.add("hidden");
+          menu.classList.remove("flex");
+          
+
+          xstatus = false;
+        } else {
+          menu.classList.remove("hidden");
+          menu.classList.add("flex");
+          
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+
+      function showDrop() {
+        var daftarDrop = document.getElementById('daftarDrop');
+        if (xstatus) {
+          daftarDrop.classList.add("hidden");
+          daftarDrop.classList.remove("flex");
+
+          xstatus = false;
+        } else {
+          daftarDrop.classList.remove("hidden");
+          daftarDrop.classList.add("flex");
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+
+      function drop() {
+        var dropMode = document.getElementById('dropMode');
+        if (xstatus) {
+          
+          dropMode.classList.add("hidden");
+          dropMode.classList.remove("flex");
+          xstatus = false;
+        } else {
+          
+          dropMode.classList.remove("hidden");
+          dropMode.classList.add("flex");
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      
+      function tombol1() {
+        document.getElementById("item1").classList.remove("hidden");
+        document.getElementById("item1").classList.add("flex");
+        document.getElementById("item2").classList.remove("flex");
+        document.getElementById("item2").classList.add("hidden");
+        document.getElementById("item3").classList.remove("flex");
+        document.getElementById("item3").classList.add("hidden");
+        document.getElementById("item4").classList.remove("flex");
+        document.getElementById("item4").classList.add("hidden");
+
+        document.getElementById("btn1").classList.add("bg-gray-600");
+        document.getElementById("btn1").classList.add("text-slate-50");
+        // btn2
+        document.getElementById("btn2").classList.remove("bg-gray-600");
+        document.getElementById("btn2").classList.remove("text-slate-50");
+        document.getElementById("btn2").classList.add("bg-gray-50");
+        document.getElementById("btn2").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.remove("bg-gray-600");
+        document.getElementById("btn3").classList.remove("text-slate-50");
+        document.getElementById("btn3").classList.add("bg-gray-50");
+        document.getElementById("btn3").classList.add("text-slate-600");
+        //btn 4
+        document.getElementById("btn4").classList.remove("bg-gray-600");
+        document.getElementById("btn4").classList.remove("text-slate-50");
+        document.getElementById("btn4").classList.add("bg-gray-50");
+        document.getElementById("btn4").classList.add("text-slate-600");
+      }
+
+      function tombol2() {
+        document.getElementById("item2").classList.add("flex");
+        document.getElementById("item2").classList.remove("hidden");
+        document.getElementById("item1").classList.remove("flex");
+        document.getElementById("item1").classList.add("hidden");
+        document.getElementById("item3").classList.remove("flex");
+        document.getElementById("item3").classList.add("hidden");
+        document.getElementById("item4").classList.remove("flex");
+        document.getElementById("item4").classList.add("hidden");
+        //btn2
+        document.getElementById("btn2").classList.add("bg-gray-600");
+        document.getElementById("btn2").classList.add("text-slate-50");
+        // btn1
+        document.getElementById("btn1").classList.remove("bg-gray-600");
+        document.getElementById("btn1").classList.remove("text-slate-50");
+        document.getElementById("btn1").classList.add("bg-gray-50");
+        document.getElementById("btn1").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.remove("bg-gray-600");
+        document.getElementById("btn3").classList.remove("text-slate-50");
+        document.getElementById("btn3").classList.add("bg-gray-50");
+        document.getElementById("btn3").classList.add("text-slate-600");
+        //btn 4
+        document.getElementById("btn4").classList.remove("bg-gray-600");
+        document.getElementById("btn4").classList.remove("text-slate-50");
+        document.getElementById("btn4").classList.add("bg-gray-50");
+        document.getElementById("btn4").classList.add("text-slate-600");
+      }
+      
+      function tombol3() {
+        document.getElementById("item2").classList.remove("flex");
+        document.getElementById("item2").classList.add("hidden");
+        document.getElementById("item1").classList.remove("flex");
+        document.getElementById("item1").classList.add("hidden");
+        document.getElementById("item3").classList.add("flex");
+        document.getElementById("item3").classList.remove("hidden");
+        document.getElementById("item4").classList.remove("flex");
+        document.getElementById("item4").classList.add("hidden");
+
+        // btn 1
+        document.getElementById("btn1").classList.remove("bg-gray-600");
+        document.getElementById("btn1").classList.remove("text-slate-50");
+        document.getElementById("btn1").classList.add("bg-gray-50");
+        document.getElementById("btn1").classList.add("text-slate-600");
+        //btn 2
+        document.getElementById("btn2").classList.remove("bg-gray-600");
+        document.getElementById("btn2").classList.remove("text-slate-50");
+        document.getElementById("btn2").classList.add("bg-gray-50");
+        document.getElementById("btn2").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.add("bg-gray-600");
+        document.getElementById("btn3").classList.add("text-slate-50");
+        //btn 4
+        document.getElementById("btn4").classList.remove("bg-gray-600");
+        document.getElementById("btn4").classList.remove("text-slate-50");
+        document.getElementById("btn4").classList.add("bg-gray-50");
+        document.getElementById("btn4").classList.add("text-slate-600");
+      }
+
+      function tombol4() {
+        document.getElementById("item2").classList.remove("flex");
+        document.getElementById("item2").classList.add("hidden");
+        document.getElementById("item1").classList.remove("flex");
+        document.getElementById("item1").classList.add("hidden");
+        document.getElementById("item3").classList.remove("flex");
+        document.getElementById("item3").classList.add("hidden");
+        document.getElementById("item4").classList.add("flex");
+        document.getElementById("item4").classList.remove("hidden");
+        // btn 1
+        document.getElementById("btn1").classList.remove("bg-gray-600");
+        document.getElementById("btn1").classList.remove("text-slate-50");
+        document.getElementById("btn1").classList.add("bg-gray-50");
+        document.getElementById("btn1").classList.add("text-slate-600");
+        //btn 2
+        document.getElementById("btn2").classList.remove("bg-gray-600");
+        document.getElementById("btn2").classList.remove("text-slate-50");
+        document.getElementById("btn2").classList.add("bg-gray-50");
+        document.getElementById("btn2").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.remove("bg-gray-600");
+        document.getElementById("btn3").classList.remove("text-slate-50");
+        document.getElementById("btn3").classList.add("bg-gray-50");
+        document.getElementById("btn3").classList.add("text-slate-600");
+        //btn 4
+        document.getElementById("btn4").classList.add("bg-gray-600");
+        document.getElementById("btn4").classList.add("text-slate-50");
+      }
+
+      const arrowUp = document.getElementById("drop");
+      arrowUp.addEventListener('click', function () {
+        arrowUp.classList.toggle("drop-active");
+      });
+
+      const hambuger = document.getElementById("ham");
+
+      hambuger.addEventListener("click", function () {
+        hambuger.classList.toggle("hamburger-active");
+      });
+
+
+
+      function dark() {
+        var html = document.querySelector("html");
+        if (hehe) {
+          html.classList.add("dark");
+          hehe = false;
+        } else {
+          html.classList.remove("dark");
+          hehe = true;
+        }
+        console.log(hehe);
+      }
+    </script>
+  </body>
+</html>

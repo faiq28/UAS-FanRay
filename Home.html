@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  </head>
+
+  <body class="font-Poppins bg-white min-h-[3000px]">
+    <header class="fixed top-0 z-20" id="header">
+      <div class="w-screen px-8 md1:px-14">
+        <div class="h-20 w-full flex justify-between items-center">
+          <nav>
+            <div class="block md1:hidden" onclick="showHideMenu()">
+              <button id="ham" href="#" class="block absolute right-10 top-[30px] font-extrabold">
+                <span class="w-[29.5px] rounded-lg py-[1.5px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300 origin-top-left"></span>
+                <span class="w-[29px] rounded-lg py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
+                <span class="w-[29.5px] rounded-lg py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
+              </button>
+            </div>
+            <ul class="hidden md1:flex gap-2 dark:text-white md1:items-center">
+              <li><h1 class="text-3xl font-bold text-black mr-4">gatau</h1></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Works</a></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Service</a></li>
+              <div onclick="showDrop()" class="-ml-6">
+                <button id="drop" class="flex">
+                <span class="ml-1 w-2 h-[2px] bg-gray-500 origin-bottom-right mt-[9px] rotate-45"></span>
+                <span class="w-[8px] h-[2px] bg-gray-500 origin-bottom-left mt-[9px] -rotate-45"></span>
+                </button>
+              </div>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">About</a></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Careers</a></li>
+              <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">FAQ</a></li>
+              <li class="mt-2">
+                <button onclick="drop()" href="#" class="text-[16px] dark:text-white font-medium">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
+                </button>
+              </li>
+            </ul>
+          </nav>
+          <a href="" class="md:hidden px-5 py-3 bg-[#EBF0FF] bg-opacity-70 text-[14px] rounded-full mt-2 font-medium text-[#6882D4] hover:ring-offset-[0.5px] hover:ring  transition ease-in-out">
+            Get Started</a>
+        </div>
+        <div class="hidden h-screen border-slate-500 mt-[-50px] justify-center items-center flex-col gap-4 md1:hidden px-3 py-3 rounded-sm" id="daftarMenu">
+          <a href="#" class="text-xl font-semibold border-gray-400">Home</a>
+          <a href="#" class="text-xl font-semibold border-gray-400">About</a>
+          <a href="#" class="text-xl font-semibold border-gray-400">Articles</a>
+          <a href="#" class="text-xl font-semibold border-gray-400">Project</a>
+          <a
+            ><button onclick="dark()" href="#" class="text-[16px] font-medium">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path
+                  d="M6.995 12c0 2.761 2.246 5.007 5.007 5.007s5.007-2.246 5.007-5.007-2.246-5.007-5.007-5.007S6.995 9.239 6.995 12zM11 19h2v3h-2zm0-17h2v3h-2zm-9 9h3v2H2zm17 0h3v2h-3zM5.637 19.778l-1.414-1.414 2.121-2.121 1.414 1.414zM16.242 6.344l2.122-2.122 1.414 1.414-2.122 2.122zM6.344 7.759 4.223 5.637l1.415-1.414 2.12 2.122zm13.434 10.605-1.414 1.414-2.122-2.122 1.414-1.414z"
+                ></path>
+              </svg>
+            </button>
+          </a>
+          <a href="" class="px-5 py-3 bg-[#EBF0FF] hover:font-semibold bg-opacity-70 text-[14px] rounded-full mt-2 font-medium text-[#6882D4] hover:ring-offset-[0.5px] hover:ring  transition ease-in-out">
+            Get Started</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="jumbotron">
+        <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[280px] z-20 fixed -mt-7 w-[10%]" id="daftarDrop">
+          <a href="">text</a>
+          <a href="">text</a>
+          <a href="">text</a>
+        </div>
+        <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[630px] z-20 fixed -mt-7 w-[10%]" id="dropMode">
+          <div class="flex flex-row gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
+            <a href="">Light</a>
+          </div>
+          <div class="flex flex-row gap-2 mt-2">
+            <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 mr-2"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
+            <a href="" class="-ml-1">Dark</a>
+          </div>
+        </div>
+        <div class="w-full h-[720px] md:h-[700px] px-14 md:px-8 mt-24  bg-opacity-50 flex flex-wrap md:flex-col-reverse md:gap-0 gap-8"> 
+          <div class="w-[45%] md:w-full flex flex-col items-start justify-center md:mt-28 mb-10">
+            <h1 class="text-slate-800 text-6xl md:text-5xl mb-8 md:w-full">It’s time to make 
+              your software</h1>
+            <p class="text-[#1b1b1b] text-opacity-70 w-[85%] md:w-full mb-6">Best offer beautifully designed, expertly crafted components and
+              template, built for every tailwind CSS engineer. Perfect start
+              point for the next project</p>
+
+            <div href="" class="py-3 text-lg rounded-lg px-4 bg-gray-300 text-gray-00 text-opacity-95 font-medium transition hover:text-slate-100 hover:bg-slate-700 flex flex-row gap-8 items-center shadow-md">
+              <p class="">Service Consulting</p>
+              <div class="flex w-6 h-6">
+               
+              </div>
+            </div>
+          </div>
+          <div class="w-2/4 md:-mb-10 md:w-full flex flex-col justify-center items-end">
+            <div class="scale-110 md:scale-90">
+              <img src="img/image 3.png" alt="" class="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="content">
+        <div class="w-full px-14 py-10 md:px-8 mt-10 bg-[#CBD0FF] bg-opacity-50">
+          
+          <div class="w-full mb-14 flex flex-wrap gap-8 flex-row-reverse">
+            <div class="w-full flex flex-col justify-center  items-center md:items-start">
+              <p class="my-3 md:w-[58%] text-2xl font-medium">Why FanRay Digital is the Right Business Partner for You</p>
+              <p class="font-normal text-gray-500">We make sure you get answers to the problems you are facing when using FanRay's services.</p>
+            </div>
+          </div>
+          <div class="w-full flex justify-center flex-wrap gap-16 md:hidden">
+            <div class="w-[38%] flex h-[190px] rounded-xl justify-center border-[1px] flex-col border-black border-opacity-70 p-6">
+              <div class="flex flex-row items-center jus gap-4">
+                <div class="bg-white w-12 h-12 flex p-2 items-center justify-center rounded-full">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.9767 15.399C12.835 15.3848 12.665 15.3848 12.5092 15.399C9.13752 15.2857 6.46002 12.5232 6.46002 9.12316C6.46002 5.65233 9.26502 2.83316 12.75 2.83316C16.2209 2.83316 19.04 5.65233 19.04 9.12316C19.0259 12.5232 16.3484 15.2857 12.9767 15.399Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.2475 5.66684C25.9958 5.66684 28.2058 7.89101 28.2058 10.6252C28.2058 13.3027 26.0808 15.4843 23.4317 15.5835C23.3183 15.5693 23.1908 15.5693 23.0633 15.5835" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.89327 20.6268C2.46494 22.9218 2.46494 26.6618 5.89327 28.9427C9.7891 31.5493 16.1783 31.5493 20.0741 28.9427C23.5024 26.6477 23.5024 22.9077 20.0741 20.6268C16.1924 18.0343 9.80327 18.0343 5.89327 20.6268Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.9817 28.3332C27.0017 28.1207 27.965 27.7098 28.7583 27.1007C30.9683 25.4432 30.9683 22.709 28.7583 21.0515C27.9792 20.4565 27.03 20.0598 26.0242 19.8332" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <p class="text-xl font-medium">Team Professional</p>
+              </div>  
+              <div class="flex mt-3">
+                <p class="text-black text-opacity-70 w-[95%]">Done by an Experienced and Professional Team in making website applications and digital marketing.</p>
+              </div>
+            </div>
+            <div class="w-[38%] flex h-[190px] rounded-xl justify-center border-[1px] flex-col border-black border-opacity-70 p-6">
+              <div class="flex flex-row items-center gap-4">
+                <div class="bg-white w-12 h-12 flex p-2 items-center justify-center rounded-full">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.935 3.56737L17.8925 3.66654L13.7842 13.2007H9.74666C8.78333 13.2007 7.8625 13.399 7.02666 13.7532L9.50583 7.83154L9.5625 7.68987L9.66166 7.4632C9.69 7.3782 9.71833 7.2932 9.76083 7.22237C11.6167 2.92987 13.7133 1.95237 17.935 3.56737Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.5708 13.484C24.9333 13.2857 24.2533 13.2007 23.5733 13.2007H13.7842L17.8925 3.66652L17.935 3.56735C18.1475 3.63819 18.3458 3.73735 18.5583 3.82235L21.6892 5.13985C23.4317 5.86235 24.65 6.61319 25.3867 7.51985C25.5283 7.68985 25.6417 7.84569 25.7408 8.02985C25.8683 8.22819 25.9675 8.42652 26.0242 8.63902C26.0808 8.76652 26.1233 8.89402 26.1517 9.00735C26.5342 10.1974 26.3075 11.6565 25.5708 13.484Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30.4891 20.1144V22.8769C30.4891 23.1602 30.4749 23.4435 30.4608 23.7269C30.1916 28.671 27.4291 31.1644 22.1874 31.1644H11.1374C10.7974 31.1644 10.4574 31.136 10.1316 31.0935C5.6266 30.796 3.21826 28.3877 2.92076 23.8827C2.87826 23.5569 2.84993 23.2169 2.84993 22.8769V20.1144C2.84993 17.2669 4.57826 14.816 7.04326 13.7535C7.89326 13.3994 8.79993 13.201 9.76326 13.201H23.5899C24.2841 13.201 24.9641 13.3002 25.5874 13.4844C28.4066 14.3485 30.4891 16.9835 30.4891 20.1144Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.50583 7.83154L7.02666 13.7532C4.56166 14.8157 2.83333 17.2665 2.83333 20.114V15.9632C2.83333 11.9399 5.69499 8.58238 9.50583 7.83154Z" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30.4847 15.9625V20.1133C30.4847 16.9967 28.4163 14.3475 25.583 13.4975C26.3197 11.6558 26.5322 10.2108 26.178 9.00667C26.1497 8.87917 26.1072 8.75167 26.0505 8.63834C28.6855 9.99834 30.4847 12.7892 30.4847 15.9625Z" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </div>
+                <p class="text-xl font-medium">Affordable prices</p>
+              </div>  
+              <div class="flex mt-3">
+                <p class="text-black text-opacity-70 w-[97%]">We make sure that the affordable costs you spend are the right investment value for your business development.</p>
+              </div>
+            </div>
+            <div class="w-[38%] flex h-[190px] rounded-xl justify-center border-[1px] flex-col border-black border-opacity-70 p-6">
+              <div class="flex flex-row items-center gap-4">
+                <div class="bg-white w-12 h-12 flex p-2 items-center justify-center rounded-full">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.8608 3.15915L7.79164 5.82248C6.16248 6.43165 4.83081 8.35831 4.83081 10.0866V20.6125C4.83081 22.2841 5.93581 24.48 7.28164 25.4858L13.3733 30.0333C15.3708 31.535 18.6575 31.535 20.655 30.0333L26.7466 25.4858C28.0925 24.48 29.1975 22.2841 29.1975 20.6125V10.0866C29.1975 8.34415 27.8658 6.41748 26.2366 5.80831L19.1675 3.15915C17.9633 2.71998 16.0366 2.71998 14.8608 3.15915Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 17.7084C18.5648 17.7084 19.8334 16.4398 19.8334 14.875C19.8334 13.3102 18.5648 12.0417 17 12.0417C15.4352 12.0417 14.1667 13.3102 14.1667 14.875C14.1667 16.4398 15.4352 17.7084 17 17.7084Z" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 17.7083V21.9583" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </div>
+                <p class="text-xl font-medium">Guaranteed Security</p>
+              </div>  
+              <div class="flex mt-3">
+                <p class="text-black text-opacity-70 w-[95%]">Data security is a top priority for us in order to maintain the trust that our customers place on us.</p>
+              </div>
+            </div>
+            <div class="w-[38%] flex h-[190px] rounded-xl justify-center border-[1px] flex-col border-black border-opacity-70 p-6">
+              <div class="flex flex-row items-center gap-4">
+                <div class="bg-white w-12 h-12 flex p-2 items-center justify-center rounded-full">
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M25.5 26.7183H24.4233C23.29 26.7183 22.2133 27.1575 21.42 27.9508L18.9975 30.3451C17.8925 31.4359 16.0933 31.4359 14.9883 30.3451L12.5658 27.9508C11.7725 27.1575 10.6817 26.7183 9.5625 26.7183H8.5C6.14833 26.7183 4.25 24.8342 4.25 22.5109V7.05499C4.25 4.73166 6.14833 2.84753 8.5 2.84753H25.5C27.8517 2.84753 29.75 4.73166 29.75 7.05499V22.5109C29.75 24.82 27.8517 26.7183 25.5 26.7183Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.91666 12.9767C9.91666 11.6592 10.9933 10.5825 12.3108 10.5825C13.6283 10.5825 14.705 11.6592 14.705 12.9767C14.705 15.64 10.9225 15.9234 10.0867 18.4592C9.91666 18.9834 10.3558 19.5075 10.9083 19.5075H14.705" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22.7233 19.4933V11.4042C22.7233 11.0359 22.4825 10.71 22.1283 10.6108C21.7741 10.5116 21.3917 10.6533 21.1933 10.965C20.1733 12.6083 19.0683 14.4783 18.105 16.1217C17.9492 16.3908 17.9492 16.745 18.105 17.0142C18.2608 17.2833 18.5583 17.4532 18.8842 17.4532H24.0833" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </div>
+                <p class="text-xl font-medium">24/7 Support Team</p>
+              </div>  
+              <div class="flex mt-3">
+                <p class="text-black text-opacity-70 w-[95%]">Our company is committed to providing ON-Time Support Fast Response when you need help.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      </section>
+
+      <section>
+        <div class="w-full px-14 md:px-8 mt-10">
+          <div class="w-full flex flex-col items-center justify-center">
+            <h1 class="text-2xl font-medium mb-3">The Solutions That FanRay Digital Offers For Your Business</h1>
+            <p class="mb-14" >Complete Services to support your business transformation in the Digital Age</p>
+            <div class="w-full flex flex-row md:flex-col justify-center gap-40">
+              <div class="w-[400px] md:w-full scale-110 flex flex-col justify-center items-start mt-14">
+                <div class="mb-6">
+                  <img src="img/image 13.png" alt="" class="">
+                </div>
+                  <div class="flex flex-col mb-8 items-center">
+                    <h1 class="text-xl font-medium mb-4">Website, Mobile Application Design & Development</h1>
+                    <h1 class="text-base text-black text-opacity-70 font-medium">Website and mobile application development using Wordpress technology or custom according to your business needs for information systems, administration, and promotions.</h1>
+                  </div>
+                  <div class="flex flex-col group">
+                    <div class="flex flex-row gap-3 mb-2">
+                      <a href="" class="font-medium">View price list</a>
+                      <button class="p-2 bg-[#292D32] bg-opacity-80 rounded-full leading-[8px] text-center my-auto text-white">></button>
+                    </div>
+                    <div class="h-[1.4px] group-hover:h-[2.8px] w-full bg-slate-600"></div>
+                  </div>
+                </div>
+              <div class="w-[400px] md:w-full scale-110 flex flex-col justify-center items-start md:mt-0 mt-14">
+                <div class="mb-6">
+                  <img src="img/image 12.png" alt="" class="">
+                </div>
+                  <div class="flex flex-col mb-8">
+                    <h1 class="text-xl font-medium -mt-1 mb-4">Branding, Design Promotion & Content Creation</h1>
+                    <h1 class="text-base text-black text-opacity-70 font-medium">Making designs such as Logo, Stationary, Marketing Kit Design, Social Media Content Design, and Photo & Videography for branding and promotion needs.</h1>
+                  </div>
+                  <div class="flex flex-col group">
+                    <div class="flex flex-row gap-3 mb-2">
+                      <a href="" class="font-medium">View price list</a>
+                      <button class="p-2 bg-[#292D32] bg-opacity-80 rounded-full leading-[8px] text-center my-auto text-white">></button>
+                    </div>
+                    <div class="h-[1.4px] group-hover:h-[2.8px] w-full bg-slate-600"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      window.onscroll = function () {
+        Menu();
+      };
+      var xstatus = false;
+      var hehe = false;
+
+      function Menu() {
+        if (document.documentElement.scrollTop > 20) {
+          document.getElementById("header").classList.add("bg-white");
+          document.getElementById("header").classList.add("shadow-lg");
+          document.getElementById("header").classList.add("bg-opacity-70");
+          document.getElementById("header").classList.add("backdrop-blur-[7px]");
+          document.getElementById("header").classList.add("dark:bg-opacity-70");
+          document.getElementById("header").classList.add("dark:backdrop-blur-[7px]");
+        } else if (document.documentElement.scrollTop > -5) {
+          document.getElementById("header").classList.remove("bg-white");
+          document.getElementById("header").classList.remove("shadow-lg");
+        } else {
+          document.getElementById("header").classList.remove("shadow-lg");
+          document.getElementById("header").classList.remove("bg-white");
+          document.getElementById("header").classList.remove("bg-opacity-70");
+          document.getElementById("header").classList.remove("backdrop-blur-[7px]");
+          document.getElementById("header").classList.remove("dark:bg-opacity-70");
+          document.getElementById("header").classList.remove("dark:backdrop-blur-[7px]");
+        }
+      }
+
+      function showHideMenu() {
+        var menu = document.getElementById("daftarMenu");
+        if (xstatus) {
+          menu.classList.add("hidden");
+          menu.classList.remove("flex");
+          menu.classList.add("transition");
+          menu.classList.add("duration-300");
+          xstatus = false;
+        } else {
+          menu.classList.remove("hidden");
+          menu.classList.add("flex");
+          menu.classList.remove("transition");
+          menu.classList.remove("duration-300");
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      
+      function showDrop() {
+        var daftarDrop = document.getElementById('daftarDrop');
+        if (xstatus) {
+          daftarDrop.classList.add("hidden");
+          daftarDrop.classList.remove("flex");
+          daftarDrop.classList.add("transition");
+          daftarDrop.classList.add("duration-300");
+          xstatus = false;
+        } else {
+          daftarDrop.classList.remove("hidden");
+          daftarDrop.classList.add("flex");
+          daftarDrop.classList.remove("transition");
+          daftarDrop.classList.remove("duration-300");
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      
+      function drop() {
+        var dropMode = document.getElementById('dropMode');
+        if (xstatus) {
+          
+          dropMode.classList.add("hidden");
+          dropMode.classList.remove("flex");
+          xstatus = false;
+        } else {
+          
+          dropMode.classList.remove("hidden");
+          dropMode.classList.add("flex");
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      
+      const arrowUp = document.getElementById("drop");
+      arrowUp.addEventListener('click', function () {
+        arrowUp.classList.toggle("drop-active");
+      });
+
+      const hambuger = document.getElementById("ham");
+
+      hambuger.addEventListener("click", function () {
+        hambuger.classList.toggle("hamburger-active");
+      });
+
+      function dark() {
+        var html = document.querySelector("html");
+        if (hehe) {
+          html.classList.add("dark");
+          hehe = false;
+        } else {
+          html.classList.remove("dark");
+          hehe = true;
+        }
+        console.log(hehe);
+      }
+    </script>
+  </body>
+</html>

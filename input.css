@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger-active > span:nth-child(1){
+    @apply rotate-[44deg]
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0
+}
+.hamburger-active > span:nth-child(3){
+    @apply origin-bottom-left rotate-[-44deg]
+}
+
+.drop-active > span:nth-child(1){
+    @apply -rotate-45 origin-top-left 
+}
+
+.drop-active > span:nth-child(2){
+    @apply rotate-45 origin-top-right relative -left-1 
+}
+
+/* #kntl{
+    overflow-x: scroll;
+}
+
+#kntl::-webkit-scrollbar {
+    display: none;
+} */
+
+@media screen and (max-width: 768px) {
+    #kntl{
+    overflow-x: scroll;
+}
+
+#kntl::-webkit-scrollbar {
+    display: none;
+}
+}
+
+.swiper {
+    width: 90%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+  }
+
+
