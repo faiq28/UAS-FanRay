@@ -20,6 +20,40 @@
     @apply rotate-45 origin-top-right relative -left-1 
 }
 
+
+.drop-isi > span:nth-child(1){
+    @apply rotate-180 origin-top mt-[2px] scale-0
+}
+.drop-isi > span:nth-child(2){
+    @apply origin-top 
+}
+
+.drop-isi1 > span:nth-child(1){
+    @apply rotate-180 origin-top mt-[2px] scale-0
+}
+.drop-isi1 > span:nth-child(2){
+    @apply origin-top 
+}
+
+.drop-isi2 > span:nth-child(1){
+    @apply rotate-180 origin-top mt-[2px] scale-0
+}
+.drop-isi2 > span:nth-child(2){
+    @apply origin-top 
+}
+
+.drop-isi3 > span:nth-child(1){
+    @apply rotate-180 origin-top mt-[2px] scale-0
+}
+.drop-isi3 > span:nth-child(2){
+    @apply origin-top 
+}
+
+
+.bwh-input{
+    @apply w-3/4 md:w-full px-2 py-2 font-light bg-transparent focus:outline-none
+}
+
 /* #kntl{
     overflow-x: scroll;
 }

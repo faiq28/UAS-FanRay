@@ -14,61 +14,36 @@
   <body class="font-Poppins bg-white overflow-x-hidden">
 
     <section>
-      <div class="px-14 md:px-8 md:px-10 mt-10 bg-opacity-50 bg-slate-100 w-screen h-screen flex">
-        <div class="w-full px-[90px] flex flex-row md:flex-col-reverse my-auto">
+      <div class="px-14 md:px-8 mt-10 bg-opacity-50 bg-slate-100 w-screen h-screen flex">
+        <div class="w-full px-[90px] md:px-8 sm:px-4 flex flex-row md:flex-col-reverse my-auto justify-center items-center">
           <div class="w-2/4 md:w-full flex flex-col">
             <div class="flex flex-col">
               <p class="font-medium text-2xl italic mb-5">FanRay Digital</p>
               <p class="font-medium text-2xl mb-5">Reliable Digital Marketing Services With a Professional Team</p>
             </div>
             <div class="mt-4 flex-col flex py-2">
-              <input type="text" class="w-3/4 px-2 py-2 font-light bg-transparent" placeholder="Email address" />
-              <div class="w-3/4 h-[5px] bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-6"></div>
+              <form action="Home.html" method="get">
+                <input id="username" type="email" class="bwh-input" placeholder="Email address" required/>
+                <div class="w-3/4 md:w-full h-[5px] bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-6"></div>
 
-              <div class="flex">
-                <input type="password" class="w-3/4 px-2 py-2 font-light bg-transparent" placeholder="Password" />
-                <div class="relative right-9 -bottom-2 w-5 h-5">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M14.5307 9.46998L9.47065 14.53C8.82065 13.88 8.42065 12.99 8.42065 12C8.42065 10.02 10.0207 8.41998 12.0007 8.41998C12.9907 8.41998 13.8807 8.81998 14.5307 9.46998Z"
-                      stroke="#292D32"
-                      stroke-opacity="0.7"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M17.8208 5.76998C16.0708 4.44998 14.0708 3.72998 12.0008 3.72998C8.47082 3.72998 5.18082 5.80998 2.89082 9.40998C1.99082 10.82 1.99082 13.19 2.89082 14.6C3.68082 15.84 4.60082 16.91 5.60082 17.77"
-                      stroke="#292D32"
-                      stroke-opacity="0.7"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M8.42065 19.53C9.56065 20.01 10.7707 20.27 12.0007 20.27C15.5307 20.27 18.8207 18.19 21.1107 14.59C22.0107 13.18 22.0107 10.81 21.1107 9.39999C20.7807 8.87999 20.4207 8.38999 20.0507 7.92999"
-                      stroke="#292D32"
-                      stroke-opacity="0.7"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path d="M15.5107 12.7C15.2507 14.11 14.1007 15.26 12.6907 15.52" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M9.47073 14.53L2.00073 22" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M22.0008 2L14.5308 9.47" stroke="#292D32" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
+                <div class="flex flex-row">
+                  <input type="password" name="" placeholder="Confirm password" id="password" class="bwh-input" required>
+                  <div class="relative right-9 -bottom-2 w-5 h-5 scale-105 cursor-pointer">
+                    <img src="img/eye-slash.png" alt="" id="eyeicon">
+                  </div>
                 </div>
+                <div class="bwh-input"></div>
+                <p id="errorMessage" hidden></p>
+                <button class="w-3/4 md:w-full flex py-4 text-gray-600 font-medium justify-center items-center bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-10">Log In</button>
+              </form>  
+              <div class="flex flex-row w-3/4 md:w-full max-h-1 items-center justify-center gap-[14px] md:gap-0">
+                <div class="w-2/6 md:w-full bg-gray-600 h-[1px]"></div>
+                <p class="w-[22%] md:text-sm md:w-[365px] text-gray-600">Or Login with</p>
+                <div class="w-2/6 md:w-full bg-gray-600 h-[1px]"></div>
               </div>
-              <div class="w-3/4 h-[5px] bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-10"></div>
-              <p class="w-3/4 flex py-4 text-gray-600 font-medium justify-center items-center bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-10">Log In</p>
-              <div class="flex flex-row w-3/4 max-h-1 items-center justify-center gap-[14px]">
-                <div class="w-2/6 bg-gray-600 h-[1px]"></div>
-                <p class="w-[22%] text-gray-600">Or Login with</p>
-                <div class="w-2/6 bg-gray-600 h-[1px]"></div>
-              </div>
-              <div class="flex flex-row w-3/4 max-h-1 items-center justify-between gap-[14px] my-14">
-                <div class="h-14 w-48 flex flex-row justify-center items-center border border-black rounded-lg py-3 px-10 gap-4">
-                    <div class="w-">
+              <div class="flex flex-row w-3/4 max-h-1 items-center md:justify-center gap-[14px] md:gap-0 my-14">
+                <div class="h-14 w-48 md:scale-75 flex flex-row justify-center items-center border border-black rounded-lg py-3 px-10 gap-4 ml-8">
+                    <div class="">
                         <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.7507 32.8167C5.95907 31.4417 0.000732422 24.6583 0.000732422 16.5C0.000732422 7.425 7.42573 0 16.5007 0C25.5757 0 33.0007 7.425 33.0007 16.5C33.0007 24.6583 27.0424 31.4417 19.2507 32.8167L18.3341 32.0833H14.6674L13.7507 32.8167Z" fill="url(#paint0_linear_158_653)"/>
                             <path d="M22.9174 21.0834L23.6507 16.5001H19.2507V13.2917C19.2507 12.0084 19.7091 11.0001 21.7257 11.0001H23.8341V6.78341C22.6424 6.60008 21.3591 6.41675 20.1674 6.41675C16.4091 6.41675 13.7507 8.70841 13.7507 12.8334V16.5001H9.62573V21.0834H13.7507V32.7251C14.6674 32.9084 15.5841 33.0001 16.5007 33.0001C17.4174 33.0001 18.3341 32.9084 19.2507 32.7251V21.0834H22.9174Z" fill="white"/>
@@ -82,7 +57,7 @@
                     </div>
                   <p class="">Facebook</p>
                 </div>
-                <div class="h-14 w-48 flex flex-row border border-black justify-center items-center rounded-lg py-3 px-10 gap-4">
+                <div class="h-14 w-[40%] md:scale-75 flex flex-row border border-black justify-center items-center rounded-lg py-3 px-10 gap-4">
                     <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3405 16.8751C32.3405 15.7051 32.2355 14.5801 32.0405 13.5001H16.5005V19.8826H25.3805C24.998 21.9451 23.8355 23.6926 22.088 24.8626V29.0026H27.4205C30.5405 26.1301 32.3405 21.9001 32.3405 16.8751Z" fill="#4285F4"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5008 32.9999C20.9558 32.9999 24.6908 31.5224 27.4208 29.0024L22.0883 24.8624C20.6108 25.8524 18.7208 26.4374 16.5008 26.4374C12.2033 26.4374 8.56585 23.5349 7.26835 19.6349H1.75586V23.9099C4.47086 29.3024 10.0508 32.9999 16.5008 32.9999Z" fill="#34A853"/>
@@ -92,16 +67,17 @@
                   <p class="">Google</p>
                 </div>
               </div>
-              <div class="w-3/4 flex">
-              <p class="mx-auto">Don’t have an account? <span class="text-[#35B6FF]"> Sign Up</span></p>
+              <div class="w-3/4 md:w-full flex">
+              <p class="mx-auto">Don’t have an account? <a href="signUp.html" class="text-[#35B6FF]"> Sign Up</a></p>
               </div>
             </div>
           </div>
-          <div class="w-2/4 md:w-full flex flex-col">
+          <div class="w-2/4 md:w-full flex flex-col justify-center items-center">
             <img src="img/image 11.png" alt="">
           </div>
         </div>
       </div>
     </section>
+    <script src="signIn.js"></script>
   </body>
 </html>
