@@ -25,7 +25,7 @@
                 <input type="text" id="username" class="w-3/4 md:w-full px-2 py-2 font-light bg-transparent focus:outline-none" placeholder="Mobile Number or Email" required/>
                 <div class="w-3/4 md:w-full h-[5px] bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-6"></div>
 
-                <div class="flex flex-row">
+                <div class="flex flex-row md:justify-between">
                   <input type="password" name="" placeholder="create password" id="password" class="w-3/4 px-2 py-2 font-light bg-transparent focus:outline-none">
                   <button class="relative right-9 -bottom-2 w-5 h-5 scale-105">
                     <img src="img/eye-slash.png" alt="" id="eyeicon">
@@ -35,10 +35,10 @@
                 <p id="errorMessage" class=""></p>
 
 
-                <div class="flex flex-row">
+                <div class="flex flex-row md:justify-between">
                   <input id="password2" type="password" name="" placeholder="Confirm password" class="w-3/4 px-2 py-2 font-light bg-transparent focus:outline-none" required>
                   <button class="relative right-9 -bottom-2 w-5 h-5 scale-105">
-                    <img src="img/eye-slash.png" alt="" id="eyeicon2">
+                    <img src="img/eye-slash.png" alt="" id="eyeicon2" class="">
                   </button>
                 </div>
                 <div class="w-3/4 md:w-full h-[5px] bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-10"></div>
@@ -46,17 +46,17 @@
 
                 <button class="w-3/4 md:w-full flex py-4 text-gray-600 font-medium justify-center items-center bg-gradient-to-r from-[#35B6FF] via-[#8EE4FF80] to-[#ABF0FFA6] rounded-full mb-4">Sign Up</button>
               </form>
-              <p class="text-[12px] mb-10">
+              <p class="text-[12px] mb-10 md:text-center">
                 By signing up, you agree to our <a href="" class="font-medium text-[#006FAD]"> Terms,</a> <a href="" class="font-medium text-[#006FAD]"> Privacy Policy</a> and
                 <a href="" class="font-medium text-[#006FAD]"> Cookies Policy</a>
               </p>
 
               <div class="flex flex-row w-3/4 md:w-full max-h-1 items-center justify-center gap-[14px] md:gap-0">
                 <div class="w-2/6 md:w-full bg-gray-600 h-[1px]"></div>
-                <p class="w-[25%] md:text-sm md:w-[365px] text-gray-600">or sign up with</p>
+                <p class="w-[25%] md:text-sm md:w-[365px] text-gray-600 md:text-center">or sign up with</p>
                 <div class="w-2/6 md:w-full bg-gray-600 h-[1px]"></div>
               </div>
-              <div class="flex flex-row w-3/4 max-h-1 items-center md:justify-center gap-[14px] md:gap-0 my-14">
+              <div class="flex flex-row max-h-1 items-center md:justify-center gap-[14px] md:gap-0 my-14  md:items-center">
                 <div class="h-14 w-48 md:scale-75 flex flex-row justify-center items-center border border-black rounded-lg py-3 px-10 gap-4 ml-8">
                   <div class="">
                     <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -78,33 +78,16 @@
                   </div>
                   <p class="">Facebook</p>
                 </div>
-                <div class="h-14 w-[40%] md:scale-75 flex flex-row border border-black justify-center items-center rounded-lg py-3 px-10 gap-4">
-                  <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M32.3405 16.8751C32.3405 15.7051 32.2355 14.5801 32.0405 13.5001H16.5005V19.8826H25.3805C24.998 21.9451 23.8355 23.6926 22.088 24.8626V29.0026H27.4205C30.5405 26.1301 32.3405 21.9001 32.3405 16.8751Z"
-                      fill="#4285F4"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.5008 32.9999C20.9558 32.9999 24.6908 31.5224 27.4208 29.0024L22.0883 24.8624C20.6108 25.8524 18.7208 26.4374 16.5008 26.4374C12.2033 26.4374 8.56585 23.5349 7.26835 19.6349H1.75586V23.9099C4.47086 29.3024 10.0508 32.9999 16.5008 32.9999Z"
-                      fill="#34A853"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.26822 19.6351C6.93822 18.6451 6.75072 17.5876 6.75072 16.5001C6.75072 15.4126 6.93822 14.3551 7.26822 13.3651V9.09009H1.75573C0.638231 11.3176 0.000732422 13.8376 0.000732422 16.5001C0.000732422 19.1626 0.638231 21.6826 1.75573 23.9101L7.26822 19.6351Z"
-                      fill="#FBBC05"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M16.5008 6.56261C18.9233 6.56261 21.0983 7.39511 22.8083 9.03011L27.5408 4.29762C24.6833 1.63512 20.9483 0.00012207 16.5008 0.00012207C10.0508 0.00012207 4.47086 3.69762 1.75586 9.09011L7.26835 13.3651C8.56585 9.46511 12.2033 6.56261 16.5008 6.56261Z"
-                      fill="#EA4335"
-                    />
-                  </svg>
+                <div class="h-14 w-48 md:scale-75 flex flex-row border border-black justify-center items-center rounded-lg py-3 px-10 gap-4">
+                  <div class="">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4998V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56499 23.535 7.2675 19.635H1.755V23.91C4.47 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56273C18.9225 6.56273 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47 3.69774 1.755 9.09023L7.2675 13.3652C8.56499 9.46523 12.2025 6.56273 16.5 6.56273Z" fill="#EA4335"/>
+                      </svg>
+                      
+                  </div>
                   <p class="">Google</p>
                 </div>
               </div>
