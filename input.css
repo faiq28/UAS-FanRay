@@ -49,7 +49,12 @@
     @apply origin-top 
 }
 
-
+p, h1, h2, button, div {
+    @apply dark:text-slate-50
+}
+html{
+    @apply dark:bg-slate-700
+}
 .bwh-input{
     @apply w-3/4 md:w-full px-2 py-2 font-light bg-transparent focus:outline-none
 }
