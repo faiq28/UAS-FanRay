@@ -1296,6 +1296,10 @@ video {
   gap: 14px;
 }
 
+.gap-24 {
+  gap: 6rem;
+}
+
 .gap-y-14 {
   row-gap: 3.5rem;
 }
