@@ -15,7 +15,7 @@
 
   <body class="font-Poppins bg-white min-h-[6000px] dark:bg-slate-600">
     <header class="fixed top-0 z-20" id="header">
-      <div class="w-screen px-28 md1:px-14">
+      <div class="w-screen px-28 md1:px-28">
         <div class="h-20 w-full flex justify-between items-center">
           <nav>
             <div class="block md1:hidden" onclick="showHideMenu()">
@@ -27,6 +27,10 @@
             </div>
             <ul class="hidden md1:flex gap-2 dark:text-white md1:items-center">
               <li><img src="img/logo/Group 3.png" alt="" class=""></li>
+            </ul>
+          </nav>
+          <div class="">
+            <ul class="flex justify-center gap-4 items-center">
               <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Works</a></li>
               <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Service</a></li>
               <div onclick="showDrop()" class="-ml-6">
@@ -44,8 +48,10 @@
                 </button>
               </li>
             </ul>
-          </nav>
-          
+          </div>  
+          <div class="flex items-center">
+            <p class="">Login</p>
+          </div>
         </div>
         <div class="hidden h-screen border-slate-500 mt-[-50px] justify-center items-center flex-col gap-4 md1:hidden px-3 py-3 rounded-sm" id="daftarMenu">
           <a href="#" class="text-xl font-semibold border-gray-400">Home</a>
@@ -68,12 +74,12 @@
     </header>
     <main>
       <section id="jumbotron" class=" bg-[#EAF0FF]">
-        <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[280px] z-20 fixed -mt-7 w-[10%]" id="daftarDrop">
-          <a href="">text</a>
-          <a href="">text</a>
-          <a href="">text</a>
-        </div>
-        <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[630px] z-20 fixed -mt-7 w-[10%]" id="dropMode">
+          <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[650px] z-20 fixed -mt-7 w-[10%]" id="daftarDrop">
+            <a href="">text</a>
+            <a href="">text</a>
+            <a href="">text</a>
+          </div> 
+        <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[1030px] z-20 fixed -mt-7 w-[10%]" id="dropMode">
           <div class="flex flex-row gap-3">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
             <a href="">Light</a>
@@ -228,10 +234,10 @@
             </div>
         </div>
       </section>
-      <section>
-        <div class="w-full px-28 md:px-8 mt-10 bg-slate-50">
+      <section class=" bg-slate-50 bg-opacity-70 py-24">
+        <div class="w-full px-28 md:px-8">
           <div class="w-full flex flex-row md:flex-col gap-10 py-14 justify-center items-center">
-            <div class="w-2/4 flex flex-col">
+            <div class="w-2/4 md:w-full flex flex-col">
               <p class="mb-8 text-gray-500">ABOUT US</p>
               <p class="mb-6 text-5xl font-semibold">The team will turn your ideas into reality</p>
               <p class="mb-16 text-gray-500 w-[80%]">Website and mobile application development using Wordpress technology or custom according to your business needs for information systems, administration, and promotions.</p>
@@ -255,24 +261,23 @@
                 </div>
               </div>
             </div>
-            <div class="w-2/4 flex">
+            <div class="w-2/4 md:w-full flex">
               <img src="img/parel_hbd-removebg-preview.png" alt="" class="rounded-xl w-full h-[700px]">
             </div>
           </div>
         </div>
-      </section>
-      <section>
-        <div class="w-full px-28 md:px-8 mt-20">
-          <div class="w-full flex flex-row gap-6">
-            <div class="w-[60%] flex flex-col">
+        <hr>
+        <div class="w-full px-28 md:px-8 mt-20 mb-10">
+          <div class="w-full flex flex-row md:flex-col gap-6">
+            <div class="w-[60%] md:w-full flex flex-col">
               <p class="mb-8 text-gray-500">TESTIMONIALS</p>
-              <p class="mb-6 text-3xl font-semibold">What they say abous us</p>
+              <p class="mb-6 text-[40px] font-semibold">What they say abous us</p>
               <div class="w-full p-10 flex flex-col border-[2px] rounded-xl">
                   <div class="flex flex-col lg:w-full md:mx-auto">
                     <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z" fill="#007AFF"/>
                       </svg>
-                    <p class=" leading-7 my-6 text-xl w-[90%] md:text-center lg:w-full">The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS response.</p>
+                    <p class=" leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full">The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS response.</p>
                   </div>
                   <div class="bg-slate-200 py-6 -mx-10 -mb-10 flex flex-row px-10 gap-6 items-center">
                     <div class="w-[70px] h-[70px] bg-white rounded-full"></div>
@@ -283,7 +288,7 @@
                   </div>
               </div>
             </div>
-            <div class="w-[30%] flex flex-col bg-[#0468D7] mx-auto rounded-xl p-10 py-14">
+            <div class="w-[30%] md:w-full flex flex-col bg-[#0468D7] mx-auto rounded-xl p-10 py-14">
               <div class="w-[70px] h-24 bg-slate-400 mx-auto my-auto">
 
               </div>
@@ -293,12 +298,103 @@
               <button class="py-3 px-5 bg-slate-100 text-slate-800 font-medium rounded-lg w-2/3 mx-auto">Project Estimation</button>
             </div>
           </div>   
-        </div> 
+        </div>
+      </section>
+      <section>
+        <div class="w-full px-40 md:px-8 mt-24">
+          <div class="w-full flex flex-row md:flex-col gap-10">
+            <div class="w-2/5 md:w-full">
+              <h1 class="text-6xl md:text-5xl font-semibold w-2/3">Join our newsletter</h1>
+            </div>
+            <div class="w-[60%] md:w-full flex flex-col md:mt-0 mt-4">
+              <h1 class="text-3xl md:text-2xl font-semibold text-slate-800 text-opacity-80 mb-6">Keep in touch with FanRay</h1>
+              <form action="">
+                <div class="flex flex-row-reverse bg-gray-50 py-3 px-8 justify-center items-center gap-3 rounded-full mb-8">
+                  <input type="email" name="" placeholder="Enter your email address" id="password" class="w-[100%] px-2 py-2 bg-transparent text-slate-700 focus:outline-none font-normal" required>
+                  <div class=" w-7 h-7 scale-105 cursor-pointer flex items-center justify-center">
+                    <svg class="text-gray-500" aria-hidden="true" focusable="false" data-prefix="far" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"></path></svg>
+                  </div>
+                </div>
+                <div class="flex flex-row w-full gap-6">
+                  <div class="bg-gray-50 py-3 px-8 w-2/4 rounded-full">
+                    <input type="text" name="" placeholder="First name" id="password" class="w-[100%] px-2 py-2 bg-transparent text-slate-700 focus:outline-none font-normal" required>
+                  </div>
+                  <div class="bg-gray-50 py-3 px-8 w-2/4 rounded-full">
+                    <input type="text" name="" placeholder="Last name" id="password" class="w-[100%] px-2 py-2 bg-transparent text-slate-700 focus:outline-none font-normal" required>
+                  </div>
+                </div>
+                <div class="flex flex-row-reverse bg-gray-50 py-3 px-8 justify-center items-center gap-3 rounded-full mt-8">
+                  <input type="text" name="" placeholder="Enter your mobile number" id="password" class="w-[100%] px-2 py-2 bg-transparent text-slate-700 focus:outline-none font-normal" required>
+                  <div class=" w-14 h-8 scale-105 cursor-pointer flex flex-row items-center justify-center gap-4">
+                    <p class="text-gray-500">+62</p>
+                    <div class="h-8 w-[1.5px] bg-gray-500"></div>
+                  </div>
+                </div>
+                <button class="py-2 px-3 w-40 bg-[#0468D7] hover:font-semibold text-white font-medium mt-8 transition-all ease-in-out hover:text-slate-100 text-center rounded-full">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
     </main> 
     <footer>
-      <div class="w-full px-28 md:px-8 mt-20">
-        <div class="bg-slate-200 w-full flex "></div>
+      <div class="w-full px-28 py-14 md:px-8 mt-20 bg-[#F8F9FA]">
+        <div class="w-full flex flex-col items-center justify-center md:justify-start">
+          <h1 class="text-2xl mb-6">Your turn proves the quality of our services</h1>
+          <p class="text-[#4A5071] mb-[30px] w-[490px] md:w-full text-center md:text-left">Consult your business digitization needs with our team to get a price quote that fits your business budget.</p>
+          <button class="flex flex-row py-4 px-7 bg-[#0468D7] rounded-2xl gap-3 mx-auto">
+            <svg class="scale-90" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.9644 21.4125C25.9644 21.8625 25.8644 22.325 25.6519 22.775C25.4394 23.225 25.1645 23.65 24.802 24.05C24.1895 24.725 23.5145 25.2125 22.752 25.525C22.002 25.8375 21.1895 26 20.3145 26C19.0395 26 17.677 25.7 16.2395 25.0875C14.802 24.475 13.3645 23.65 11.9395 22.6125C10.502 21.5625 9.13945 20.4 7.83945 19.1125C6.55195 17.8125 5.38945 16.45 4.35195 15.025C3.32695 13.6 2.50195 12.175 1.90195 10.7625C1.30195 9.3375 1.00195 7.975 1.00195 6.675C1.00195 5.825 1.15195 5.0125 1.45195 4.2625C1.75195 3.5 2.22695 2.8 2.88945 2.175C3.68945 1.3875 4.56445 1 5.48945 1C5.83945 1 6.18945 1.075 6.50195 1.225C6.82695 1.375 7.11445 1.6 7.33945 1.925L10.2395 6.0125C10.4645 6.325 10.627 6.6125 10.7395 6.8875C10.852 7.15 10.9145 7.4125 10.9145 7.65C10.9145 7.95 10.827 8.25 10.652 8.5375C10.4895 8.825 10.252 9.125 9.95195 9.425L9.00195 10.4125C8.86445 10.55 8.80195 10.7125 8.80195 10.9125C8.80195 11.0125 8.81445 11.1 8.83945 11.2C8.87695 11.3 8.91445 11.375 8.93945 11.45C9.16445 11.8625 9.55195 12.4 10.102 13.05C10.6645 13.7 11.2645 14.3625 11.9145 15.025C12.5895 15.6875 13.2395 16.3 13.902 16.8625C14.552 17.4125 15.0895 17.7875 15.5145 18.0125C15.577 18.0375 15.652 18.075 15.7395 18.1125C15.8395 18.15 15.9395 18.1625 16.052 18.1625C16.2645 18.1625 16.427 18.0875 16.5645 17.95L17.5145 17.0125C17.827 16.7 18.127 16.4625 18.4145 16.3125C18.702 16.1375 18.9895 16.05 19.302 16.05C19.5395 16.05 19.7895 16.1 20.0645 16.2125C20.3395 16.325 20.627 16.4875 20.9395 16.7L25.077 19.6375C25.402 19.8625 25.627 20.125 25.7645 20.4375C25.8895 20.75 25.9644 21.0625 25.9644 21.4125Z" stroke="white" stroke-width="1.7" stroke-miterlimit="10"/>
+              <path d="M21.627 9.75C21.627 9 21.0395 7.85 20.1645 6.9125C19.3645 6.05 18.302 5.375 17.252 5.375" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26.002 9.75C26.002 4.9125 22.0895 1 17.252 1" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <p class="text-slate-50">Free Consultation</p>
+          </button>
+        </div>
+        <div class="h-[1.8px] bg-slate-700 w-full bg-opacity-20 my-6 md:my-8"></div>
+        <div class="w-full flex flex-row md:flex-col items-center justify-between md:justify-start md:gap-12">
+          <div class="flex flex-col w-[40%] md:w-full">
+            <p class="italic font-semibold text-2xl mb-3">FanRay</p>
+            <p class="text-gray-500">FanRay is a digital brand agency part of PT.SMKMadinatul Quran which provides website application development services, branding, and digital marketing.</p>
+          </div>
+          <div class="flex flex-col w-[35%] md:w-full items-start justify-center gap-5">
+            <div class="flex-row flex gap-2">
+              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.0983 3.94445C20.0701 4.09051 22.8392 5.31597 24.9542 7.43239C27.2102 9.68981 28.4519 12.6905 28.4507 15.8816C28.448 22.4668 23.0872 27.8248 16.5016 27.8248C14.0251 27.8248 12.0571 27.0639 10.7864 26.3711L4.4519 28.0319L6.14716 21.843C5.10147 20.0317 4.55124 17.9772 4.5521 15.8722C4.55474 9.28716 9.91516 3.92969 16.5014 3.92969L17.0983 3.94445ZM11.0798 24.209L11.4426 24.4241C12.9674 25.3285 14.7153 25.8071 16.4975 25.8078H16.5015C21.9757 25.8078 26.431 21.3545 26.4332 15.881C26.4342 13.2285 25.4021 10.7345 23.527 8.85814C21.6518 6.98171 19.1583 5.94775 16.5055 5.94688C11.0272 5.94688 6.57179 10.3997 6.56961 15.8728C6.56886 17.7486 7.09391 19.5753 8.0881 21.1557L8.32424 21.5314L7.32092 25.1945L11.0798 24.209ZM22.5215 18.7217C22.4468 18.5971 22.2478 18.5225 21.9493 18.3731C21.6507 18.2237 20.1828 17.5018 19.9091 17.4021C19.6354 17.3027 19.4364 17.2529 19.2374 17.5516C19.0383 17.8503 18.4662 18.5225 18.2919 18.7217C18.1178 18.9209 17.9436 18.9458 17.6451 18.7964C17.3465 18.6471 16.3845 18.3319 15.2441 17.3152C14.3565 16.5239 13.7573 15.5467 13.5831 15.2479C13.409 14.9492 13.5645 14.7876 13.714 14.6389C13.8483 14.5051 14.0126 14.2903 14.1619 14.116C14.3112 13.9418 14.3609 13.8173 14.4605 13.6182C14.56 13.419 14.5102 13.2448 14.4356 13.0954C14.3609 12.946 13.7638 11.4771 13.515 10.8795C13.2726 10.2977 13.0265 10.3765 12.8432 10.3673C12.6693 10.3586 12.47 10.3567 12.271 10.3567C12.0719 10.3567 11.7485 10.4314 11.4748 10.7302C11.2011 11.0289 10.4298 11.751 10.4298 13.2197C10.4298 14.6887 11.4997 16.1076 11.649 16.3068C11.7983 16.5061 13.7543 19.5202 16.7494 20.8129C17.4617 21.1204 18.0179 21.304 18.4515 21.4415C19.1668 21.6686 19.8176 21.6366 20.3321 21.5598C20.9057 21.4741 22.0986 20.8378 22.3473 20.1409C22.5961 19.4436 22.5961 18.8462 22.5215 18.7217Z" fill="white"/>
+                <mask id="mask0_286_18" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="5" width="21" height="21">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0798 24.2091L11.4425 24.4242C12.9674 25.3287 14.7153 25.8072 16.4975 25.8079H16.5015C21.9756 25.8079 26.431 21.3547 26.4331 15.8811C26.4342 13.2287 25.4021 10.7346 23.527 8.85828C21.6518 6.98185 19.1582 5.94788 16.5055 5.94702C11.0272 5.94702 6.57177 10.3998 6.56958 15.873C6.56883 17.7487 7.09389 19.5755 8.08807 21.1559L8.32421 21.5315L7.32089 25.1946L11.0798 24.2091ZM22.5214 18.7218C22.4468 18.5973 22.2478 18.5226 21.9492 18.3733C21.6507 18.2239 20.1828 17.502 19.9091 17.4023C19.6354 17.3028 19.4363 17.2531 19.2373 17.5517C19.0383 17.8504 18.4661 18.5227 18.2919 18.7218C18.1178 18.921 17.9436 18.9459 17.6451 18.7965C17.3465 18.6472 16.3845 18.332 15.2441 17.3153C14.3564 16.524 13.7572 15.5468 13.5831 15.248C13.4089 14.9493 13.5645 14.7878 13.7139 14.639C13.8483 14.5053 14.0126 14.2904 14.1619 14.1162C14.3111 13.942 14.3609 13.8174 14.4604 13.6183C14.5599 13.4191 14.5102 13.2449 14.4355 13.0955C14.3609 12.9461 13.7638 11.4772 13.515 10.8797C13.2726 10.2978 13.0264 10.3766 12.8432 10.3674C12.6692 10.3588 12.47 10.3569 12.271 10.3569C12.0719 10.3569 11.7485 10.4315 11.4748 10.7303C11.2011 11.0291 10.4298 11.7511 10.4298 13.2199C10.4298 14.6888 11.4997 16.1077 11.649 16.3069C11.7982 16.5062 13.7543 19.5203 16.7494 20.813C17.4617 21.1205 18.0179 21.3041 18.4515 21.4417C19.1667 21.6688 19.8176 21.6368 20.3321 21.5599C20.9057 21.4742 22.0985 20.838 22.3473 20.141C22.5961 19.4438 22.5961 18.8463 22.5214 18.7218Z" fill="black"/>
+                </mask>
+                <g mask="url(#mask0_286_18)">
+                <path d="M32.9099 -0.666504H-0.66333V32.9068H32.9099V-0.666504Z" fill="url(#paint0_linear_286_18)"/>
+                </g>
+                <defs>
+                <linearGradient id="paint0_linear_286_18" x1="16.1234" y1="32.9068" x2="16.1234" y2="-0.666504" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#25CF43"/>
+                <stop offset="1" stop-color="#61FD7D"/>
+                </linearGradient>
+                </defs>
+                </svg>
+              <p class="text-gray-500 my-auto">0888 8888 8888</p>  
+            </div>
+            <div class="flex-row flex gap-3 ml-1">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.972 17.33C20.972 17.69 20.892 18.06 20.722 18.42C20.552 18.78 20.332 19.12 20.042 19.44C19.552 19.98 19.012 20.37 18.402 20.62C17.802 20.87 17.152 21 16.452 21C15.432 21 14.342 20.76 13.192 20.27C12.042 19.78 10.892 19.12 9.75195 18.29C8.60195 17.45 7.51195 16.52 6.47195 15.49C5.44195 14.45 4.51195 13.36 3.68195 12.22C2.86195 11.08 2.20195 9.94 1.72195 8.81C1.24195 7.67 1.00195 6.58 1.00195 5.54C1.00195 4.86 1.12195 4.21 1.36195 3.61C1.60195 3 1.98195 2.44 2.51195 1.94C3.15195 1.31 3.85195 1 4.59195 1C4.87195 1 5.15195 1.06 5.40195 1.18C5.66195 1.3 5.89195 1.48 6.07195 1.74L8.39195 5.01C8.57195 5.26 8.70195 5.49 8.79195 5.71C8.88195 5.92 8.93195 6.13 8.93195 6.32C8.93195 6.56 8.86195 6.8 8.72195 7.03C8.59195 7.26 8.40195 7.5 8.16195 7.74L7.40195 8.53C7.29195 8.64 7.24195 8.77 7.24195 8.93C7.24195 9.01 7.25195 9.08 7.27195 9.16C7.30195 9.24 7.33195 9.3 7.35195 9.36C7.53195 9.69 7.84195 10.12 8.28195 10.64C8.73195 11.16 9.21195 11.69 9.73195 12.22C10.272 12.75 10.792 13.24 11.322 13.69C11.842 14.13 12.272 14.43 12.612 14.61C12.662 14.63 12.722 14.66 12.792 14.69C12.872 14.72 12.952 14.73 13.042 14.73C13.212 14.73 13.342 14.67 13.452 14.56L14.212 13.81C14.462 13.56 14.702 13.37 14.932 13.25C15.162 13.11 15.392 13.04 15.642 13.04C15.832 13.04 16.032 13.08 16.252 13.17C16.472 13.26 16.702 13.39 16.952 13.56L20.262 15.91C20.522 16.09 20.702 16.3 20.812 16.55C20.912 16.8 20.972 17.05 20.972 17.33Z" stroke="#292D32" stroke-width="1.7" stroke-miterlimit="10"/>
+                <path d="M17.502 8C17.502 7.4 17.032 6.48 16.332 5.73C15.692 5.04 14.842 4.5 14.002 4.5" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21.002 8C21.002 4.13 17.872 1 14.002 1" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              <p class="text-gray-500 my-auto">(022) 8888 000</p>  
+            </div>
+            <div class="flex-row flex gap-3 ml-2">
+              <svg class="scale-125" width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.0021 13.4299C12.5816 13.4299 13.8621 12.0331 13.8621 10.3099C13.8621 8.58681 12.5816 7.18994 11.0021 7.18994C9.42256 7.18994 8.14209 8.58681 8.14209 10.3099C8.14209 12.0331 9.42256 13.4299 11.0021 13.4299Z" stroke="#292D32" stroke-width="1.5"/>
+                <path d="M3.32018 8.49C5.12602 -0.169998 16.8868 -0.159997 18.6835 8.5C19.7377 13.58 16.841 17.88 14.3018 20.54C12.4593 22.48 9.54435 22.48 7.69268 20.54C5.16268 17.88 2.26602 13.57 3.32018 8.49Z" stroke="#292D32" stroke-width="1.5"/>
+                </svg>
+              <p class="text-gray-500 my-auto">Jl. Merdeka No.14, Sodong,Kec. Jonggol, Kota Bogor, Jawa Barat 00000</p>  
+            </div>
+          </div>
+        </div>
+        <div class="h-[1.5px] bg-slate-700 w-full bg-opacity-20 my-6 md:my-8"></div>
+        <div class="w-full flex mx-auto -mb-6 mt-2"><p class="mx-auto my-auto"> Copyright 2023 ©<span class="font-medium"> FanRay</span></p></div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
