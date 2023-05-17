@@ -756,6 +756,14 @@ video {
   margin-top: 9px;
 }
 
+.ml-7 {
+  margin-left: 1.75rem;
+}
+
+.ml-28 {
+  margin-left: 7rem;
+}
+
 .block {
   display: block;
 }
@@ -952,6 +960,10 @@ video {
   width: 38%;
 }
 
+.w-\[40\%\] {
+  width: 40%;
+}
+
 .w-\[401px\] {
   width: 401px;
 }
@@ -1038,10 +1050,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[40\%\] {
-  width: 40%;
 }
 
 .max-w-xl {
