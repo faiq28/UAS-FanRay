@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   </head>
 
-  <body class="font-Poppins bg-white min-h-[3000px]">
+  <body class="font-Poppins bg-white min-h-[6000px] dark:bg-slate-600">
     <header class="fixed top-0 z-20" id="header">
-      <div class="w-screen px-8 md1:px-14">
+      <div class="w-screen px-28 md1:px-14">
         <div class="h-20 w-full flex justify-between items-center">
           <nav>
             <div class="block md1:hidden" onclick="showHideMenu()">
@@ -26,7 +26,7 @@
               </button>
             </div>
             <ul class="hidden md1:flex gap-2 dark:text-white md1:items-center">
-              <li><h1 class="text-3xl font-bold text-black mr-4">gatau</h1></li>
+              <li><img src="img/logo/Group 3.png" alt="" class=""></li>
               <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Works</a></li>
               <li><a href="#" class="text-[16px] text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">Service</a></li>
               <div onclick="showDrop()" class="-ml-6">
@@ -45,8 +45,7 @@
               </li>
             </ul>
           </nav>
-          <a href="" class="md:hidden px-5 py-3 bg-[#EBF0FF] bg-opacity-70 text-[14px] rounded-full mt-2 font-medium text-[#6882D4] hover:ring-offset-[0.5px] hover:ring  transition ease-in-out">
-            Get Started</a>
+          
         </div>
         <div class="hidden h-screen border-slate-500 mt-[-50px] justify-center items-center flex-col gap-4 md1:hidden px-3 py-3 rounded-sm" id="daftarMenu">
           <a href="#" class="text-xl font-semibold border-gray-400">Home</a>
@@ -68,7 +67,7 @@
       </div>
     </header>
     <main>
-      <section id="jumbotron">
+      <section id="jumbotron" class=" bg-[#EAF0FF]">
         <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[280px] z-20 fixed -mt-7 w-[10%]" id="daftarDrop">
           <a href="">text</a>
           <a href="">text</a>
@@ -81,12 +80,12 @@
           </div>
           <div class="flex flex-row gap-2 mt-2">
             <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 mr-2"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
-            <a href="" class="-ml-1">Dark</a>
+            <button onclick="dark()" class="-ml-1">Dark</button>
           </div>
         </div>
-        <div class="w-full h-[720px] md:h-[700px] px-14 md:px-8 mt-24  bg-opacity-50 flex flex-wrap md:flex-col-reverse md:gap-0 gap-8"> 
+        <div class="w-full h-[720px] md:h-[700px] px-28 md:px-8 mt-24  bg-opacity-50 flex flex-wrap md:flex-col-reverse md:gap-0 gap-8"> 
           <div class="w-[45%] md:w-full flex flex-col items-start justify-center md:mt-28 mb-10">
-            <h1 class="text-slate-800 text-6xl md:text-5xl mb-8 md:w-full">It’s time to make 
+            <h1 class="text-slate-800 text-6xl font-medium md:text-5xl mb-8 md:w-full">It’s time to make 
               your software</h1>
             <p class="text-[#1b1b1b] text-opacity-70 w-[85%] md:w-full mb-6">Best offer beautifully designed, expertly crafted components and
               template, built for every tailwind CSS engineer. Perfect start
@@ -107,8 +106,8 @@
         </div>
       </section>
 
-      <section id="content">
-        <div class="w-full px-14 py-10 md:px-8 mt-10 bg-[#CBD0FF] bg-opacity-50">
+      <!-- <section id="content">
+        <div class="w-full px-14 py-10 md:px-8 mt-10 bg-opacity-50">
           
           <div class="w-full mb-14 flex flex-wrap gap-8 flex-row-reverse">
             <div class="w-full flex flex-col justify-center  items-center md:items-start">
@@ -181,58 +180,123 @@
               </div>
             </div>
           </div>
+
+          <div class=""></div>
         </div>
+
        
-      </section>
+      </section> -->
 
       <section>
-        <div class="w-full px-14 md:px-8 mt-10">
-          <div class="w-full flex flex-col items-center justify-center">
-            <h1 class="text-2xl font-medium mb-3">The Solutions That FanRay Digital Offers For Your Business</h1>
-            <p class="mb-14" >Complete Services to support your business transformation in the Digital Age</p>
-            <div class="w-full flex flex-row md:flex-col justify-center gap-40">
-              <div class="w-[400px] md:w-full scale-110 flex flex-col justify-center items-start mt-14">
-                <div class="mb-6">
-                  <img src="img/image 13.png" alt="" class="">
-                </div>
-                  <div class="flex flex-col mb-8 items-center">
-                    <h1 class="text-xl font-medium mb-4">Website, Mobile Application Design & Development</h1>
-                    <h1 class="text-base text-black text-opacity-70 font-medium">Website and mobile application development using Wordpress technology or custom according to your business needs for information systems, administration, and promotions.</h1>
-                  </div>
-                  <div class="flex flex-col group">
-                    <div class="flex flex-row gap-3 mb-2">
-                      <a href="" class="font-medium">View price list</a>
-                      <button class="p-2 bg-[#292D32] bg-opacity-80 rounded-full leading-[8px] text-center my-auto text-white">></button>
-                    </div>
-                    <div class="h-[1.4px] group-hover:h-[2.8px] w-full bg-slate-600"></div>
-                  </div>
-                </div>
-              <div class="w-[400px] md:w-full scale-110 flex flex-col justify-center items-start md:mt-0 mt-14">
-                <div class="mb-6">
-                  <img src="img/image 12.png" alt="" class="">
-                </div>
-                  <div class="flex flex-col mb-8">
-                    <h1 class="text-xl font-medium -mt-1 mb-4">Branding, Design Promotion & Content Creation</h1>
-                    <h1 class="text-base text-black text-opacity-70 font-medium">Making designs such as Logo, Stationary, Marketing Kit Design, Social Media Content Design, and Photo & Videography for branding and promotion needs.</h1>
-                  </div>
-                  <div class="flex flex-col group">
-                    <div class="flex flex-row gap-3 mb-2">
-                      <a href="" class="font-medium">View price list</a>
-                      <button class="p-2 bg-[#292D32] bg-opacity-80 rounded-full leading-[8px] text-center my-auto text-white">></button>
-                    </div>
-                    <div class="h-[1.4px] group-hover:h-[2.8px] w-full bg-slate-600"></div>
-                  </div>
-                </div>
-
+        <div class="w-full px-28 md:px-8 mt-10">
+          <div class="w-full flex flex-col items-center justify-center mt-24">
+            <h1 class="text-5xl leading-[55px] font-semibold mb-6 text-slate-800 md:w-full md:text-4xl md:text-left w-[1100px] text-center">The Solutions That FanRay Digital Offers For Your Business</h1>
+            <p class="mb-16 text-xl text-gray-600 w-[600px] text-center md:w-full md:text-lg md:text-left" >Complete Services to support your business transformation in the Digital Age</p>
+          </div>  
+            <div class="w-full flex flex-row lg:flex-col-reverse md:flex-col-reverse justify-center mb-28">
+              <div class="w-2/4 md:w-full flex flex-col bg-red-00 justify-center">
+                <p class="text-xl text-[#35B6FF] mb-4 md:mb-0 font-medium">Multi Platform</p>
+                <p class="text-5xl font-semibold leading-[55px] text-slate-800 w-[650px] md:w-full md:text-[30px] md:leading-10 mb-6 md:my-3">Mobile Design Application & Development, Website</p>
+                <p class="text-black text-opacity-70 w-[532px] mb-6 md:w-full md:text-sm">Website and mobile application development using Wordpress technology or custom according to your business needs for information systems, administration, and promotions.</p>
+                <a href="#" class="py-3 px-6 w-44 hover:ring-transparent hover:bg-[#0468D7] transition-all ease-in-out hover:text-slate-100 text-center rounded-full ring-[#0468D7] ring-[1px]">View Platform</a>
               </div>
+              <div class="w-2/4 md:w-full flex">
+                <img src="img/image 17.png" alt="" class="">
+              </div>
+            </div>
+            <div class="w-full flex flex-row-reverse lg:flex-col-reverse md:flex-col-reverse justify-center gap-10 mb-28">
+              <div class="w-2/4 md:w-full flex flex-col bg-red-00 justify-center">
+                <p class="text-xl text-[#0CB42A] mb-4 md:mb-0 font-medium">Multi Platform</p>
+                <p class="text-5xl font-semibold leading-[55px] text-slate-800 w-[650px] md:w-full md:text-[30px] md:leading-10 mb-6 md:my-3">Branding, Design & Content Creation</p>
+                <p class="text-black text-opacity-70 w-[532px] mb-6 md:w-full md:text-sm">Making designs such as Logo, Stationary, Marketing Kit Design, Social Media Content Design, and Photo & Videography for branding and promotion needs.</p>
+                <a href="#" class="py-3 px-6 w-44 hover:ring-transparent hover:bg-[#0468D7] transition-all ease-in-out hover:text-slate-100 text-center rounded-full ring-[#0468D7] ring-[1px]">View Platform</a>
+              </div>
+              <div class="w-2/4 md:w-full flex scale-95">
+                <img src="img/image 12 (1).png" alt="" class="">
+              </div>
+            </div>
+            <div class="w-full flex flex-row lg:flex-col-reverse md:flex-col-reverse justify-center mb-20">
+              <div class="w-2/4 md:w-full flex flex-col bg-red-00 justify-center">
+                <p class="text-xl text-[#FF5C00] mb-4 md:mb-0 font-medium">Multi Platform</p>
+                <p class="text-5xl font-semibold leading-[55px] text-slate-800 w-[650px] md:w-full md:text-[30px] md:leading-10 mb-6 md:my-3">SEO, Digital Marketing & Advertising</p>
+                <p class="text-black text-opacity-70 w-[532px] mb-6 md:w-full md:text-sm">Website and mobile application development using Wordpress technology or custom according to your business needs for information systems, administration, and promotions.</p>
+                <a href="#" class="py-3 px-6 w-44 hover:ring-transparent hover:bg-[#0468D7] transition-all ease-in-out hover:text-slate-100 text-center rounded-full ring-[#0468D7] ring-[1px]">View Platform</a>
+              </div>
+              <div class="w-2/4 md:w-full flex">
+                <img src="img/image 13 (1).png" alt="" class="">
+              </div>
+            </div>
+        </div>
+      </section>
+      <section>
+        <div class="w-full px-28 md:px-8 mt-10 bg-slate-50">
+          <div class="w-full flex flex-row md:flex-col gap-10 py-14 justify-center items-center">
+            <div class="w-2/4 flex flex-col">
+              <p class="mb-8 text-gray-500">ABOUT US</p>
+              <p class="mb-6 text-5xl font-semibold">The team will turn your ideas into reality</p>
+              <p class="mb-16 text-gray-500 w-[80%]">Website and mobile application development using Wordpress technology or custom according to your business needs for information systems, administration, and promotions.</p>
+              <button></button>
+              <div class="w-full px-10 py-12 rounded-lg border-[2px] flex flex-wrap gap-y-14">
+                <div class="flex-col flex w-2/4 justify-center gap-2 items-center">
+                  <p class="text-6xl text-slate-800 font-semibold">8</p>
+                  <p class="text-gray-400 font-medium">Operrated Years</p>
+                </div>
+                <div class="flex-col flex w-2/4 justify-center gap-2 items-center">
+                  <p class="text-6xl text-slate-800 font-semibold">76+</p>
+                  <p class="text-gray-400 font-medium">Happy Clients</p>
+                </div>
+                <div class="flex-col flex w-2/4 justify-center gap-2 items-center">
+                  <p class="text-6xl text-slate-800 font-semibold">30</p>
+                  <p class="text-gray-400 font-medium">Profesionals</p>
+                </div>
+                <div class="flex-col flex w-2/4 justify-center gap-2 items-center">
+                  <p class="text-6xl text-slate-800 font-semibold">8</p>
+                  <p class="text-gray-400 font-medium">Project Works</p>
+                </div>
+              </div>
+            </div>
+            <div class="w-2/4 flex">
+              <img src="img/parel_hbd-removebg-preview.png" alt="" class="rounded-xl w-full h-[700px]">
             </div>
           </div>
         </div>
       </section>
-      
-    </main>
-    <footer>
+      <section>
+        <div class="w-full px-28 md:px-8 mt-20">
+          <div class="w-full flex flex-row gap-6">
+            <div class="w-[60%] flex flex-col">
+              <p class="mb-8 text-gray-500">TESTIMONIALS</p>
+              <p class="mb-6 text-3xl font-semibold">What they say abous us</p>
+              <div class="w-full p-10 flex flex-col border-[2px] rounded-xl">
+                  <div class="flex flex-col lg:w-full md:mx-auto">
+                    <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z" fill="#007AFF"/>
+                      </svg>
+                    <p class=" leading-7 my-6 text-xl w-[90%] md:text-center lg:w-full">The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS response.</p>
+                  </div>
+                  <div class="bg-slate-200 py-6 -mx-10 -mb-10 flex flex-row px-10 gap-6 items-center">
+                    <div class="w-[70px] h-[70px] bg-white rounded-full"></div>
+                    <div class="flex flex-col">
+                      <p class="text-lg">Miko Ahmadineza</p>
+                      <p class=" text-gray-500">The most Exclusive customers</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="w-[30%] flex flex-col bg-[#0468D7] mx-auto rounded-xl p-10 py-14">
+              <div class="w-[70px] h-24 bg-slate-400 mx-auto my-auto">
 
+              </div>
+              <div class="flex flex-col">
+                <p class="text-4xl text-slate-100 text-center font-medium mb-6">Want to Estimate your Project?</p>
+              </div>
+              <button class="py-3 px-5 bg-slate-100 text-slate-800 font-medium rounded-lg w-2/3 mx-auto">Project Estimation</button>
+            </div>
+          </div>   
+        </div>
+      </section>
+    </main> 
+    <footer>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
@@ -338,14 +402,14 @@
 
       function dark() {
         var html = document.querySelector("html");
-        if (hehe) {
-          html.classList.add("dark");
-          hehe = false;
-        } else {
+        if (xstatus) {
           html.classList.remove("dark");
-          hehe = true;
+          xstatus = false;
+        } else {
+          html.classList.add("dark");
+          xstatus = true;
         }
-        console.log(hehe);
+        console.log(xstatus);
       }
     </script>
   </body>
