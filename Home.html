@@ -92,8 +92,8 @@
         </div>
         <div class="w-full h-[720px] md:h-[700px] px-28 md:px-8 mt-24  bg-opacity-50 flex flex-wrap md:flex-col-reverse md:gap-0 gap-8"> 
           <div class="w-[45%] md:w-full flex flex-col items-start justify-center md:mt-28 mb-10">
-            <h1 class="text-slate-800 text-6xl font-medium md:text-5xl mb-8 md:w-full">It’s time to make 
-              your software</h1>
+            <h1 class="text-slate-800 text-6xl font-medium md:text-5xl mb-8 md:w-full ">It’s time to make 
+              your software <span id="text"></span></h1>
             <p class="text-[#1b1b1b] text-opacity-70 w-[85%] md:w-full mb-6">Best offer beautifully designed, expertly crafted components and
               template, built for every tailwind CSS engineer. Perfect start
               point for the next project</p>
@@ -408,6 +408,18 @@
         },
       });
     </script>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#text', {
+        strings: ['easly', 'and quickly'],
+        typedSpeed: 40,
+        loop: true
+      });
+    </script>
+
+
+
 
     <script>
       window.onscroll = function () {
