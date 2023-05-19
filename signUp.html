@@ -13,6 +13,17 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="font-Poppins bg-white overflow-x-hidden">
+
+
+    <div class="h-screen w-full fixed flex z-[100] bg-slate-800 bg-opacity-70 backdrop-blur-lg items-center justify-center" id="loader">
+      <svg class="pl scale-150 " width="240" height="240" viewBox="0 0 240 240">
+        <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+      </svg>
+    </div>
+
     <section>
       <div class="px-14 md:px-8 bg-opacity-50 w-screen h-screen flex">
         <div class="w-full  px-[90px] md:px-8 sm:px-4 flex flex-row md:flex-col-reverse my-auto justify-center items-center">
@@ -105,5 +116,6 @@
       </div>
     </section>
     <script src="signUp.js"></script>
+    
   </body>
 </html>
