@@ -28,7 +28,7 @@ const username = document.getElementById("username");
   const errorMessage = document.getElementById("errorMessage");
   const errorMessage2 = document.getElementById("errorMessage2");
   
-  let name = null;
+  let name = null
 
   
   form.addEventListener("submit", (e) => {
@@ -61,16 +61,7 @@ const username = document.getElementById("username");
           errorMessage2.classList.add("mb-6");
           errorMessage2.classList.add("-mt-8");
      }
-  });
-
-
-  var loader = document.getElementById("loader");
-
-  window.addEventListener("load", function() {
-    loader.style.display = "none";
-  });
-
-
+      })
 
 
   

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./Home.html", "./Service.html","./digital.html", "./Branding.html", "./signIn.html", "./signUp.html",],
+  content: ["./Home.html", "./Service.html","./digital.html", "./Branding.html", "./signIn.html", "./signUp.html", "./slider.html"],
   darkMode: 'class',
   theme: {
     screens: {
@@ -33,8 +33,8 @@ module.exports = {
         Poppins : ['Poppins']
       },
       backgroundImage : {
-        'flutter' : "url('img/image 21.png')",
-        'niga' : "url('img/image 19.png')"
+        'service' : "url('img/Group 27.png')",
+        'parel' : "url('img/parel_hbd-removebg-preview.png')",
       },
       colors : {
         "primary" : ['#929292']
