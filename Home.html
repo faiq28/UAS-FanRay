@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./img/icon.png">
-    <title>FaNRay raya item</title>
+    <title>FaNRay</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -90,9 +90,12 @@
                 </div>
                 <li><a href="#about" class="text-[16px] dark:text-slate-200 text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">About</a></li>
                 <li><a href="#FAQ" class="text-[16px] dark:text-slate-200 text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">FAQ</a></li>
-                <li class="mt-2">
-                  <button onclick="drop()" href="#" class="text-[16px] dark:text-white font-medium">
+                <li class="mt-[4px]">
+                  <button id="gelapp" onclick="gelap()" href="#" class="flex">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
+                  </button>
+                  <button id="terang" onclick="light()" href="#" class="hidden">
+                    <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
                   </button>
                 </li>
               </ul>
@@ -129,22 +132,12 @@
             <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./Service.html">Service Website & Application</a>
             <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./Branding.html">Branding Content Creation</a>
             <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./digital.html">Digital Marketing</a>
-          </div> 
-          <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[1030px] z-20 fixed mt-14 w-[10%]" id="dropMode">
-            <div class="flex flex-row gap-3">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
-              <a class="text-sm" href="">Light</a>
-            </div>
-            <div class="flex flex-row gap-2 mt-2">
-              <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 mr-2"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
-              <button onclick="dark()" class="-ml-1">Dark</button>
-            </div>
           </div>
           <div class="dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
             <div id="jumbotron" class="w-full px-28 md:px-8 py-32 pt-56 bg-opacity-50 flex flex-row lg:flex-col-reverse md:gap-0 gap-8 bg-[#EAF0FF] dark:bg-transparent"> 
               <div class="w-[45%] lg:w-full flex flex-col items-start justify-center md:mt-28 mb-10">
-                <p class="text-slate-800 text-6xl font-medium md:text-5xl mb-8 lg:w-full dark:text-slate-200">It’s time to make 
-                  your software</p>
+                <p class="text-slate-800 text-5xl font-medium md:text-5xl mb-8 lg:w-full dark:text-slate-200">It’s time to make 
+                  your software <span id="text"></span></p>
                 <p class="text-[#1b1b1b] text-opacity-70 w-[85%] lg:w-full mb-6 dark:text-slate-400">Best offer beautifully designed, expertly crafted components and
                   template, built for every tailwind CSS engineer. Perfect start
                   point for the next project</p>
@@ -308,10 +301,10 @@
                 </div>
                 <div class="flex w-full">
                   <button data-modal-target="#modal" class="mx-auto py-16 text-xl text-[#0468D7] underline underline-offset-4 dark:hover:text-sky-500 md:py-6">View more</button>
-                    <div class="modal w-full h-screen flex flex-col z-[4000000] justify-center items-center dark:bg-slate-800 dark:bg-opacity-70 dark:backdrop-blur-[7px] backdrop-blur-[7px] bg-white bg-opacity-70" id="modal">
-                      <div class=" flex w-2/4 justify-end items-center mt-32 md:-mt-3 md:mb-3 -mb-12">
-                        <div class="modal-header w-2/4 flex justify-end items-center md:-mr-24">
-                          <button data-close-button class="close-button absolute cursor-pointer border-none outline-none bg-none text-lg scale-[3] font-semibold mr-auto dark:text-slate-200">&times;</button>
+                    <div class="modal w-full h-screen flex flex-row-reverse z-[4000000] justify-center dark:bg-slate-800 dark:bg-opacity-80 dark:backdrop-blur-xl backdrop-blur-lg bg-slate-500 bg-opacity-70" id="modal">
+                      <div class="flex justify-start items-start mt-24 absolute right-[365px] md:mt-3 md:mb-3">
+                        <div class="modal-header flex justify-start items-start md:-mr-24">
+                          <button data-close-button class="close-button ml-auto absolute cursor-pointer border-none outline-none bg-none scale-[2] font-light dark:text-slate-200 bg-slate-800 bg-opacity-60 text-slate-100 rounded-full px-[8px] p-[-32px] text-xl">&times;</button>
                         </div>
                       </div>  
                         <div class="modal-body flex flex-col">
@@ -595,6 +588,19 @@
         </div>
       </footer>
       
+      <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+      <script>
+        var typed = new Typed("#text", {
+          strings: ['quickly', 'and easly'],
+          typeSpeed: 50,
+          loop: true,
+          startDelay: 50,
+          backSpeed: 50,
+          smartBackspace: true,
+          shuffle: false,
+        })  
+      </script>
+
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
       <script>
         AOS.init();
@@ -626,9 +632,9 @@
       };
       var xstatus = false;
       var hehe = false;
+
       function dark() {
         var html = document.querySelector("html");
-        var jumbo = document.querySelector("jumbotron");
         if (xstatus) {
           html.classList.remove("dark");
           xstatus = false;
@@ -638,6 +644,27 @@
         }
         console.log(xstatus);
       }
+      function gelap() {
+        var html = document.querySelector("html");
+        var gelapp = document.getElementById("gelapp");
+        var terang = document.getElementById("terang");
+        html.classList.add("dark");
+        gelapp.classList.remove("flex");
+        gelapp.classList.add("hidden");
+        terang.classList.remove("hidden");
+        terang.classList.add("flex");
+      }
+      function light(){
+        var html = document.querySelector("html");
+        var gelapp = document.getElementById("gelapp");
+        var terang = document.getElementById("terang");
+        html.classList.remove("dark");
+        terang.classList.remove("flex");
+        terang.classList.add("hidden");
+        gelapp.classList.remove("hidden");
+        gelapp.classList.add("flex");
+      }
+
       function Menu() {
         if (document.documentElement.scrollTop > 20) {
           document.getElementById("header").classList.add("bg-white");
@@ -676,41 +703,6 @@
         }
         console.log(xstatus);
       }
-      // function pop(){
-      //   var blur = document.getElementById("blur");
-      //   var wellbg = document.getElementById("wellbg");
-      //   var wellbg2 = document.getElementById("wellbg2");
-      //     blur.classList.remove("hidden");
-      //     blur.classList.add("flex");
-      //     blur.classList.add("transition-all");
-      //     blur.classList.add("duration-300");
-      //     blur.classList.add("scale-100");
-      //     blur.classList.remove("scale-0");
-      //     wellbg.classList.remove("hidden")
-      //     wellbg.classList.add("flex")
-      //     wellbg2.classList.add("hidden")
-      //     wellbg2.classList.remove("flex")
-      // }
-      // function pop2(){
-      //   var blur2 = document.getElementById("blur2");
-      //   var wellbg2 = document.getElementById("wellbg2");
-      //     blur2.classList.remove("hidden");
-      //     blur2.classList.add("flex");
-      //     blur2.classList.add("transition-all");
-      //     blur2.classList.add("duration-300");
-      //     blur2.classList.add("scale-100");
-      //     blur2.classList.remove("scale-0");
-      //     wellbg2.classList.remove("hidden")
-      //     wellbg2.classList.add("flex")
-      // }
-      // function exit(){
-      //   var blur = document.getElementById("blur");
-      //   var blur2 = document.getElementById("blur2");
-      //   blur.classList.add("hidden");
-      //   blur.classList.remove("flex");
-      //   blur2.classList.add("hidden");
-      //   blur2.classList.remove("flex");
-      // }
       function showDrop() {
         var daftarDrop = document.getElementById('daftarDrop');
         if (xstatus) {
@@ -729,21 +721,6 @@
         console.log(xstatus);
       }
       
-      function drop() {
-        var dropMode = document.getElementById('dropMode');
-        if (xstatus) {
-          
-          dropMode.classList.add("hidden");
-          dropMode.classList.remove("flex");
-          xstatus = false;
-        } else {
-          
-          dropMode.classList.remove("hidden");
-          dropMode.classList.add("flex");
-          xstatus = true;
-        }
-        console.log(xstatus);
-      }
       function showIsi() {
         var isi = document.getElementById('daftar');
         if (xstatus) {
