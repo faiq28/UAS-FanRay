@@ -11,6 +11,16 @@ html::-webkit-scrollbar-track{
 html::-webkit-scrollbar-thumb{
   @apply rounded-[12px] bg-sky-500
 }
+
+#pop::-webkit-scrollbar {
+  @apply w-4
+}
+#pop::-webkit-scrollbar-track{
+  @apply bg-slate-50 rounded-[12px]
+}
+#pop::-webkit-scrollbar-thumb{
+  @apply rounded-[12px] bg-sky-500
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -24,6 +34,7 @@ html::-webkit-scrollbar-thumb{
   justify-content: center;
   align-items: center;
 }
+
 
 .hamburger-active > span:nth-child(1){
     @apply rotate-[44deg]
@@ -60,25 +71,7 @@ html::-webkit-scrollbar-thumb{
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
-/* modal1 */
-#overlay.active1 {
-  opacity: 1;
-  pointer-events: all;
-}
 
-.modal1 {
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  z-index: 10;
-}
-
-.modal.active1 {
-  transform: translate(-50%, -50%) scale(1);
-}
 
 .pl {
     width: 6em;
@@ -494,7 +487,7 @@ html::-webkit-scrollbar-thumb{
 }
 
 p, h1, h2, button, div {
-    @apply dark:text-slate-50
+    @apply dark:text-slate-100;
 }
 html{
     @apply dark:bg-slate-700
