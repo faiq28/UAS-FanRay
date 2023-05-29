@@ -11,9 +11,453 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
+  <style>
+    #blurGanti::-webkit-scrollbar {
+  @apply w-4
+}
+#blurGanti::-webkit-scrollbar-track{
+  @apply bg-slate-50 rounded-[12px]
+}
+#blurGanti::-webkit-scrollbar-thumb{
+  @apply rounded-[12px] bg-sky-500
+} 
+    .pop{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease-in-out;
+      z-index: 10;
+    }
+    .pop.active-pop{
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .pop.close-pop{
+      transform: translate(-50%, -50%) scale(0);
+    }
 
+    .popup{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease-in-out;
+      z-index: 10;
+    }
+    .popup.active-payment{
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup.close-payment{
+      transform: translate(-50%, -50%) scale(0);
+    }
+    /* card 2 */
+    .pop2{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease-in-out;
+      z-index: 10;
+    }
+    .pop2.active-pop2{
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .pop2.close-pop2{
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    .popup2{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease-in-out;
+      z-index: 10;
+    }
+    .popup2.active-payment2{
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup2.close-payment2{
+      transform: translate(-50%, -50%) scale(0);
+    }
+    /* card 3 */
+    .pop3{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease-in-out;
+      z-index: 10;
+    }
+    .pop3.active-pop3{
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .pop3.close-pop3{
+      transform: translate(-50%, -50%) scale(0);
+    }
+
+    .popup3{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: 200ms ease-in-out;
+      z-index: 10;
+    }
+    .popup3.active-payment3{
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup3.close-payment3{
+      transform: translate(-50%, -50%) scale(0);
+    }
+  </style>
   <body class="font-Poppins bg-white min-h-[5000px] overflow-x-hidden">
+    <!-- card 1 -->
+    <div id="blurGanti" class="pop h-screen w-full dark:bg-slate-800 bg-slate-500 backdrop-blur-sm bg-opacity-70 z-[1000] flex fixed justify-center items-center">
+      <div class="w-[70vw] h-[80vh] overflow-y-scroll rounded-xl my-auto md:h-[85vh] md:w-[85vw]">
+        <div class="w-full bg-slate-100 rounded-xl p-16 md:p-10 dark:bg-slate-800">
+          <div class="flex flex-row w-full justify-between">
+            <div class="flex flex-col mb-10">
+            <h1 class="text-2xl text-slate-800 font-semibold dark:text-slate-800 mb-3">Make your order</h1>
+            <div class="flex flex-row gap-2">
+              <input type="radio">
+              <p class="text-gray-500">Debit or Credit Card</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <input type="radio">
+              <p class="text-cyan-600">Paypal</p>
+            </div>
+            </div>
+             <div class="modal-header flex mr-7">
+              <button onclick="closet()" class="ml-auto absolute cursor-pointer border-none outline-none bg-none scale-[2] font-light dark:text-slate-200 bg-slate-800 bg-opacity-60 text-slate-100 rounded-full px-[8px] p-[-32px] text-xl">&times;</button>
+            </div>
+          </div>
+           <div class="w-full flex flex-col gap-10">
+            <div class="w-full flex flex-col justify-center">
+              <div class="flex flex-row md:flex-col w-full gap-6">
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-300">Email address
+                  <input type="text" id="credit" class="py-[14px] px-4 w-full mt-3 focus:outline-none rounded-md mb-7 dark:bg-transparent dark:shadow-sm dark:shadow-slate-200 text-sm font-light md:mb-0" placeholder="Enter your mobile number">
+                </div>
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-300">Mobile number
+                  <input type="text" id="email" class="py-[14px] px-4 w-full mt-3 focus:outline-none rounded-md mb-7 dark:bg-transparent dark:shadow-sm dark:shadow-slate-200 text-sm font-light md:mb-4" placeholder="Enter your mobile number">
+                </div>
+              </div>
+              <div class="flex flex-row md:flex-col w-full gap-6">
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-300">Email address
+                  <input type="text" id="credit" class="py-[14px] px-4 w-full mt-3 focus:outline-none rounded-md mb-7 dark:bg-transparent dark:shadow-sm dark:shadow-slate-200 text-sm font-light md:mb-4" placeholder="Enter your mobile number">
+                </div>
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-300">Mobile number
+                  <input type="text" id="email" class="py-[14px] px-4 w-full mt-3 focus:outline-none rounded-md mb-7 dark:bg-transparent dark:shadow-sm dark:shadow-slate-200 text-sm font-light md:mb-4" placeholder="Enter your mobile number">
+                </div>
+              </div>
+              
+              <div class="w-full flex flex-row md:flex-col gap-8">
+                <div class="flex flex-col w-2/4">
+                  <label for="email" class="mb-3 text-xl text-gray-600 dark:text-slate-400">Expiry Date</label>
+                  <input type="datetime-local" id="email" class="py-3 px-4 focus:outline-none rounded-md" placeholder="Enter your email address">
+                </div>
+                
+              </div>
+              <div class="flex flex-row gap-2 mt-6 ml-2">
+                <input type="checkbox" class="scale-[1.5]">
+                <p class="">i have a promo code</p>
+              </div>
+            </div>
+            <div class="w-[2px] bg-gray-200"></div>
+            <div class="w-full flex flex-col justify-center">
+              <div class="flex flex-row justify-between mb-5">
+                <p class="text-gray-500 text-xl font-medium">Sub total</p> 
+                <p class="text-gray-500 text-xl font-semibold">499k</p> 
+              </div>
+              <div class="flex flex-row justify-between mb-8">
+                <p class="text-gray-500 text-xl font-medium">Platform Fee</p> 
+                <p class="text-gray-500 text-xl font-semibold">5k</p> 
+              </div>
+              <div class="py-[2px] rounded-full bg-slate-300 mb-8"></div>
+              <div class="flex flex-row justify-between mb-14">
+                <p class="text-gray-500 text-xl font-medium">Total amount</p> 
+                <p class="text-gray-500 text-xl font-semibold">504k</p> 
+              </div>
+              <button onclick="payment()" class="w-[80%] py-4 text-center mx-auto bg-[#19AFFF] font-semibold rounded-lg text-slate-100">Make a Payment</button>
+            </div>
+           </div>
+          </div>
+      </div>
+    </div>
+    <div id="blur" class="popup h-screen w-full dark:bg-slate-800 bg-slate-500 backdrop-blur-sm bg-opacity-70 z-[1000] flex fixed justify-center items-center">
+      <div class="w-[50vw] md:w-[85vw] bg-slate-100 px-8 py-10 rounded-xl flex flex-col items-center justify-center gap-4">
+        <svg class="w-[100px] h-[100px] scale-90" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90 180C40.293 180 0 139.707 0 90C0 40.293 40.293 0 90 0C139.707 0 180 40.293 180 90C180 139.707 139.707 180 90 180ZM81.027 126L144.657 62.361L131.94 49.635L81.027 100.548L55.566 75.087L42.84 87.813L81.027 126Z" fill="#0FA958" fill-opacity="0.7"/>
+        </svg>                                
+        <p class="text-4xl text-[#0FA958] font-semibold mt-4">Your Payment was successful!</p>
+        <div class="mt-12 w-full flex flex-col gap-4 px-14">
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Payment type</p>
+            <p class="text-[#5C5C5C]">Net Banking</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Bank</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">BSI</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Mobile</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">0888 8888 8888</p>
+          </div>
+          <div class="flex flex-row w-full justify-between mb-2">
+            <p class="text-gray-500">Email</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">smkmqhebat@gmail.com</p>
+          </div>
+          <div class="flex flex-row w-full justify-between mb-1">
+            <p class="text-[18px] font-semibold text-[#6C6C6C]">Amount Paid</p>
+            <p class="text-[#6C6C6C] text-[18px] text-opacity-90 font-semibold">504k</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Transaction id</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">475485990</p>
+          </div>  
+          <p class="mt-14 mb-3 text-[#4C4C4C] font-medium text-center">Wait until 1x24 hours then our team will contact you</p>
+          <button onclick="closepayment()" class="py-3 px-8 font-semibold text-white bg-[#19AFFF] text-center rounded-lg w-[40%] mx-auto">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- card 2 -->
+    <div id="blurGanti2" class="pop2 h-screen w-full dark:bg-slate-800 bg-slate-500 backdrop-blur-sm bg-opacity-70 z-[1000] flex fixed justify-center items-center">
+      <div class="w-[70vw] h-[80vh] overflow-y-scroll rounded-xl my-auto md:h-[85vh] md:w-[85vw]">
+        <div class="w-full bg-slate-100 rounded-xl p-16 md:p-10 dark:bg-slate-800">
+          <div class="flex flex-row w-full justify-between">
+            <div class="flex flex-col mb-10">
+            <h1 class="text-2xl text-slate-800 font-semibold dark:text-slate-800 mb-3">Make your order</h1>
+            <div class="flex flex-row gap-2">
+              <input type="radio">
+              <p class="text-gray-500">Debit or Credit Card</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <input type="radio">
+              <p class="text-cyan-600">Paypal</p>
+            </div>
+            </div>
+             <div class="modal-header flex mr-7">
+              <button onclick="closet2()" class="ml-auto absolute cursor-pointer border-none outline-none bg-none scale-[2] font-light dark:text-slate-200 bg-slate-800 bg-opacity-60 text-slate-100 rounded-full px-[8px] p-[-32px] text-xl">&times;</button>
+            </div>
+          </div>
+           <div class="w-full flex flex-col gap-10">
+            <div class="w-full flex flex-col justify-center">
+              <div class="flex flex-row md:flex-col w-full gap-6">
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Email address
+                  <input type="text" id="credit" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-0" placeholder="Enter your mobile number">
+                </div>
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Mobile number
+                  <input type="text" id="email" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-4" placeholder="Enter your mobile number">
+                </div>
+              </div>
+              <div class="flex flex-row md:flex-col w-full gap-6">
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Email address
+                  <input type="text" id="credit" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-4" placeholder="Enter your mobile number">
+                </div>
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Mobile number
+                  <input type="text" id="email" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-4" placeholder="Enter your mobile number">
+                </div>
+              </div>
+              
+              <div class="w-full flex flex-row md:flex-col gap-8">
+                <div class="flex flex-col w-2/4">
+                  <label for="email" class="mb-3 text-xl text-gray-600 dark:text-slate-400">Expiry Date</label>
+                  <input type="datetime-local" id="email" class="py-3 px-4 focus:outline-none rounded-md" placeholder="Enter your email address">
+                </div>
+                
+              </div>
+              <div class="flex flex-row gap-2 mt-6 ml-2">
+                <input type="checkbox" class="scale-[1.5]">
+                <p class="">i have a promo code</p>
+              </div>
+            </div>
+            <div class="w-[2px] bg-gray-200"></div>
+            <div class="w-full flex flex-col justify-center">
+              <div class="flex flex-row justify-between mb-5">
+                <p class="text-gray-500 text-xl font-medium">Sub total</p> 
+                <p class="text-gray-500 text-xl font-semibold">700k</p> 
+              </div>
+              <div class="flex flex-row justify-between mb-5">
+                <p class="text-gray-500 text-xl font-medium">Discount promo</p> 
+                <p class="text-gray-500 text-xl font-semibold">101k</p> 
+              </div>
+              <div class="flex flex-row justify-between mb-8">
+                <p class="text-gray-500 text-xl font-medium">Platform Fee</p> 
+                <p class="text-gray-500 text-xl font-semibold">6k</p> 
+              </div>
+              <div class="py-[2px] rounded-full bg-slate-300 mb-8"></div>
+              <div class="flex flex-row justify-between mb-14">
+                <p class="text-gray-500 text-xl font-medium">Total amount</p> 
+                <p class="text-gray-500 text-xl font-semibold">605k</p> 
+              </div>
+              <button onclick="payment2()" class="w-[80%] py-4 text-center mx-auto bg-[#19AFFF] font-semibold rounded-lg text-slate-100">Make a Payment</button>
+            </div>
+           </div>
+          </div>
+      </div>
+    </div>
+    <div id="blur2" class="popup2 h-screen w-full dark:bg-slate-800 bg-slate-500 backdrop-blur-sm bg-opacity-70 z-[1000] flex fixed justify-center items-center">
+      <div class="w-[50vw] md:w-[85vw] bg-slate-100 px-8 py-10 rounded-xl flex flex-col items-center justify-center gap-4">
+        <svg class="w-[100px] h-[100px] scale-90" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90 180C40.293 180 0 139.707 0 90C0 40.293 40.293 0 90 0C139.707 0 180 40.293 180 90C180 139.707 139.707 180 90 180ZM81.027 126L144.657 62.361L131.94 49.635L81.027 100.548L55.566 75.087L42.84 87.813L81.027 126Z" fill="#0FA958" fill-opacity="0.7"/>
+        </svg>                                
+        <p class="text-4xl text-[#0FA958] font-semibold mt-4">Your Payment was successful!</p>
+        <div class="mt-12 w-full flex flex-col gap-4 px-14">
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Payment type</p>
+            <p class="text-[#5C5C5C]">Net Banking</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Bank</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">M-banking</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Mobile</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">0846 8w97 ww959w59</p>
+          </div>
+          <div class="flex flex-row w-full justify-between mb-2">
+            <p class="text-gray-500">Email</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">smkmqhebat@gmail.com</p>
+          </div>
+          <div class="flex flex-row w-full justify-between mb-1">
+            <p class="text-[18px] font-semibold text-[#6C6C6C]">Amount Paid</p>
+            <p class="text-[#6C6C6C] text-[18px] text-opacity-90 font-semibold">605k</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Transaction id</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">0584930091</p>
+          </div>  
+          <p class="mt-14 mb-3 text-[#4C4C4C] text-opacity-80 text-center">Wait until 1x24 hours then our team will contact you</p>
+          <button onclick="closepayment2()" class="py-3 px-8 font-semibold text-white bg-[#19AFFF] text-center rounded-lg w-[40%] mx-auto">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- card 3 -->
+    <div id="blurGanti3" class="pop3 h-screen w-full dark:bg-slate-800 bg-slate-500 backdrop-blur-sm bg-opacity-70 z-[1000] flex fixed justify-center items-center">
+      <div class="w-[70vw] h-[80vh] overflow-y-scroll rounded-xl my-auto md:h-[85vh] md:w-[85vw]">
+        <div class="w-full bg-slate-100 rounded-xl p-16 md:p-10 dark:bg-slate-800">
+          <div class="flex flex-row w-full justify-between">
+            <div class="flex flex-col mb-10">
+            <h1 class="text-2xl text-slate-800 font-semibold dark:text-slate-800 mb-3">Make your order</h1>
+            <div class="flex flex-row gap-2">
+              <input type="radio">
+              <p class="text-gray-500">Debit or Credit Card</p>
+            </div>
+            <div class="flex flex-row gap-2">
+              <input type="radio">
+              <p class="text-cyan-600">Paypal</p>
+            </div>
+            </div>
+             <div class="modal-header flex mr-7">
+              <button onclick="closet3()" class="ml-auto absolute cursor-pointer border-none outline-none bg-none scale-[2] font-light dark:text-slate-200 bg-slate-800 bg-opacity-60 text-slate-100 rounded-full px-[8px] p-[-32px] text-xl">&times;</button>
+            </div>
+          </div>
+           <div class="w-full flex flex-col gap-10">
+            <div class="w-full flex flex-col justify-center">
+              <div class="flex flex-row md:flex-col w-full gap-6">
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Email address
+                  <input type="text" id="credit" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-0" placeholder="Enter your mobile number">
+                </div>
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Mobile number
+                  <input type="text" id="email" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-4" placeholder="Enter your mobile number">
+                </div>
+              </div>
+              <div class="flex flex-row md:flex-col w-full gap-6">
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Email address
+                  <input type="text" id="credit" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-4" placeholder="Enter your mobile number">
+                </div>
+                <div class="w-2/4 md:w-full flex flex-col gap-3">
+                  <label for="credit" class="mb-3 text-lg text-gray-600 dark:text-slate-400">Mobile number
+                  <input type="text" id="email" class="py-3 px-4 w-full mt-3 focus:outline-none rounded-md mb-7 md:mb-4" placeholder="Enter your mobile number">
+                </div>
+              </div>
+              
+              <div class="w-full flex flex-row md:flex-col gap-8">
+                <div class="flex flex-col w-2/4">
+                  <label for="email" class="mb-3 text-xl text-gray-600 dark:text-slate-400">Expiry Date</label>
+                  <input type="datetime-local" id="email" class="py-3 px-4 focus:outline-none rounded-md" placeholder="Enter your email address">
+                </div>
+                
+              </div>
+              <div class="flex flex-row gap-2 mt-6 ml-2">
+                <input type="checkbox" class="scale-[1.5]">
+                <p class="">i have a promo code</p>
+              </div>
+            </div>
+            <div class="w-[2px] bg-gray-200"></div>
+            <div class="w-full flex flex-col justify-center">
+              <div class="flex flex-row justify-between mb-5">
+                <p class="text-gray-500 text-xl font-medium">Sub total</p> 
+                <p class="text-gray-500 text-xl font-semibold">1.199k</p> 
+              </div>
+              <div class="flex flex-row justify-between mb-8">
+                <p class="text-gray-500 text-xl font-medium">Platform Fee</p> 
+                <p class="text-gray-500 text-xl font-semibold">8k</p> 
+              </div>
+              <div class="py-[2px] rounded-full bg-slate-300 mb-8"></div>
+              <div class="flex flex-row justify-between mb-14">
+                <p class="text-gray-500 text-xl font-medium">Total amount</p> 
+                <p class="text-gray-500 text-xl font-semibold">1.207k</p> 
+              </div>
+              <button onclick="payment3()" class="w-[80%] py-4 text-center mx-auto bg-[#19AFFF] font-semibold rounded-lg text-slate-100">Make a Payment</button>
+            </div>
+           </div>
+          </div>
+      </div>
+    </div>
+    <div id="blur3" class="popup3 h-screen w-full dark:bg-slate-800 bg-slate-500 backdrop-blur-sm bg-opacity-70 z-[1000] flex fixed justify-center items-center">
+      <div class="w-[50vw] md:w-[85vw] bg-slate-100 px-8 py-10 rounded-xl flex flex-col items-center justify-center gap-4">
+        <svg class="w-[100px] h-[100px] scale-90" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90 180C40.293 180 0 139.707 0 90C0 40.293 40.293 0 90 0C139.707 0 180 40.293 180 90C180 139.707 139.707 180 90 180ZM81.027 126L144.657 62.361L131.94 49.635L81.027 100.548L55.566 75.087L42.84 87.813L81.027 126Z" fill="#0FA958" fill-opacity="0.7"/>
+        </svg>                                
+        <p class="text-4xl text-[#0FA958] font-semibold mt-4">Your Payment was successful!</p>
+        <div class="mt-12 w-full flex flex-col gap-4 px-14">
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Payment type</p>
+            <p class="text-[#5C5C5C]">Net Banking</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Bank</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">Debit</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Mobile</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">0846 8w97 ww959w59</p>
+          </div>
+          <div class="flex flex-row w-full justify-between mb-2">
+            <p class="text-gray-500">Email</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">smkmqhebat@gmail.com</p>
+          </div>
+          <div class="flex flex-row w-full justify-between mb-1">
+            <p class="text-[18px] font-semibold text-[#6C6C6C]">Amount Paid</p>
+            <p class="text-[#6C6C6C] text-[18px] text-opacity-90 font-semibold">1.207k</p>
+          </div>
+          <div class="flex flex-row w-full justify-between">
+            <p class="text-gray-500">Transaction id</p>
+            <p class="text-[#5C5C5C] font-medium text-opacity-90">4795759581</p>
+          </div>  
+          <p class="mt-14 mb-3 text-[#4C4C4C] text-opacity-80 text-center">Wait until 1x24 hours then our team will contact you</p>
+          <button onclick="closepayment3()" class="py-3 px-8 font-semibold text-white bg-[#19AFFF] text-center rounded-lg w-[40%] mx-auto">Close</button>
+        </div>
+      </div>
+    </div>
+
     <div class="h-screen w-full fixed flex z-[100] bg-slate-800 bg-opacity-70 backdrop-blur-lg items-center justify-center" id="loader" >
       <svg class="pl scale-150 " width="240" height="240" viewBox="0 0 240 240">
         <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
@@ -85,9 +529,12 @@
               </div>
               <li><a href="#about" class="text-[16px] dark:text-slate-200 text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">About</a></li>
               <li><a href="#FAQ" class="text-[16px] dark:text-slate-200 text-[#1B1B1B] text-opacity-70 font-medium hover:bg-slate-100 rounded-full transition ease-in-out px-4 py-[6px]">FAQ</a></li>
-              <li class="mt-2">
-                <button onclick="drop()" href="#" class="text-[16px] dark:text-white font-medium">
+              <li class="mt-[4px]">
+                <button id="gelapp" onclick="gelap()" href="#" class="flex">
                   <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
+                </button>
+                <button id="terang" onclick="light()" href="#" class="hidden">
+                  <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
                 </button>
               </li>
             </ul>
@@ -120,20 +567,10 @@
         <a href="#jumbotron" class="p-5 bg-sky-400 fixed bottom-10 right-4 rounded-full">Up</a>
       </section>
       <section id="jumbotron">
-        <div class="hidden p-4 rounded-lg gap-1 bg-slate-200 backdrop-blur-sm bg-opacity-70 flex-col justify-center ml-[640px] z-20 fixed mt-[64px] w-[20%]" id="daftarDrop">
-          <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./Service.html">Service Website & Application</a>
-          <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./Branding.html">Branding Content Creation</a>
-          <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./digital.html">Digital Marketing</a>
-        </div>
-        <div class="hidden p-2 bg-red-100 flex-col justify-center ml-[1030px] z-20 fixed mt-14 w-[10%]" id="dropMode">
-          <div class="flex flex-row gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" class="fill-sky-400/20 stroke-sky-500"></path><path d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836" class="stroke-sky-500"></path></svg>
-            <a href="">Light</a>
-          </div>
-          <div class="flex flex-row gap-2 mt-2">
-            <svg viewBox="0 0 24 24" fill="none" class="w-6 h-6 mr-2"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z" class="fill-sky-400/20"></path><path d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z" class="fill-sky-500"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z" class="fill-sky-500"></path></svg>
-            <button onclick="dark()" class="-ml-1">Dark</button>
-          </div>
+        <div class="hidden p-4 rounded-lg gap-1 bg-slate-100 dark:bg-slate-800 dark:backdrop-blur-sm dark:bg-opacity-70 backdrop-blur-sm bg-opacity-70 flex-col justify-center ml-[640px] z-20 fixed mt-[64px] w-[20%]" id="daftarDrop">
+          <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white dark:text-slate-800 rounded-lg transition-all ease-in-out" href="./Service.html">Service Website & Application</a>
+          <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white dark:text-slate-800 rounded-lg transition-all ease-in-out" href="./Branding.html">Branding Content Creation</a>
+          <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white dark:text-slate-800 rounded-lg transition-all ease-in-out" href="./digital.html">Digital Marketing</a>
         </div>
         <div class="w-full py-56 bg-service px-14 md:px-8 flex flex-wrap md:flex-col-reverse md:gap-0 gap-8">
           <div class="w-full flex flex-col items-center justify-center md:mt-28 mb-10">
@@ -175,16 +612,15 @@
           </div>
         </div>
       </section>
-
       <section id="content">
         <div class="w-full px-14 md:px-8 lg:px-10 pb-10 bg-opacity-50 dark:bg-gradient-to-b dark:from-slate-800 dark:via-slate-800 dark:to-slate-900">
           <div class="w-full flex items-center justify-center flex-col ">
             <div class="w-full flex items-center mx-auto justify-center flex-row md:flex-col gap-14 mt-20">
-              <div class="w-[50%] md:w-full flex h-[230px] rounded-xl justify-center flex-col p-6 mt-24 md:-mb-14 hover:scale-105 transition-all ease-in-out">
+              <div data-aos="fade-right" class="w-[50%] md:w-full flex h-[230px] rounded-xl justify-center flex-col p-6 mt-24 md:-mb-14 hover:scale-105 transition-all ease-in-out">
                   <img src="img/image 3.png" alt="" class="md:max-w-[430px] md:max-h-[330px] max-w-xl mah scale-90 md:scale-100">
               </div>
 
-              <div class="w-[50%] md:w-full flex flex-col justify-center">
+              <div data-aos="fade-left" class="w-[50%] md:w-full flex flex-col justify-center">
                 <h1 class="text-2xl mb-4 w-[419px] dark:text-slate-200">BUILD MODERN WEBSITES QUICKLY USING TAILWIND CSS</h1>
                 <p class=" dark:text-slate-300">Fanray’s purpose is to assist all web developers in rapidly and easily developing
                     a website. You will no longer have to worry about developing great websites
@@ -192,11 +628,11 @@
               </div>
             </div>
             <div class="w-full flex justify-between flex-row-reverse md:flex-col gap-14 md:mt-2 mt-40">
-              <div class="w-[50%] md:w-full flex h-[230px] rounded-xl justify-center flex-col p-6 mt-24 md:-mb-14 hover:scale-105 transition-all ease-in-out">
+              <div data-aos="fade-left" data-aos-duration="500" class="w-[50%] md:w-full flex h-[230px] rounded-xl justify-center flex-col p-6 mt-24 md:-mb-14 hover:scale-105 transition-all ease-in-out">
                 <img src="img/image 3.png" alt="" class="md:max-w-[430px] md:max-h-[330px] max-w-xl mah scale-90 md:scale-100">
               </div>
 
-              <div class="flex flex-col w-[50%] md:w-full justify-center">
+              <div data-aos="fade-right" data-aos-duration="500" class="flex flex-col w-[50%] md:w-full justify-center">
                 <h1 class="text-2xl mb-4 w-[419px] dark:text-slate-200">Best Hosting</h1>
                 <p class=" dark:text-slate-300">We provide fast servers with superior security for your website. Where this affects the comfort of visitors when accessing your website, and indirectly the website can increase sales.</p>
               </div>
@@ -277,16 +713,16 @@
               <h1 class="text-base">Determine the website creation package according to your needs.</h1>
             </div>
             <div class="w-full flex flex-row justify-center items-center gap-5 mb-20 md:w-full md:px-0 mx-auto">
-              <button onclick="tombol1()" id="btn1" class="py-3 px-5 bg-[#0468D7] text-base text-slate-50 rounded-lg ">Website Company Profile</button>
-              <button onclick="tombol2()" id="btn2" class="py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">Online Store Website</button>
-              <button onclick="tombol3()" id="btn3" class="py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">Website Custom</button>
-              <button onclick="tombol4()" id="btn4" class="py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">Mobile Application</button>
+              <button onclick="tombol1()" id="btn1" class="py-3 px-5 bg-[#0468D7] dark:bg-[#0468D7] dark:text-slate-50 text-base text-slate-50 rounded-lg">Website Company Profile</button>
+              <button onclick="tombol2()" id="btn2" class="py-3 px-5 bg-gray-50 dark:bg-gray-300 dark:text-slate-800  text-base text-slate-600 rounded-lg">Online Store Website</button>
+              <button onclick="tombol3()" id="btn3" class="py-3 px-5 bg-gray-50 dark:bg-gray-300 dark:text-slate-800  text-base text-slate-600 rounded-lg">Website Custom</button>
+              <button onclick="tombol4()" id="btn4" class="py-3 px-5 bg-gray-50 dark:bg-gray-300 dark:text-slate-800  text-base text-slate-600 rounded-lg">Mobile Application</button>
             </div>
             <div id="item1" class="md:overflow-x-scroll mx-auto flex flex-row md:flex-row justify-center md:px-0 md:w-full gap-6">
-              <div class=" md:flex-shrink-0 w-[310px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
-                <h1 class="flex-none text-2xl font-medium mb-[14px]">Economic Package</h1>
-                <h1 class="flex-none text-4xl font-medium mb-6">IDR 499K</h1>
-                <p class="flex-none py-3 px-5  bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</p>
+              <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 bg-opacity-80 rounded-lg">
+                <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Economic Package</h1>
+                <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 499K</h1>
+                <button onclick="popGanti()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
                 <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -339,13 +775,34 @@
                       </svg>          
                     <p class="">5 Pages Website</p>        
                   </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Capaticy 500mb</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">+10 Featured Themes</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">5 Pages Website</p>        
+                  </div>
                   <button onclick="myvar = setTimeout(view,150,AnimationEffect)" class="mx-auto mt-8">View Less</button>
                 </div>
               </div>
-              <div class=" md:flex-shrink-0 w-[310px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
-                <h1 class="flex-none text-2xl font-medium mb-[14px]">Economic Package</h1>
-                <h1 class="flex-none text-4xl font-medium mb-6">IDR 499K</h1>
-                <p class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</p>
+              <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 bg-opacity-80 rounded-lg">
+                <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Business Package</h1>
+                <div class="flex flex-row font-semibold gap-3">
+                  <h1 class="text-4xl font-medium mb-6 line-through text-gray-600 dark:text-gray-600 opacity-60">IDR 700K</h1>
+                  <p class="text-3xl text-slate-700 dark:text-slate-700 mt-[3px]">599k</p>
+                </div>
+                <button onclick="popGanti2()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
                 <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -419,10 +876,10 @@
                   <button onclick="myvar2 = setTimeout(view2,150,AnimationEffect)" class="mx-auto mt-8">View Less</button>
                 </div>
               </div>
-              <div class=" md:flex-shrink-0 w-[310px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
-                <h1 class="flex-none text-2xl font-medium mb-[14px]">Economic Package</h1>
-                <h1 class="flex-none text-4xl font-medium mb-6">IDR 499K</h1>
-                <p class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</p>
+              <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 bg-opacity-80 rounded-lg">
+                <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Corporate Package</h1>
+                <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700 text-slate-700 dark:text-slate-700">IDR 1.199K</h1>
+                <button onclick="popGanti3()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
                 <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -496,90 +953,12 @@
                   <button onclick="myvar3 = setTimeout(view3,150,AnimationEffect)" class="mx-auto mt-8">View Less</button>
                 </div>
               </div>
-              <div class=" md:flex-shrink-0 w-[310px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
-                <h1 class="flex-none text-2xl font-medium mb-[14px]">Economic Package</h1>
-                <h1 class="flex-none text-4xl font-medium mb-6">IDR 499K</h1>
-                <p class="flex-none py-3 px-5  bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</p>
-                <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">Domain .my.id</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">Capaticy 500mb</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">+10 Featured Themes</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">5 Pages Website</p>        
-                  </div>
-                </div>  
-                <button onclick="myvar4 = setTimeout(view4,100,AnimationEffect)" class="mx-auto">View More</button>
-                <div id="daftarCard4" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100 flex-col gap-y-[14px] -mb-12">
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">Domain .my.id</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">Capaticy 500mb</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">+10 Featured Themes</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">5 Pages Website</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">Capaticy 500mb</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">+10 Featured Themes</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="">5 Pages Website</p>        
-                  </div>
-                  <button onclick="myvar4 = setTimeout(view4,150,AnimationEffect)" class="mx-auto mt-8">View Less</button>
-                </div>
-              </div>
-              
             </div>
 
             <div id="item2" class="md:overflow-x-scroll hidden md:hidden mx-auto flex-row md:flex-row justify-center md:px-0 md:w-full gap-6 group">
               <div  class="h-full w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
                 <h1 class="text-2xl font-medium mb-[14px]">Economic Package</h1>
-                <h1 class="text-4xl font-medium mb-6">IDR 1.999K</h1>
+                <h1 class="text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 1.999K</h1>
                 <p class="py-3 px-5 text-center rounded-md mb-7 bg-[#0468D7] text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100 ">Choose package</p>
                 <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
@@ -674,7 +1053,7 @@
               </div>
               <div  class="h-full w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
                 <h1 class="text-2xl font-medium mb-[14px]">Business Package</h1>
-                <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+                <h1 class="text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">CALL US</h1>
                 <p class="py-3 px-5 text-center rounded-md mb-7 bg-[#0468D7] text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</p>
                 <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
@@ -787,7 +1166,7 @@
               </div>
               <div  class="h-full w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
                 <h1 class="text-2xl font-medium mb-[14px]">Corporate Package</h1>
-                <h1 class="text-4xl font-medium mb-6">CALL US</h1>
+                <h1 class="text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">CALL US</h1>
                 <p class="py-3 px-5 text-center rounded-md mb-7 bg-[#0468D7] text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</p>
                 <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
@@ -966,7 +1345,7 @@
       </section>
       <section id="FAQ">
         <div class="w-full px-14 py-28 flex flex-col md:px-8 lg:px-10 dark:bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800 dark:bg-opacity-90">
-          <h1 class="w-2/4 lg:w-3/4 md:w-full md:text-center text-4xl leading-[50px] font-medium text-slate-700 mx-auto text-center mb-10">FAQ about Digital Marketing</h1>
+          <h1 class="w-2/4 lg:w-3/4 md:w-full md:text-center text-4xl leading-[50px] font-medium text-slate-700 dark:text-slate-700 mx-auto text-center mb-10">FAQ about Digital Marketing</h1>
           <div class="w-full flex flex-col gap-8">
             <div class="w-[70%] md:w-full flex flex-col justify-center px-6 py-6 bg-slate-100 dark:bg-slate-200 rounded-lg mx-auto">
               <p class=" dark:text-slate-900">What is Digital Marketing?</p>
@@ -1161,6 +1540,92 @@
         },
       });
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- pop up -->
+    <script>
+      // card 1
+      function popGanti(){
+        const blurGanti = document.getElementById('blurGanti');
+        const header = document.getElementById("header");
+        header.classList.add('hidden')
+        header.classList.remove('flex')
+        blurGanti.classList.toggle('active-pop');
+        blurGanti.classList.remove('close-pop');
+      }
+      function closet(){
+        const blurGanti = document.getElementById('blurGanti'); 
+        blurGanti.classList.toggle('close-pop');
+        blurGanti.classList.remove('active-pop');
+        header.classList.remove('hidden')
+        header.classList.add('flex')
+      }
+      function payment(){
+        const blur = document.getElementById('blur');
+        blur.classList.toggle('active-payment');
+        blur.classList.remove('close-payment');
+      }
+      function closepayment(){
+        const blur = document.getElementById('blur');
+        blur.classList.toggle('close-payment');
+        blur.classList.remove('active-payment');
+      }
+      
+      // card 2
+      function popGanti2(){
+        const blurGanti2 = document.getElementById('blurGanti2');
+        const header = document.getElementById("header");
+        header.classList.add('hidden')
+        header.classList.remove('flex')
+        blurGanti2.classList.toggle('active-pop2');
+        blurGanti2.classList.remove('close-pop2');
+      }
+      function closet2(){
+        const blurGanti2 = document.getElementById('blurGanti2'); 
+        blurGanti2.classList.toggle('close-pop2');
+        blurGanti2.classList.remove('active-pop2');
+        header.classList.remove('hidden')
+        header.classList.add('flex')
+      }
+      function payment2(){
+        const blur2 = document.getElementById('blur2');
+        blur2.classList.toggle('active-payment2');
+        blur2.classList.remove('close-payment2');
+      }
+      function closepayment2(){
+        const blur2 = document.getElementById('blur2');
+        blur2.classList.toggle('close-payment2');
+        blur2.classList.remove('active-payment2');
+      }
+      // card 3
+      function popGanti3(){
+        const blurGanti3 = document.getElementById('blurGanti3');
+        const header = document.getElementById("header");
+        header.classList.add('hidden')
+        header.classList.remove('flex')
+        blurGanti3.classList.toggle('active-pop3');
+        blurGanti3.classList.remove('close-pop3');
+      }
+      function closet3(){
+        const blurGanti3 = document.getElementById('blurGanti3'); 
+        blurGanti3.classList.toggle('close-pop3');
+        blurGanti3.classList.remove('active-pop3');
+        header.classList.remove('hidden')
+        header.classList.add('flex')
+      }
+      function payment3(){
+        const blur3 = document.getElementById('blur3');
+        blur3.classList.toggle('active-payment3');
+        blur3.classList.remove('close-payment3');
+      }
+      function closepayment3(){
+        const blur3 = document.getElementById('blur3');
+        blur3.classList.toggle('close-payment3');
+        blur3.classList.remove('active-payment3');
+      }
+    </script>
     <script src="load.js"></script>
     <script>
       window.onscroll = function () {
@@ -1168,8 +1633,6 @@
       };
       var xstatus = false;
       var hehe = false;
-
-      
       function view(){
         var daftar = document.getElementById('daftarCard');
         if(xstatus) {
@@ -1190,7 +1653,6 @@
       }
       function view2(){
         var daftar2 = document.getElementById('daftarCard2');
-        var daftar = document.getElementById('daftarCard');
         if(xstatus) {
           daftar2.classList.add('hidden');
           daftar2.classList.remove('flex');
@@ -1222,24 +1684,6 @@
           daftar3.classList.add("translate-y-[152px]");
           daftar3.classList.add("delay-500");
           daftar3.classList.add("transtion-all");
-          xstatus = true;
-        }
-      }
-      function view4(){
-        var daftar4 = document.getElementById('daftarCard4');
-        if(xstatus) {
-          daftar4.classList.add('hidden');
-          daftar4.classList.remove('flex');
-          daftar4.classList.remove("translate-y-[152px]");
-          daftar4.classList.remove("delay-500");
-          daftar4.classList.remove("transtion-all");
-          xstatus = false;
-        } else{
-          daftar4.classList.remove("hidden");
-          daftar4.classList.add("flex");
-          daftar4.classList.add("translate-y-[152px]");
-          daftar4.classList.add("delay-500");
-          daftar4.classList.add("transtion-all");
           xstatus = true;
         }
       }
@@ -1279,7 +1723,6 @@
           xstatus = true;
         }
       }
-      
       function scrol() {
         if(document.documentElement.scrollTop > 2630) {
           document.getElementById("scrol").classList.add("fixed")
@@ -1362,22 +1805,6 @@
         }
         console.log(xstatus);
       }
-
-      function drop() {
-        var dropMode = document.getElementById('dropMode');
-        if (xstatus) {
-          
-          dropMode.classList.add("hidden");
-          dropMode.classList.remove("flex");
-          xstatus = false;
-        } else {
-          
-          dropMode.classList.remove("hidden");
-          dropMode.classList.add("flex");
-          xstatus = true;
-        }
-        console.log(xstatus);
-      }
       
       function tombol1() {
         document.getElementById("item1").classList.remove("hidden");
@@ -1395,23 +1822,38 @@
         document.getElementById("btn1").classList.add("text-slate-50");
         document.getElementById("btn1").classList.remove("bg-gray-50");
         document.getElementById("btn1").classList.remove("text-slate-600");
+        document.getElementById("btn1").classList.add("dark:bg-[#0468D7]");
+        document.getElementById("btn1").classList.add("dark:text-slate-50");
+        document.getElementById("btn1").classList.remove("dark:bg-gray-300");
+        document.getElementById("btn1").classList.remove("dark:text-slate-800");
         // btn2
         document.getElementById("btn2").classList.remove("bg-[#0468D7]");
         document.getElementById("btn2").classList.remove("text-slate-200");
         document.getElementById("btn2").classList.add("bg-gray-50");
         document.getElementById("btn2").classList.add("text-slate-600");
+        document.getElementById("btn2").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn2").classList.remove("dark:text-slate-800");
+        document.getElementById("btn2").classList.add("dark:bg-gray-300");
+        document.getElementById("btn2").classList.add("dark:text-slate-800");
         //btn 3
         document.getElementById("btn3").classList.remove("bg-[#0468D7]");
         document.getElementById("btn3").classList.remove("text-slate-50");
         document.getElementById("btn3").classList.add("bg-gray-50");
         document.getElementById("btn3").classList.add("text-slate-600");
+        document.getElementById("btn3").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn3").classList.remove("dark:text-slate-800");
+        document.getElementById("btn3").classList.add("dark:bg-gray-300");
+        document.getElementById("btn3").classList.add("dark:text-slate-800");
         //btn 4
         document.getElementById("btn4").classList.remove("bg-[#0468D7]");
         document.getElementById("btn4").classList.remove("text-slate-50");
         document.getElementById("btn4").classList.add("bg-gray-50");
         document.getElementById("btn4").classList.add("text-slate-600");
+        document.getElementById("btn4").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn4").classList.remove("dark:text-slate-800");
+        document.getElementById("btn4").classList.add("dark:bg-gray-300");
+        document.getElementById("btn4").classList.add("dark:text-slate-800");
       }
-
       function tombol2() {
         document.getElementById("item2").classList.add("flex");
         document.getElementById("item2").classList.add("md:flex");
@@ -1432,23 +1874,39 @@
         document.getElementById("btn2").classList.add("text-slate-50");
         document.getElementById("btn2").classList.remove("bg-gray-50");
         document.getElementById("btn2").classList.remove("text-slate-600");
+        document.getElementById("btn2").classList.add("dark:bg-[#0468D7]");
+        document.getElementById("btn2").classList.add("dark:text-slate-800");
+        document.getElementById("btn2").classList.remove("dark:bg-gray-300");
+        document.getElementById("btn2").classList.remove("dark:text-slate-800");
         // btn1
         document.getElementById("btn1").classList.remove("bg-[#0468D7]");
         document.getElementById("btn1").classList.remove("text-slate-50");
         document.getElementById("btn1").classList.add("bg-gray-50");
         document.getElementById("btn1").classList.add("text-slate-600");
+        document.getElementById("btn1").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn1").classList.remove("dark:text-slate-50");
+        document.getElementById("btn1").classList.add("dark:bg-gray-300");
+        document.getElementById("btn1").classList.add("dark:text-slate-800");
+        
         //btn 3
         document.getElementById("btn3").classList.remove("bg-[#0468D7]");
         document.getElementById("btn3").classList.remove("text-slate-50");
         document.getElementById("btn3").classList.add("bg-gray-50");
         document.getElementById("btn3").classList.add("text-slate-600");
+        document.getElementById("btn3").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn3").classList.remove("dark:text-slate-50");
+        document.getElementById("btn3").classList.add("dark:bg-gray-300");
+        document.getElementById("btn3").classList.add("dark:text-slate-800");
         //btn 4
         document.getElementById("btn4").classList.remove("bg-[#0468D7]");
         document.getElementById("btn4").classList.remove("text-slate-50");
         document.getElementById("btn4").classList.add("bg-gray-50");
         document.getElementById("btn4").classList.add("text-slate-600");
+        document.getElementById("btn4").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn4").classList.remove("dark:text-slate-50");
+        document.getElementById("btn4").classList.add("dark:bg-gray-300");
+        document.getElementById("btn4").classList.add("dark:text-slate-800");
       }
-      
       function tombol3() {
         document.getElementById("item2").classList.remove("flex");
         document.getElementById("item2").classList.remove("md:flex");
@@ -1467,28 +1925,43 @@
         document.getElementById("btn1").classList.remove("text-slate-50");
         document.getElementById("btn1").classList.add("bg-gray-50");
         document.getElementById("btn1").classList.add("text-slate-600");
+        document.getElementById("btn1").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn1").classList.remove("dark:text-slate-50");
+        document.getElementById("btn1").classList.add("dark:bg-gray-300");
+        document.getElementById("btn1").classList.add("dark:text-slate-800");
         //btn 2
         document.getElementById("btn2").classList.remove("bg-[#0468D7]");
         document.getElementById("btn2").classList.remove("text-slate-50");
         document.getElementById("btn2").classList.add("bg-gray-50");
         document.getElementById("btn2").classList.add("text-slate-600");
+        document.getElementById("btn2").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn2").classList.remove("dark:text-slate-50");
+        document.getElementById("btn2").classList.add("dark:bg-gray-300");
+        document.getElementById("btn2").classList.add("dark:text-slate-800");
         //btn 3
         document.getElementById("btn3").classList.add("bg-[#0468D7]");
         document.getElementById("btn3").classList.add("text-slate-50");
         document.getElementById("btn3").classList.remove("bg-gray-50");
         document.getElementById("btn3").classList.remove("text-slate-600");
+        document.getElementById("btn3").classList.add("dark:bg-[#0468D7]");
+        document.getElementById("btn3").classList.add("dark:text-slate-800");
+        document.getElementById("btn3").classList.remove("dark:bg-gray-300");
+        document.getElementById("btn3").classList.remove("dark:text-slate-800");
         //btn 4
         document.getElementById("btn4").classList.remove("bg-[#0468D7]");
         document.getElementById("btn4").classList.remove("text-slate-50");
         document.getElementById("btn4").classList.add("bg-gray-50");
         document.getElementById("btn4").classList.add("text-slate-600");
+        document.getElementById("btn4").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn4").classList.remove("dark:text-slate-50");
+        document.getElementById("btn4").classList.add("dark:bg-gray-300");
+        document.getElementById("btn4").classList.add("dark:text-slate-800");
       }
-
       function tombol4() {
-        document.getElementById("item2").classList.remove("flex");
-        document.getElementById("item2").classList.add("hidden");
         document.getElementById("item1").classList.remove("flex");
         document.getElementById("item1").classList.add("hidden");
+        document.getElementById("item2").classList.remove("flex");
+        document.getElementById("item2").classList.add("hidden");
         document.getElementById("item3").classList.remove("flex");
         document.getElementById("item3").classList.add("hidden");
         document.getElementById("item4").classList.add("flex");
@@ -1498,22 +1971,40 @@
         document.getElementById("btn1").classList.remove("text-slate-50");
         document.getElementById("btn1").classList.add("bg-gray-50");
         document.getElementById("btn1").classList.add("text-slate-600");
+        document.getElementById("btn1").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn1").classList.remove("dark:text-slate-50");
+        document.getElementById("btn1").classList.add("dark:bg-gray-300");
+        document.getElementById("btn1").classList.add("dark:text-slate-800");
         //btn 2
         document.getElementById("btn2").classList.remove("bg-[#0468D7]");
         document.getElementById("btn2").classList.remove("text-slate-50");
         document.getElementById("btn2").classList.add("bg-gray-50");
         document.getElementById("btn2").classList.add("text-slate-600");
+        document.getElementById("btn2").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn2").classList.remove("dark:text-slate-50");
+        document.getElementById("btn2").classList.add("dark:bg-gray-300");
+        document.getElementById("btn2").classList.add("dark:text-slate-800");
         //btn 3
         document.getElementById("btn3").classList.remove("bg-[#0468D7]");
         document.getElementById("btn3").classList.remove("text-slate-50");
         document.getElementById("btn3").classList.add("bg-gray-50");
         document.getElementById("btn3").classList.add("text-slate-600");
+        document.getElementById("btn3").classList.remove("dark:bg-[#0468D7]");
+        document.getElementById("btn3").classList.remove("dark:text-slate-50");
+        document.getElementById("btn3").classList.add("dark:bg-gray-300");
+        document.getElementById("btn3").classList.add("dark:text-slate-800");
         //btn 4
         document.getElementById("btn4").classList.add("bg-[#0468D7]");
         document.getElementById("btn4").classList.add("text-slate-50");
         document.getElementById("btn4").classList.remove("bg-gray-50");
         document.getElementById("btn4").classList.remove("text-slate-600");
+        document.getElementById("btn4").classList.add("dark:bg-[#0468D7]");
+        document.getElementById("btn4").classList.add("dark:text-slate-800");
+        document.getElementById("btn4").classList.remove("dark:bg-gray-300");
+        document.getElementById("btn4").classList.remove("dark:text-slate-800");
       }
+      
+
       
       function dark() {
         var html = document.querySelector("html");
@@ -1526,6 +2017,29 @@
         }
         console.log(hehe);
       }
+      
+      function gelap() {
+        var html = document.querySelector("html");
+        var gelapp = document.getElementById("gelapp");
+        var terang = document.getElementById("terang");
+        html.classList.add("dark");
+        gelapp.classList.remove("flex");
+        gelapp.classList.add("hidden");
+        terang.classList.remove("hidden");
+        terang.classList.add("flex");
+      }
+      
+      function light(){
+        var html = document.querySelector("html");
+        var gelapp = document.getElementById("gelapp");
+        var terang = document.getElementById("terang");
+        html.classList.remove("dark");
+        terang.classList.remove("flex");
+        terang.classList.add("hidden");
+        gelapp.classList.remove("hidden");
+        gelapp.classList.add("flex");
+      }
+      
       const arrowUp = document.getElementById("drop");
       arrowUp.addEventListener('click', function () {
         arrowUp.classList.toggle("drop-active");
@@ -1537,7 +2051,7 @@
         hambuger.classList.toggle("hamburger-active");
       });
 
-
+      
 
 
     </script>

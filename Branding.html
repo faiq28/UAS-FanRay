@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
     <link rel="stylesheet" href="output.css" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" /> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   </head>
 
   <body class="font-Poppins bg-white min-h-[6000px] dark:bg-slate-800 overflow-x-hidden">
@@ -466,33 +466,62 @@
         </div>
       </section>
       <section id="works">
-        <div class="w-full px-32 py-24 md:px-8">
-          <div class="w-full flex flex-col gap-4 items-center justify-center">
-            <p class="py-2 px-5 bg-[#0468D7] text-white rounded-full hover:scale-105 transition-all ease-in-out mb-6">works</p>
+        <div id="works" class="w-full flex flex-col px-32 py-24 md:px-8">
+          <div class="w-full flex flex-col gap-4 items-center justify-center scale-110">
+            <p class="py-2 px-5 bg-[#0468D7] text-white rounded-full transition-all ease-in-out mb-6">works</p>
             <p class="text-4xl font-semibold text-slate-800 -mb-1">Find Our latetest works</p>
             <p class="text-gray-400 mb-10">The awesome people who makes all this possible</p>
           </div>
-          <div class="w-full flex flex-row md:flex-col gap-10">
+          
+          <div class="w-full flex flex-row-reverse md:flex-col-reverse md:gap-16 gap-10 mt-14">
             <div class="w-2/4 md:w-full flex flex-col gap-3">
-              <div class="w-full  rounded-3xl mt-10">
-                <img src="img/unsplash_UcYBL5V0xWQ.png" alt="" class="w-full h-[550px] rounded-2xl">
+              <div class="w-full group rounded-3xl mt-4">
+                <img src="img/slider2.jpg" alt="" class="w-full scale-90 md:scale-100 rounded-2xl">
               </div>
-              <a href="" class="px-6 py-2 bg-[#0468D7] mb-6 w-44 text-center rounded-full text-slate-200 mt-4">Web Design</a>
+              <div class="ml-8 md:ml-0">
+              <button class="px-4 py-[8.5px] bg-[#0468D7] mb-6 w-40 text-center rounded-full text-slate-200 mt-1 md:mt-6">Web Design</button>
               <p class="text-2xl">Website Design For Digital Agency</p>
               <p class="mb-3 text-gray-500">Build a unique Website with FanRay template</p>
-              <a href="" class="mb-3 underline underline-offset-4 text-[#0468D7]">Read more</a>
+              </div>
+              <div class="flex w-full">
+                <button data-modal-target="#modal" class="mx-auto py-16 text-xl text-[#0468D7] underline underline-offset-4 dark:hover:text-sky-500 md:py-6">View more</button>
+                  <div class="modal w-full h-screen flex flex-row-reverse z-[4000000] justify-center dark:bg-slate-800 dark:bg-opacity-80 dark:backdrop-blur-xl backdrop-blur-lg bg-slate-500 bg-opacity-70" id="modal">
+                    <div class="flex justify-start items-start mt-24 absolute right-[365px] md:mt-3 md:mb-3">
+                      <div class="modal-header flex justify-start items-start md:-mr-24">
+                        <button data-close-button class="close-button ml-auto absolute cursor-pointer border-none outline-none bg-none scale-[2] font-light dark:text-slate-200 bg-slate-800 bg-opacity-60 text-slate-100 rounded-full px-[8px] p-[-32px] text-xl">&times;</button>
+                      </div>
+                    </div>  
+                      <div class="modal-body flex flex-col">
+                        <div class="w-[70vw] h-[100vh] md:h-[50vh] md:w-[100vw]  scale-75 md:scale-90">
+                            <!-- app -->
+                            <div class="swiper mySwiper rounded-xl">
+                                <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="img/slider2.jpg" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
+                                <div class="swiper-slide"><img src="img/slider3.jpg" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
+                                <div class="swiper-slide"><img src="img/slider4.jpg" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
+                                <div class="swiper-slide"><img src="img/slider5.png" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
+                                <div class="swiper-slide"><img src="img/slider6.png" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                <div id="overlay" class="fixed opacity-0 top-10 z-[400000000] delay-200 ease-in-out pointer-events-none"></div>
+              </div>
             </div>
             <div class="w-2/4 md:w-full flex flex-col gap-3">
-              <div class="w-full bg-slate-50 mt-10">
-                <img src="img/parel_hbd-removebg-preview.png" alt="" class="h-[360px] w-full rounded-3xl">
+              <div class="w-full mt-10">
+                <img src="img/thumbnail3.jpg" alt="" class="scale-100 w-full rounded-3xl">
               </div>
-              <a href="" class="px-6 py-2 bg-[#0468D7] mb-6 w-44 text-center rounded-full text-slate-200 mt-4">3D Design</a>
-              <p class="text-3xl">Realistic 3d Model of parel safwan</p>
+              <button class="px-4 py-[8.5px] bg-[#0468D7] mb-6 w-40 text-center rounded-full text-slate-200 mt-6">App Design</button>
+              <p class="text-3xl">App Design for Digital Agency<p>
               <p class="mb-3 text-gray-500">Build a unique Website with FanRay template</p>
-              <a href="" class="mb-3 underline underline-offset-4 text-[#0468D7]">Read more</a>
+              
             </div>
           </div>
         </div>
+        
       </section>      
       <section id="gtw">
         <div class="w-full px-14 py-8 flex flex-col md:px-8 lg:px-10 mt-20 bg-opacity-50">
@@ -1634,13 +1663,21 @@
     
     <script>
       var swiper = new Swiper(".mySwiper", {
-        direction: "horizontal",
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-
-        },
-      });
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="load.js"></script>
@@ -1650,6 +1687,50 @@
       };
       var xstatus = false;
       var hehe = false;
+      const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+var header = document.getElementById("header");
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+  overlay.classList.add('z-[400000]')
+  overlay.classList.add('h-screen')
+  header.classList.add('hidden')
+  header.classList.remove('flex')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+  overlay.classList.remove('z-[400000]')
+  overlay.classList.remove('h-screen')
+  header.classList.add('flex')
+  header.classList.remove('hidden')
+}
 
       function view(){
         var daftar = document.getElementById('daftarCard');

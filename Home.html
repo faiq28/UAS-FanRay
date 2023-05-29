@@ -13,13 +13,10 @@
     <link rel="stylesheet" href="output.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script defer src="popup.js"></script>
   </head>
 
   <body class="font-Poppins bg-white min-h-[6000px] dark:bg-slate-800 overflow-x-hidden">
-    
-  
-
+     
       <div class="h-screen w-full fixed flex z-[100] bg-white bg-opacity-70 backdrop-blur-lg items-center justify-center" id="loader" >
         <svg class="pl scale-150 " width="240" height="240" viewBox="0 0 240 240">
           <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
@@ -128,10 +125,10 @@
           <a href="#jumbotron" class="p-5 bg-sky-400 fixed bottom-10 md:bottom-6 right-4 rounded-full">Up</a>
         </section>
         <section id="jumbotron">
-          <div class="hidden p-4 rounded-lg gap-1 bg-slate-200 backdrop-blur-sm bg-opacity-70 flex-col justify-center ml-[640px] z-20 fixed mt-[64px] w-[20%]" id="daftarDrop">
-            <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./Service.html">Service Website & Application</a>
-            <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./Branding.html">Branding Content Creation</a>
-            <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white rounded-lg transition-all ease-in-out" href="./digital.html">Digital Marketing</a>
+          <div class="hidden p-4 rounded-lg gap-1 bg-slate-100 dark:bg-slate-800 dark:backdrop-blur-sm dark:bg-opacity-70 backdrop-blur-sm bg-opacity-70 flex-col justify-center ml-[640px] z-20 fixed mt-[64px] w-[20%]" id="daftarDrop">
+            <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white dark:text-slate-100 rounded-lg transition-all ease-in-out" href="./Service.html">Service Website & Application</a>
+            <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white dark:text-slate-100 rounded-lg transition-all ease-in-out" href="./Branding.html">Branding Content Creation</a>
+            <a class="text-[15px] py-[10px] px-4 hover:bg-sky-500 hover:text-white dark:text-slate-100 rounded-lg transition-all ease-in-out" href="./digital.html">Digital Marketing</a>
           </div>
           <div class="dark:bg-gradient-to-b dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
             <div id="jumbotron" class="w-full px-28 md:px-8 py-32 pt-56 bg-opacity-50 flex flex-row lg:flex-col-reverse md:gap-0 gap-8 bg-[#EAF0FF] dark:bg-transparent"> 
@@ -284,46 +281,21 @@
           <!-- isi2 -->
           <div id="works" class="w-full flex flex-col px-32 py-24 md:px-8">
             <div class="w-full flex flex-col gap-4 items-center justify-center scale-110">
-              <p class="py-2 px-5 bg-[#0468D7] text-white rounded-full transition-all ease-in-out mb-6">works</p>
+              <button id="kerja" class="py-2 px-5 bg-[#0468D7] text-white rounded-full transition-all ease-in-out mb-6">works</button>
+              
               <p class="text-4xl font-semibold text-slate-800 -mb-1">Find Our latetest works</p>
               <p class="text-gray-400 mb-10">The awesome people who makes all this possible</p>
             </div>
             
             <div class="w-full flex flex-row-reverse md:flex-col-reverse md:gap-16 gap-10 mt-14">
               <div class="w-2/4 md:w-full flex flex-col gap-3">
-                <div class="w-full  rounded-3xl mt-4">
+                <div class="w-full group rounded-3xl mt-4">
                   <img src="img/slider2.jpg" alt="" class="w-full scale-90 md:scale-100 rounded-2xl">
                 </div>
                 <div class="ml-8 md:ml-0">
                 <button class="px-4 py-[8.5px] bg-[#0468D7] mb-6 w-40 text-center rounded-full text-slate-200 mt-1 md:mt-6">Web Design</button>
                 <p class="text-2xl">Website Design For Digital Agency</p>
                 <p class="mb-3 text-gray-500">Build a unique Website with FanRay template</p>
-                </div>
-                <div class="flex w-full">
-                  <button data-modal-target="#modal" class="mx-auto py-16 text-xl text-[#0468D7] underline underline-offset-4 dark:hover:text-sky-500 md:py-6">View more</button>
-                    <div class="modal w-full h-screen flex flex-row-reverse z-[4000000] justify-center dark:bg-slate-800 dark:bg-opacity-80 dark:backdrop-blur-xl backdrop-blur-lg bg-slate-500 bg-opacity-70" id="modal">
-                      <div class="flex justify-start items-start mt-24 absolute right-[365px] md:mt-3 md:mb-3">
-                        <div class="modal-header flex justify-start items-start md:-mr-24">
-                          <button data-close-button class="close-button ml-auto absolute cursor-pointer border-none outline-none bg-none scale-[2] font-light dark:text-slate-200 bg-slate-800 bg-opacity-60 text-slate-100 rounded-full px-[8px] p-[-32px] text-xl">&times;</button>
-                        </div>
-                      </div>  
-                        <div class="modal-body flex flex-col">
-                          <div class="w-[70vw] h-[100vh] md:h-[50vh] md:w-[100vw]  scale-75 md:scale-90">
-                              <!-- app -->
-                              <div class="swiper mySwiper rounded-xl">
-                                  <div class="swiper-wrapper">
-                                  <div class="swiper-slide"><img src="img/slider2.jpg" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
-                                  <div class="swiper-slide"><img src="img/slider3.jpg" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
-                                  <div class="swiper-slide"><img src="img/slider4.jpg" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
-                                  <div class="swiper-slide"><img src="img/slider5.png" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
-                                  <div class="swiper-slide"><img src="img/slider6.png" alt="" class="mx-auto my-auto w-fit h-fit block object-contain"></div>
-                                  </div>
-                                  <div class="swiper-pagination"></div>
-                              </div>
-                          </div>
-                      </div>
-                    </div>
-                  <div id="overlay" class="fixed opacity-0 top-10 z-[400000000] delay-200 ease-in-out pointer-events-none"></div>
                 </div>
               </div>
               <div class="w-2/4 md:w-full flex flex-col gap-3">
@@ -336,9 +308,30 @@
                 
               </div>
             </div>
+            <div class="w-full flex flex-row md:flex-col-reverse md:gap-16 gap-10 mt-10">
+              <div class="w-2/4 md:w-full flex flex-col gap-3 -mt-4 -ml-8">
+                <div class="w-full group rounded-3xl mt-4">
+                  <img src="img/slider2.jpg" alt="" class="w-full scale-90 md:scale-100 rounded-2xl">
+                </div>
+                <div class="ml-8 -mt-4">
+                <button class="px-4 py-[8.5px] bg-[#0468D7] mb-6 w-40 text-center rounded-full text-slate-200 mt-4">App Design</button>
+                <p class="text-3xl mb-4 ">App Design for Digital Agenc<p>
+                <p class="mb-3 text-gray-500">Build a unique Website with FanRay template</p>
+                </div>
+              </div>
+              <div class="w-2/4 md:w-full flex flex-col gap-3 -mt-36">
+                <div class="w-full mt-10">
+                  <img src="img/thumbnail3.jpg" alt="" class="scale-100 w-full rounded-3xl">
+                </div>
+                <button class="px-4 py-[8.5px] bg-[#0468D7] mb-6 w-40 text-center rounded-full text-slate-200 mt-4">App Design</button>
+                <p class="text-3xl">App Design for Digital Agency<p>
+                <p class="mb-3 text-gray-500">Build a unique Website with FanRay template</p>
+                
+              </div>
+            </div>
           </div>
           <!-- about us -->
-          <div id="about" class="w-full py-24 px-28 md:px-8 mb-14">
+          <div id="about" class="w-full py-24 px-28 md:px-8 mb-14" id="layar">
             <div class="w-full flex flex-row md:flex-col gap-24 py-14 justify-center items-center">
               <div class="w-[60%] md:w-full flex flex-col">
                 <p class="mb-8 text-gray-500 dark:text-gray-300">ABOUT US</p>
@@ -351,7 +344,7 @@
                     <p class="text-gray-400 font-medium dark:text-slate-400">Operrated Years</p>
                   </div>
                   <div class="flex-col flex w-2/4 justify-center gap-2 items-center">
-                    <p class="text-6xl text-slate-800 font-semibold dark:text-slate-200">76+</p>
+                    <p id="count1" class="text-6xl text-slate-800 font-semibold dark:text-slate-200">0+</p>
                     <p class="text-gray-400 font-medium dark:text-slate-400">Happy Clients</p>
                   </div>
                   <div class="flex-col flex w-2/4 justify-center gap-2 items-center">
@@ -366,6 +359,90 @@
               </div>
               <div class="w-2/5 md:w-full flex group">
                 <img src="img/unsplash_UcYBL5V0xWQ.png" alt="" class="rounded-xl w-full h-fit">
+              </div>
+            </div>
+            <div class="w-full flex flex-row items-center mt-24">
+              <div class="w-[35%] flex flex-row gap-2">
+                <div class="w-[13%] h-[2.5px] bg-slate-700 mt-6"></div>
+                <p class="text-[40px] leading-[41px] font-[550] w-[70%] text-slate-800">Meet my recent clients</p>
+              </div>
+              <div class="w-[65%] flex flex-col gap-10">
+                <div class="w-full flex flex-row gap-20">
+                  <div class="flex flex-row justify-center items-center gap-3">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Google</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-3">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Warner Bros</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-3">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Mailchimp</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-3">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Adobe</p>
+                  </div>
+                </div>
+                <div class="w-full flex flex-row gap-20">
+                  <div class="flex flex-row justify-center items-center gap-3">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Upwork</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-3">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Creative Cloud</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-3 -ml-[22px]">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Woocommerce</p>
+                  </div>
+                  <div class="flex flex-row justify-center items-center gap-3 -ml-[41px]">
+                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M32.3397 16.875C32.3397 15.705 32.2347 14.58 32.0397 13.5H16.4997V19.8825H25.3797C24.9972 21.945 23.8347 23.6925 22.0872 24.8625V29.0025H27.4197C30.5397 26.13 32.3397 21.9 32.3397 16.875Z" fill="#4285F4"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 33C20.955 33 24.69 31.5225 27.42 29.0025L22.0875 24.8625C20.61 25.8525 18.72 26.4375 16.5 26.4375C12.2025 26.4375 8.56504 23.535 7.26754 19.635H1.75505V23.91C4.47005 29.3025 10.05 33 16.5 33Z" fill="#34A853"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.26749 19.6351C6.93749 18.6451 6.74999 17.5876 6.74999 16.5001C6.74999 15.4126 6.93749 14.3551 7.26749 13.3651V9.09009H1.755C0.637499 11.3176 0 13.8376 0 16.5001C0 19.1626 0.637499 21.6826 1.755 23.9101L7.26749 19.6351Z" fill="#FBBC05"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 6.56274C18.9225 6.56274 21.0975 7.39523 22.8075 9.03023L27.54 4.29774C24.6825 1.63524 20.9475 0.000244141 16.5 0.000244141C10.05 0.000244141 4.47005 3.69774 1.75505 9.09023L7.26754 13.3652C8.56504 9.46523 12.2025 6.56274 16.5 6.56274Z" fill="#EA4335"/>
+                    </svg>
+                    <p class="">Canva</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -466,10 +543,10 @@
               </div>
             </div>
           <!--gtw -->
-          <div class="w-full px-40 md:px-8 mt-24">
+          <div class="w-full px-40 pb-52 md:px-8 mt-24">
             <div class="w-full flex flex-row md:flex-col gap-10">
-              <div class="w-2/5 md:w-full">
-                <h1 class="text-6xl md:text-5xl font-semibold w-2/3 dark:text-slate-200">Join our newsletter</h1>
+              <div class="w-2/5 md:w-full flex">
+                <h1 class="text-6xl md:text-5xl font-semibold w-full dark:text-slate-200 my-auto">Join with us</h1>
               </div>
               <div class="w-[60%] md:w-full flex flex-col md:mt-0 mt-4">
                 <h1 class="text-3xl md:text-2xl font-semibold text-slate-800 text-opacity-80 mb-6 dark:text-slate-200">Keep in touch with FanRay</h1>
@@ -495,7 +572,7 @@
                       <div class="h-8 w-[1.5px] bg-gray-500"></div>
                     </div>
                   </div>
-                  <button class="py-2 px-3 w-40 bg-[#0468D7] hover:font-semibold text-white font-medium mt-8 transition-all ease-in-out hover:text-slate-100 text-center rounded-full">Subscribe</button>
+                  <button class="py-2 px-3 w-40 bg-[#0468D7] hover:font-semibold text-white font-medium mt-8 transition-all ease-in-out hover:text-slate-100 text-center rounded-full">Contact us</button>
                 </form>
               </div>
             </div>
@@ -504,18 +581,6 @@
       </main> 
       <footer>
         <div class="w-full px-28 py-14 md:px-8 mt-20 bg-[#F8F9FA] dark:bg-gradient-to-b from-slate-800 from-60% via-50% via-slate-900 to-slate-900 to-90% dark:bg-transparent">
-          <div class="w-full flex flex-col items-center justify-center md:justify-start">
-            <h1 class="text-3xl mb-6 dark:text-slate-200 font-medium">Your turn proves the quality of our services</h1>
-            <p class="text-[#4A5071] mb-[30px] w-[490px] md:w-full text-center md:text-left dark:text-slate-400">Consult your business digitization needs with our team to get a price quote that fits your business budget.</p>
-            <button class="flex flex-row py-4 px-7 bg-[#0468D7] rounded-2xl gap-3 mx-auto">
-              <svg class="scale-90" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M25.9644 21.4125C25.9644 21.8625 25.8644 22.325 25.6519 22.775C25.4394 23.225 25.1645 23.65 24.802 24.05C24.1895 24.725 23.5145 25.2125 22.752 25.525C22.002 25.8375 21.1895 26 20.3145 26C19.0395 26 17.677 25.7 16.2395 25.0875C14.802 24.475 13.3645 23.65 11.9395 22.6125C10.502 21.5625 9.13945 20.4 7.83945 19.1125C6.55195 17.8125 5.38945 16.45 4.35195 15.025C3.32695 13.6 2.50195 12.175 1.90195 10.7625C1.30195 9.3375 1.00195 7.975 1.00195 6.675C1.00195 5.825 1.15195 5.0125 1.45195 4.2625C1.75195 3.5 2.22695 2.8 2.88945 2.175C3.68945 1.3875 4.56445 1 5.48945 1C5.83945 1 6.18945 1.075 6.50195 1.225C6.82695 1.375 7.11445 1.6 7.33945 1.925L10.2395 6.0125C10.4645 6.325 10.627 6.6125 10.7395 6.8875C10.852 7.15 10.9145 7.4125 10.9145 7.65C10.9145 7.95 10.827 8.25 10.652 8.5375C10.4895 8.825 10.252 9.125 9.95195 9.425L9.00195 10.4125C8.86445 10.55 8.80195 10.7125 8.80195 10.9125C8.80195 11.0125 8.81445 11.1 8.83945 11.2C8.87695 11.3 8.91445 11.375 8.93945 11.45C9.16445 11.8625 9.55195 12.4 10.102 13.05C10.6645 13.7 11.2645 14.3625 11.9145 15.025C12.5895 15.6875 13.2395 16.3 13.902 16.8625C14.552 17.4125 15.0895 17.7875 15.5145 18.0125C15.577 18.0375 15.652 18.075 15.7395 18.1125C15.8395 18.15 15.9395 18.1625 16.052 18.1625C16.2645 18.1625 16.427 18.0875 16.5645 17.95L17.5145 17.0125C17.827 16.7 18.127 16.4625 18.4145 16.3125C18.702 16.1375 18.9895 16.05 19.302 16.05C19.5395 16.05 19.7895 16.1 20.0645 16.2125C20.3395 16.325 20.627 16.4875 20.9395 16.7L25.077 19.6375C25.402 19.8625 25.627 20.125 25.7645 20.4375C25.8895 20.75 25.9644 21.0625 25.9644 21.4125Z" stroke="white" stroke-width="1.7" stroke-miterlimit="10"/>
-                <path d="M21.627 9.75C21.627 9 21.0395 7.85 20.1645 6.9125C19.3645 6.05 18.302 5.375 17.252 5.375" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M26.002 9.75C26.002 4.9125 22.0895 1 17.252 1" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              <p class="text-slate-50">Free Consultation</p>
-            </button>
-          </div>
           <div class="h-[1.8px] bg-slate-700 w-full bg-opacity-20 my-6 md:my-8"></div>
           <div class="w-full flex flex-row md:flex-col items-center justify-between md:justify-start md:gap-12">
             <div class="flex flex-col w-[40%] md:w-full">
@@ -628,10 +693,27 @@
     <script>
 
       window.onscroll = function () {
-        Menu();
+        Menu(),well1();
       };
+      
       var xstatus = false;
       var hehe = false;
+
+      
+      const kerja = document.getElementById('kerja');
+      kerja.addEventListener('click', function(){
+        const blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+        blur.classList.remove('close');
+      })
+
+      const closet = document.getElementById('closet');
+      closet.addEventListener('click', function(){
+        const blur = document.getElementById('blur'); 
+        blur.classList.toggle('close');
+        blur.classList.remove('active')
+      })
+
 
       function dark() {
         var html = document.querySelector("html");
@@ -664,6 +746,26 @@
         gelapp.classList.remove("hidden");
         gelapp.classList.add("flex");
       }
+
+      function well1(){
+        if(document.documentElement.scrollTop > 5000){
+          let count = 0;
+          const countElement = document.getElementById('count1');
+
+          const interval = setInterval(() => {
+            countElement.textContent = count;
+            count++;
+
+            if (count > 100) {
+              clearInterval(interval);
+            }
+          }, 0.1);
+        }else{
+          clearInterval
+        }
+      };
+
+     document.getElementById('layar').addEventListener("")
 
       function Menu() {
         if (document.documentElement.scrollTop > 20) {
@@ -815,6 +917,7 @@
       hambuger.addEventListener("click", function () {
         hambuger.classList.toggle("hamburger-active");
       });
+
 
       
     </script>
