@@ -777,15 +777,13 @@
     <header class="fixed top-0 z-20 dark:bg-slate-900" id="header">
       <div class="w-screen px-8 md1:px-28">
         <div class="h-20 w-full flex justify-between items-center">
-          <nav class="flex flex-row justify-between">
-            <div class="flex flex-row gap-2">
-              <div class="block md1:hidden" onclick="showHideMenu()">
-                <button id="hams" href="#" class="block absolute right-10 top-[30px] font-extrabold scale-90">
-                  <span class="w-[20px] rounded-full dark:bg-slate-200 py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300 origin-top-left -right-[10px] relative"></span>
-                  <span class="w-[30px] rounded-full dark:bg-slate-200 py-[1.8px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
-                  <span class="w-[20px] -right-[10px] relative rounded-full dark:bg-slate-200 py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
-                </button>
-              </div>
+          <nav>
+            <div class="block md1:hidden" onclick="showHideMenu()">
+              <button id="ham" href="#" class="block absolute right-10 top-[30px] font-extrabold">
+                <span class="w-[29.5px] rounded-lg dark:bg-slate-200 py-[1.5px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300 origin-top-left"></span>
+                <span class="w-[29px] rounded-lg dark:bg-slate-200 py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
+                <span class="w-[29.5px] rounded-lg dark:bg-slate-200 py-[1.7px] mb-[6px] block bg-slate-800 transition ease-in-out duration-300"></span>
+              </button>
             </div>
             <div class="hidden md1:flex gap-2 dark:text-white md1:items-center">
               <div class="dark:hidden">
@@ -1297,915 +1295,281 @@
         <div class="w-full px-14 py-24 flex flex-col md:px-8 lg:px-10 bg-opacity-50 dark:bg-gradient-to-b from-slate-800 via-slate-900 to-slate-800 dark:bg-opacity-90">
           <div class="w-full flex flex-col">
               <div class="w-full flex flex-wrap justify-center items-center gap-5 mb-20 md:w-full md:px-0 mx-auto">
-                <button onclick="tombol1()" id="btn1" class="py-3 px-5 bg-[#0468D7] dark:bg-[#0468D7] dark:text-slate-50 text-base text-slate-50 rounded-lg">Google Ads</button>
-              <button onclick="tombol2()" id="btn2" class="py-3 px-5 bg-gray-50 dark:bg-gray-300 dark:text-slate-800  text-base text-slate-600 rounded-lg">Social Media Ads</button>
-              <button onclick="tombol3()" id="btn3" class="py-3 px-5 bg-gray-50 dark:bg-gray-300 dark:text-slate-800  text-base text-slate-600 rounded-lg">SEO</button>
+                <button onclick="tombol1()" id="btn1" class="py-3 px-5 bg-[#0468D7] text-base text-slate-50 rounded-lg ">Google Ads</button>
+                <button onclick="tombol2()" id="btn2" class="py-3 px-5 bg-gray-50 text-base text-slate-600 dark:text-slate-600 rounded-lg ">Facebook Ads</button>
+                <button onclick="tombol3()" id="btn3" class="py-3 px-5 bg-gray-50 text-base text-slate-600 rounded-lg ">SEO</button>
               </div>
-              <div id="item1" class="md:overflow-x-scroll mx-auto flex md:hidden flex-row md:flex-row justify-center md:px-0 md:w-full gap-6">
-                <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                  <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Bronze Package</h1>
-                  <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 400K</h1>
-                  <button onclick="popGanti()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                  <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Google Search Ads</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">30 Day Maintenance</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">1 Campaign</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 3 Ad Groups</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 12 Keywords</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Free Ads Copywriting</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Free Keyword Planner Consultation</p>        
-                    </div>
-                  </div>  
-                  <button onclick="myvar = setTimeout(view,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                  <div id="daftarCard" class="hidden mx-auto w-full md:w-[100%] relative duration-500 transition-all ease-in-out -top-[209px] bg-gray-100  dark:bg-gray-200">
-                    <div class="flex flex-col gap-y-[14px] -mb-12 w-full mx-auto">
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                      </div>
-                      <button onclick="myvar = setTimeout(view,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                    </div>
-                  </div>
-                </div>
-                <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                  <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Silver Package</h1>
-                  <div class="flex flex-row font-semibold gap-3">
-                    <h1 class="text-4xl font-medium mb-6 line-through text-gray-600 dark:text-gray-600 opacity-60">IDR 700K</h1>
-                    <p class="text-3xl text-slate-700 dark:text-slate-700 mt-[3px]">599k</p>
-                  </div>
-                  <button onclick="popGanti2()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                  <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Google Search Ads</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">30 Day Maintenance</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 2 Campaigns</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 6 Ad Groups</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 60 Keywords</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Free Ads Copywriting</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Free Keyword Planner Consultation</p>        
-                    </div>
-                  </div>  
-                  <button onclick="myvar2 = setTimeout(view2,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                  <div id="daftarCard2" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100 dark:bg-gray-200 flex-col gap-y-[14px] -mb-12">
-                    <div class="flex flex-col gap-y-[14px] mb-0 w-full mx-auto">
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                      </div>
-                    </div>
-                    <button onclick="myvar2 = setTimeout(view2,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                  </div>
-                </div>
-                <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                  <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Corporate Package</h1>
-                  <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 1.199K</h1>
-                  <button onclick="popGanti3()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                  <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Google Search Ads</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Google Display Network Ads</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">30 Day Maintenance</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 3 Campaigns</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 9 Ad Groups</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Max. 90 Keywords</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Free Ads Copywriting</p>        
-                    </div>
-                  </div>  
-                  <button onclick="myvar3 = setTimeout(view3,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                  <div id="daftarCard3" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100  dark:bg-gray-200 flex-col gap-y-[14px] -mb-12">
-                    <div class="flex flex-col gap-y-[14px] mb-0 w-full mx-auto">
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                      </div>
-                      <div class="flex flex-row gap-4">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>          
-                        <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                      </div>
-                    </div>
-                    <button onclick="myvar3 = setTimeout(view3,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                  </div>
-                </div>
-              </div>
-              <!-- swiper1 -->
-              <div id="item1Slider" class="md:flex hidden">
-                <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide rounded-xl">
-                      <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                        <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Bronze Package</h1>
-                        <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 400K</h1>
-                        <button onclick="popGanti()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                        <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Google Search Ads</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">30 Day Maintenance</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">1 Campaign</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 3 Ad Groups</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 12 Keywords</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Free Ads Copywriting</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Free Keyword Planner Consultation</p>        
-                          </div>
-                        </div>  
-                        <button onclick="myvar = setTimeout(view,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                        <div id="daftarCard" class="hidden mx-auto w-full md:w-[100%] relative duration-500 transition-all ease-in-out -top-[209px] bg-gray-100  dark:bg-gray-200">
-                          <div class="flex flex-col gap-y-[14px] -mb-12 w-full mx-auto">
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                            </div>
-                            <button onclick="myvar = setTimeout(view,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide rounded-xl">
-                      <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                        <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Silver Package</h1>
-                        <div class="flex flex-row font-semibold gap-3">
-                          <h1 class="text-4xl font-medium mb-6 line-through text-gray-600 dark:text-gray-600 opacity-60">IDR 700K</h1>
-                          <p class="text-3xl text-slate-700 dark:text-slate-700 mt-[3px]">599k</p>
-                        </div>
-                        <button onclick="popGanti2()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                        <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Google Search Ads</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">30 Day Maintenance</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 2 Campaigns</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 6 Ad Groups</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 60 Keywords</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Free Ads Copywriting</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Free Keyword Planner Consultation</p>        
-                          </div>
-                        </div>  
-                        <button onclick="myvar2 = setTimeout(view2,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                        <div id="daftarCard2" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100 dark:bg-gray-200 flex-col gap-y-[14px] -mb-12">
-                          <div class="flex flex-col gap-y-[14px] mb-0 w-full mx-auto">
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                            </div>
-                          </div>
-                          <button onclick="myvar2 = setTimeout(view2,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide rounded-xl">
-                      <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                        <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Corporate Package</h1>
-                        <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 1.199K</h1>
-                        <button onclick="popGanti3()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                        <div class="flex flex-col justify-start w-[80%] gap-y-[14px] mb-12">
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Google Search Ads</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Google Display Network Ads</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">30 Day Maintenance</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 3 Campaigns</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 9 Ad Groups</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Max. 90 Keywords</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Free Ads Copywriting</p>        
-                          </div>
-                        </div>  
-                        <button onclick="myvar3 = setTimeout(view3,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                        <div id="daftarCard3" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100  dark:bg-gray-200 flex-col gap-y-[14px] -mb-12">
-                          <div class="flex flex-col gap-y-[14px] mb-0 w-full mx-auto">
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                            </div>
-                            <div class="flex flex-row gap-4">
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>          
-                              <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                            </div>
-                          </div>
-                          <button onclick="myvar3 = setTimeout(view3,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
-            
-            <div id="item2" class="md:overflow-x-scroll hidden md:hidden mx-auto flex-row md:flex-row justify-center md:px-0 md:w-full gap-6 group">
-              <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Economic Package</h1>
-                <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 499K</h1>
-                <button onclick="popGanti4()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                <div class="flex flex-col justify-start w-[90%] gap-y-[14px] mb-12">
-                  <div class="flex flex-row gap-4">
-                    <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800 ml-[1px]">Published in Feeds and Stories on Facebook and Instagram</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">10 Days Maintenance</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Obejctive Traffic/Engagement</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">1 Image Ads</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Free Caption</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Research Audience</p>        
-                  </div>
-                  <div class="flex flex-row gap-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Estimated Reach 5-10K / Day</p>        
-                  </div>
-                </div>  
-                <button onclick="myvar4 = setTimeout(view4,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                <div id="daftarCard4" class="hidden mx-auto w-full md:w-[100%] relative duration-500 transition-all ease-in-out -top-[209px] bg-gray-100  dark:bg-gray-200">
-                  <div class="flex flex-col gap-y-[14px] -mb-12 w-full mx-auto">
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                    </div>
-                    <button onclick="myvar4 = setTimeout(view4,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                  </div>
-                </div>
-              </div>
-              <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Silver Package</h1>
+            <div id="item1" class="flex flex-row justify-center items-start gap-6 md:overflow-x-scroll">
+              <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+                <h1 class="text-2xl font-medium mb-[16px]">Bronze Package</h1>
                 <div class="flex flex-row font-semibold gap-3">
-                  <h1 class="text-4xl font-medium mb-6 line-through text-gray-600 dark:text-gray-600 opacity-60">IDR 700K</h1>
-                  <p class="text-3xl text-slate-700 dark:text-slate-700 mt-[3px]">599k</p>
+                  <h1 class="text-4xl font-medium mb-6 text-slate-700">IDR 1800K</h1>
                 </div>
-                <button onclick="popGanti5()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                <div class="flex flex-col justify-start w-[90%] gap-y-[14px] mb-12">
+                <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+                <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
                   <div class="flex flex-row gap-4">
-                    <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800 ml-[1px]">Published in Feeds and Stories on Facebook and Instagram</p>        
+                    <p class="">Free Consultation</p>        
                   </div>
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">10 Days Maintenance</p>        
+                    <p class="">2 Logo Concepts</p>        
                   </div>
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Obejctive Traffic/Engagement</p>        
+                    <p class="">Bonus 1 Design (ask for request)</p>        
                   </div>
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">3 Image Ads</p>        
+                    <p class="">Logo Revision 1x</p>        
                   </div>
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Free Caption</p>        
+                    <p class="">Free Logo Redesign 1 time</p>        
                   </div>
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Research Audience</p>        
+                    <p class="">Free Logo Color Variations</p>        
                   </div>
                   <div class="flex flex-row gap-4">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>          
-                    <p class="text-slate-800 dark:text-slate-800">Estimated Reach 7-12K / Day</p>        
+                    <p class="">Free Font Files</p>        
+                  </div>
+                  
+                </div>  
+                <a href="#" class="mx-auto mb-3">View More</a>
+              </div>
+              <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+                <h1 class="text-2xl font-medium mb-[16px]">Silver Package</h1>
+                <h1 class="text-4xl font-medium mb-6 text-slate-700">CALL US</h1>
+                <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+                <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Consultation</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">3 Logo Concepts</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Name card design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Envelope Design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Letterhead Design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free 2X Logo Redesign</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Logo Color Variations</p>        
                   </div>
                 </div>  
-                <button onclick="myvar5 = setTimeout(view5,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                <div id="daftarCard5" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100 dark:bg-gray-200 flex-col gap-y-[14px] -mb-12">
-                  <div class="flex flex-col gap-y-[14px] mb-0 w-full mx-auto">
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                    </div>
-                    <div class="flex flex-row gap-4">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>          
-                      <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                    </div>
+                <a href="#" class="mx-auto mb-3">View More</a>
+              </div>
+              <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+                <h1 class="text-2xl font-medium mb-[16px]">Gold Package</h1>
+                <h1 class="text-4xl font-medium mb-6 text-slate-700">CALL US</h1>
+                <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+                <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Consultation</p>        
                   </div>
-                  <button onclick="myvar5 = setTimeout(view5,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">3 Logo Concepts</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Name card design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Envelope Design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Letterhead Design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free 2X Logo Redesign</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Logo Color Variations</p>        
+                  </div>
+                </div>  
+                <a href="#" class="mx-auto mb-3">View More</a>
               </div>
             </div>
-            <!-- slider2 -->
-            <div id="item2Slider" class="hidden">
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide rounded-xl">
-                    <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                      <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Economic Package</h1>
-                      <h1 class="flex-none text-4xl font-medium mb-6 text-slate-700 dark:text-slate-700">IDR 499K</h1>
-                      <button onclick="popGanti4()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                      <div class="flex flex-col justify-start w-[90%] gap-y-[14px] mb-12">
-                        <div class="flex flex-row gap-4">
-                          <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800 ml-[1px]">Published in Feeds and Stories on Facebook and Instagram</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">10 Days Maintenance</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Obejctive Traffic/Engagement</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">1 Image Ads</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Free Caption</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Research Audience</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Estimated Reach 5-10K / Day</p>        
-                        </div>
-                      </div>  
-                      <button onclick="myvar4 = setTimeout(view4,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                      <div id="daftarCard4" class="hidden mx-auto w-full md:w-[100%] relative duration-500 transition-all ease-in-out -top-[209px] bg-gray-100  dark:bg-gray-200">
-                        <div class="flex flex-col gap-y-[14px] -mb-12 w-full mx-auto">
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                          </div>
-                          <button onclick="myvar4 = setTimeout(view4,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide rounded-xl">
-                    <div class=" md:flex-shrink-0  w-[430px] h-full md:w-[100%] flex flex-col p-[22px] bg-gray-100 dark:bg-gray-200 rounded-lg">
-                      <h1 class="flex-none text-2xl font-medium mb-[14px] dark:text-slate-800">Silver Package</h1>
-                      <div class="flex flex-row font-semibold gap-3">
-                        <h1 class="text-4xl font-medium mb-6 line-through text-gray-600 dark:text-gray-600 opacity-60">IDR 700K</h1>
-                        <p class="text-3xl text-slate-700 dark:text-slate-700 mt-[3px]">599k</p>
-                      </div>
-                      <button onclick="popGanti5()" class="flex-none py-3 px-5 bg-[#0468D7] text-center rounded-md mb-7 text-slate-100 bg-opacity-90 transition-all ease-in-out hover:bg-opacity-100">Choose package</button>
-                      <div class="flex flex-col justify-start w-[90%] gap-y-[14px] mb-12">
-                        <div class="flex flex-row gap-4">
-                          <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800 ml-[1px]">Published in Feeds and Stories on Facebook and Instagram</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">10 Days Maintenance</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Obejctive Traffic/Engagement</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">3 Image Ads</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Free Caption</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Research Audience</p>        
-                        </div>
-                        <div class="flex flex-row gap-4">
-                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>          
-                          <p class="text-slate-800 dark:text-slate-800">Estimated Reach 7-12K / Day</p>        
-                        </div>
-                      </div>  
-                      <button onclick="myvar5 = setTimeout(view5,100,AnimationEffect)" class="mx-auto dark:text-slate-800">View More</button>
-                      <div id="daftarCard5" class="hidden mx-auto w-full md:w-[100%] relative delay-500 transition-all ease-in-out -top-[209px] bg-gray-100 dark:bg-gray-200 flex-col gap-y-[14px] -mb-12">
-                        <div class="flex flex-col gap-y-[14px] mb-0 w-full mx-auto">
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Domain .my.id</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">Capaticy 500mb</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">5 Pages Website</p>        
-                          </div>
-                          <div class="flex flex-row gap-4">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>          
-                            <p class="text-slate-800 dark:text-slate-800">+10 Featured Themes</p>        
-                          </div>
-                        </div>
-                        <button onclick="myvar5 = setTimeout(view5,150,AnimationEffect)" class="mx-auto dark:text-slate-800 mt-8">View Less</button>
-                      </div>
-                    </div>
-                  </div>
+            <div id="item2" class="hidden flex-row justify-center items-start gap-6 md:overflow-x-scroll">
+              <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+                <h1 class="text-2xl font-medium mb-[16px]">Bronze Package</h1>
+                <div class="flex flex-row font-semibold gap-3">
+                  <h1 class="text-4xl font-medium mb-6 text-slate-700">IDR 1800K</h1>
                 </div>
-                <div class="swiper-pagination"></div>
+                <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+                <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Consultation</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">2 Logo Concepts</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Bonus 1 Design (ask for request)</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Logo Revision 1x</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Logo Redesign 1 time</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Logo Color Variations</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Font Files</p>        
+                  </div>
+                  
+                </div>  
+                <a href="#" class="mx-auto mb-3">View More</a>
+              </div>
+              <div  class="md:snap-center md:flex-shrink-0 w-[430px] md:w-[100%] flex flex-col p-[22px] bg-gray-100 rounded-lg">
+                <h1 class="text-2xl font-medium mb-[16px]">Silver Package</h1>
+                <h1 class="text-4xl font-medium mb-6 text-slate-700">CALL US</h1>
+                <p class="py-3 px-5 bg-gray-300 text-center rounded-md mb-7">Choose package</p>
+                <div class="flex flex-col w-[80%] gap-y-[14px] mb-12">
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Consultation</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">3 Logo Concepts</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Name card design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Envelope Design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">1 Letterhead Design</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free 2X Logo Redesign</p>        
+                  </div>
+                  <div class="flex flex-row gap-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 8L5.66118 15L15 1" stroke="#292D32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>          
+                    <p class="">Free Logo Color Variations</p>        
+                  </div>
+                </div>  
+                <a href="#" class="mx-auto mb-3">View More</a>
               </div>
             </div>
-
-            <div id="item3" class="hidden w-[85%] mx-auto flex-col justify-center items-center bg-slate-100 dark:bg-gray-200       py-20 px-6 rounded-2xl">
-              <h1 class="text-[32px] leading-[39px] font-medium mb-4 text-center dark:text-slate-800">Tell Us Your SEO Needs</h1>
-              <p class="text-lg mb-12 text-center dark:text-slate-700">FanRay Ready to Discuss and Provide Solutions!</p>
-              <button class="py-4 px-8 flex flex-row-reverse justify-center items-center bg-[#0468D7] rounded-xl gap-3">
-                <a href="https://api.whatsapp.com/send/?phone=6281299398852&text=Hello+FanRay+I+want+to+consult&type=phone_number&app_absent=0" class="text-[16px] font-medium text-slate-100">Consult Now</a>
-                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M25.961 21.4125C25.961 21.8625 25.861 22.325 25.6485 22.775C25.436 23.225 25.161 23.65 24.7985 24.05C24.186 24.725 23.511 25.2125 22.7485 25.525C21.9985 25.8375 21.186 26 20.311 26C19.036 26 17.6735 25.7 16.236 25.0875C14.7985 24.475 13.361 23.65 11.936 22.6125C10.4985 21.5625 9.13603 20.4 7.83603 19.1125C6.54853 17.8125 5.38603 16.45 4.34853 15.025C3.32353 13.6 2.49854 12.175 1.89854 10.7625C1.29854 9.3375 0.998535 7.975 0.998535 6.675C0.998535 5.825 1.14854 5.0125 1.44853 4.2625C1.74853 3.5 2.22354 2.8 2.88603 2.175C3.68603 1.3875 4.56103 1 5.48603 1C5.83603 1 6.18603 1.075 6.49853 1.225C6.82353 1.375 7.11103 1.6 7.33603 1.925L10.236 6.0125C10.461 6.325 10.6235 6.6125 10.736 6.8875C10.8485 7.15 10.911 7.4125 10.911 7.65C10.911 7.95 10.8235 8.25 10.6485 8.5375C10.486 8.825 10.2485 9.125 9.94853 9.425L8.99853 10.4125C8.86103 10.55 8.79853 10.7125 8.79853 10.9125C8.79853 11.0125 8.81103 11.1 8.83603 11.2C8.87353 11.3 8.91103 11.375 8.93603 11.45C9.16103 11.8625 9.54853 12.4 10.0985 13.05C10.661 13.7 11.261 14.3625 11.911 15.025C12.586 15.6875 13.236 16.3 13.8985 16.8625C14.5485 17.4125 15.086 17.7875 15.511 18.0125C15.5735 18.0375 15.6485 18.075 15.736 18.1125C15.836 18.15 15.936 18.1625 16.0485 18.1625C16.261 18.1625 16.4235 18.0875 16.561 17.95L17.511 17.0125C17.8235 16.7 18.1235 16.4625 18.411 16.3125C18.6985 16.1375 18.986 16.05 19.2985 16.05C19.536 16.05 19.786 16.1 20.061 16.2125C20.336 16.325 20.6235 16.4875 20.936 16.7L25.0735 19.6375C25.3985 19.8625 25.6235 20.125 25.761 20.4375C25.886 20.75 25.961 21.0625 25.961 21.4125Z" stroke="white" stroke-width="1.7" stroke-miterlimit="10"/>
-                  <path d="M21.6235 9.75C21.6235 9 21.036 7.85 20.161 6.9125C19.361 6.05 18.2985 5.375 17.2485 5.375" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M25.9985 9.75C25.9985 4.9125 22.086 1 17.2485 1" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                                  
-              </button>
+            <div id="item3" class="hidden w-[85%] mx-auto flex-col justify-center items-center bg-slate-100 py-20 px-6 rounded-2xl">
+              <h1 class="text-[32px] leading-[39px] font-medium mb-4 text-center">Tell Us Your SEO Needs</h1>
+            <p class="text-lg mb-12 text-center">Fanray Ready to Discuss and Provide Solutions!</p>
+            <button class="py-4 px-6 flex flex-row justify-center items-center bg-gray-300 rounded-lg gap-2">
+              <h1 class="text-[16px] font-medium ">Consult Now</h1>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.976 14.064C16.976 14.352 16.912 14.648 16.776 14.936C16.64 15.224 16.464 15.496 16.232 15.752C15.84 16.184 15.408 16.496 14.92 16.696C14.44 16.896 13.92 17 13.36 17C12.544 17 11.672 16.808 10.752 16.416C9.832 16.024 8.912 15.496 8 14.832C7.08 14.16 6.208 13.416 5.376 12.592C4.552 11.76 3.808 10.888 3.144 9.976C2.488 9.064 1.96 8.152 1.576 7.248C1.192 6.336 1 5.464 1 4.632C1 4.088 1.096 3.568 1.288 3.088C1.48 2.6 1.784 2.152 2.208 1.752C2.72 1.248 3.28 1 3.872 1C4.096 1 4.32 1.048 4.52 1.144C4.728 1.24 4.912 1.384 5.056 1.592L6.912 4.208C7.056 4.408 7.16 4.592 7.232 4.768C7.304 4.936 7.344 5.104 7.344 5.256C7.344 5.448 7.288 5.64 7.176 5.824C7.072 6.008 6.92 6.2 6.728 6.392L6.12 7.024C6.032 7.112 5.992 7.216 5.992 7.344C5.992 7.408 6 7.464 6.016 7.528C6.04 7.592 6.064 7.64 6.08 7.688C6.224 7.952 6.472 8.296 6.824 8.712C7.184 9.128 7.568 9.552 7.984 9.976C8.416 10.4 8.832 10.792 9.256 11.152C9.672 11.504 10.016 11.744 10.288 11.888C10.328 11.904 10.376 11.928 10.432 11.952C10.496 11.976 10.56 11.984 10.632 11.984C10.768 11.984 10.872 11.936 10.96 11.848L11.568 11.248C11.768 11.048 11.96 10.896 12.144 10.8C12.328 10.688 12.512 10.632 12.712 10.632C12.864 10.632 13.024 10.664 13.2 10.736C13.376 10.808 13.56 10.912 13.76 11.048L16.408 12.928C16.616 13.072 16.76 13.24 16.848 13.44C16.928 13.64 16.976 13.84 16.976 14.064Z" stroke="#292D32" stroke-width="1.7" stroke-miterlimit="10"/>
+                <path d="M14.1999 6.60005C14.1999 6.12005 13.8239 5.38405 13.2639 4.78405C12.7519 4.23205 12.0719 3.80005 11.3999 3.80005" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.9999 6.6C16.9999 3.504 14.4959 1 11.3999 1" stroke="#292D32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                
+            </button>
             </div>
           </div>
         </div>
@@ -2313,136 +1677,22 @@
             <div class="w-[60%] md:w-full flex flex-col">
               <p class="mb-8 text-gray-500 dark:text-gray-400">TESTIMONIALS</p>
               <p class="mb-6 text-[40px] font-semibold dark:text-slate-200">What they say abous us</p>
-
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide rounded-xl">
-                    <div class="w-full p-10 flex flex-col border-[2px] dark:border-gray-400 dark:bg-slate-900 dark:bg-opacity-90 dark:shadow-lg dark:border-none rounded-xl">
-                      <div class="flex flex-col lg:w-full md:mx-auto">
-                        <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z"
-                            fill="#007AFF"
-                          />
-                        </svg>
-                        <p class="leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full dark:text-slate-300">
-                          The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS
-                          response.
-                        </p>
-                      </div>
-                      <div class="bg-slate-200 dark:bg-transparent rounded-xl py-6 -mx-10 -mb-10 flex flex-row md:flex-col px-10 gap-6 md:gap-4 md:py-5 md:px-7 items-center">
-                        <div class="w-[70px] h-[70px] rounded-full md:scale-90">
-                          <img src="img/image 10.png" alt="" class="" />
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-lg dark:text-slate-200 md:text-center text-left">Miko Ahmadineza</p>
-                          <p class="text-gray-500 dark:text-slate-400 text-left">The most Exclusive customers</p>
-                        </div>
-                      </div>
+              <div class="w-full p-10 flex flex-col border-[2px] dark:border-gray-400 rounded-xl">
+                  <div class="flex flex-col lg:w-full md:mx-auto">
+                    <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z" fill="#007AFF"/>
+                      </svg>
+                    <p class=" leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full dark:text-slate-300 ">The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS response.</p>
+                  </div>
+                  <div class="bg-slate-200 dark:shadow-inner dark:shadow-slate-400 dark:bg-transparent rounded-xl py-6 -mx-10 -mb-10 flex flex-row px-10 gap-6 items-center">
+                    <div class="w-[70px] h-[70px] rounded-full">
+                      <img src="img/image 10.png" alt="" class="">
+                    </div>
+                    <div class="flex flex-col">
+                      <p class="text-lg dark:text-slate-200">Miko Ahmadineza</p>
+                      <p class=" text-gray-500 dark:text-slate-400">The most Exclusive customers</p>
                     </div>
                   </div>
-                  <div class="swiper-slide rounded-xl">
-                    <div class="w-full p-10 flex flex-col border-[2px] dark:border-gray-400 dark:bg-slate-900 dark:bg-opacity-90 dark:shadow-lg dark:border-none rounded-xl">
-                      <div class="flex flex-col lg:w-full md:mx-auto">
-                        <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z"
-                            fill="#007AFF"
-                          />
-                        </svg>
-                        <p class="leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full dark:text-slate-300">
-                          The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS
-                          response.
-                        </p>
-                      </div>
-                      <div class="bg-slate-200 dark:bg-transparent rounded-xl py-6 -mx-10 -mb-10 flex flex-row md:flex-col px-10 gap-6 md:gap-4 md:py-5 md:px-7 items-center">
-                        <div class="w-[70px] h-[70px] rounded-full md:scale-90">
-                          <img src="img/image 10.png" alt="" class="" />
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-lg dark:text-slate-200 md:text-center text-left">Miko Ahmadineza</p>
-                          <p class="text-gray-500 dark:text-slate-400 md:text text-left">The most Exclusive customers</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide rounded-xl">
-                    <div class="w-full p-10 flex flex-col border-[2px] dark:border-gray-400 dark:bg-slate-900 dark:bg-opacity-90 dark:shadow-lg dark:border-none rounded-xl">
-                      <div class="flex flex-col lg:w-full md:mx-auto">
-                        <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z"
-                            fill="#007AFF"
-                          />
-                        </svg>
-                        <p class="leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full dark:text-slate-300">
-                          The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS
-                          response.
-                        </p>
-                      </div>
-                      <div class="bg-slate-200 dark:bg-transparent rounded-xl py-6 -mx-10 -mb-10 flex flex-row md:flex-col px-10 gap-6 md:gap-4 md:py-5 md:px-7 items-center">
-                        <div class="w-[70px] h-[70px] rounded-full md:scale-90">
-                          <img src="img/image 10.png" alt="" class="" />
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-lg dark:text-slate-200 md:text-center text-left">Miko Ahmadineza</p>
-                          <p class="text-gray-500 dark:text-slate-400 md:text text-left">The most Exclusive customers</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide rounded-xl">
-                    <div class="w-full p-10 flex flex-col border-[2px] dark:border-gray-400 dark:bg-slate-900 dark:bg-opacity-90 dark:shadow-lg dark:border-none rounded-xl">
-                      <div class="flex flex-col lg:w-full md:mx-auto">
-                        <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z"
-                            fill="#007AFF"
-                          />
-                        </svg>
-                        <p class="leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full dark:text-slate-300">
-                          The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS
-                          response.
-                        </p>
-                      </div>
-                      <div class="bg-slate-200 dark:bg-transparent rounded-xl py-6 -mx-10 -mb-10 flex flex-row md:flex-col px-10 gap-6 md:gap-4 md:py-5 md:px-7 items-center">
-                        <div class="w-[70px] h-[70px] rounded-full md:scale-90">
-                          <img src="img/image 10.png" alt="" class="" />
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-lg dark:text-slate-200 md:text-center text-left">Miko Ahmadineza</p>
-                          <p class="text-gray-500 dark:text-slate-400 md:text-center text-left">The most Exclusive customers</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide rounded-xl">
-                    <div class="w-full p-10 flex flex-col border-[2px] dark:border-gray-400 dark:bg-slate-900 dark:bg-opacity-90 dark:shadow-lg dark:border-none rounded-xl">
-                      <div class="flex flex-col lg:w-full md:mx-auto">
-                        <svg width="33" height="26" viewBox="0 0 33 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M6.32687 25.9821L1.45522 22.1612C4.38458 19.1045 6.10398 16.1433 6.61343 13.2776H0.5V0H13.8731V8.69254C13.8731 12.004 13.3 15.0289 12.1537 17.7672C11.0711 20.4418 9.12886 23.1801 6.32687 25.9821ZM24.9537 25.9821L20.0821 22.1612C23.0114 19.1045 24.7308 16.1433 25.2403 13.2776H19.1269V0H32.5V8.69254C32.5 12.004 31.9269 15.0289 30.7806 17.7672C29.698 20.4418 27.7557 23.1801 24.9537 25.9821Z"
-                            fill="#007AFF"
-                          />
-                        </svg>
-                        <p class="leading-7 my-6 text-xl md:text-lg w-[90%] md:text-center lg:w-full dark:text-slate-300">
-                          The best hosting and domain service provider in Indonesia. Good CS response and service and ready to support 24/7. The price offered is in accordance with the quality domain service provider in Indonesia. Good CS
-                          response.
-                        </p>
-                      </div>
-                      <div class="bg-slate-200 dark:bg-transparent rounded-xl py-6 -mx-10 -mb-10 flex flex-row md:flex-col px-10 gap-6 md:gap-4 md:py-5 md:px-7 items-center">
-                        <div class="w-[70px] h-[70px] rounded-full md:scale-90">
-                          <img src="img/image 10.png" alt="" class="" />
-                        </div>
-                        <div class="flex flex-col">
-                          <p class="text-lg dark:text-slate-200 md:text-center text-left">Miko Ahmadineza</p>
-                          <p class="text-gray-500 dark:text-slate-400 text-left">The most Exclusive customers</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
               </div>
             </div>
             <div class="w-[30%] md:w-full flex flex-col bg-[#0468D7] justify-center mx-auto rounded-xl p-10 py-14">
@@ -2544,25 +1794,317 @@
       </div>
     </footer>
     <script src="load.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-          var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-<script src="digital.js"></script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+
+    <script>
+      window.onscroll = function () {
+        Menu(),scrol();
+      };
+      var xstatus = false;
+      var hehe = false;
+      var loader = document.getElementById("loader");
+
+  window.addEventListener("load", function() {
+    loader.style.display = "none";
+  });
+      function scrol() {
+        if(document.documentElement.scrollTop > 700) {
+          document.getElementById("scrol").classList.add("fixed")
+          document.getElementById("scrol").classList.add("top-[100px]")
+          document.getElementById("scrol").classList.add("lg:static")
+          document.getElementById("scrol2").classList.add("w-2/4")
+            if (document.documentElement.scrollTop > 1400) {
+              document.getElementById("scrol").classList.add("top-[100px]")
+              document.getElementById("scrol").classList.add("sticky")
+              document.getElementById("scrol").classList.add("mb-12")
+              document.getElementById("scrol").innerHTML = `<div id="scrol" class="w-2/4 h-[200px] md:w-full flex flex-col lg:items-center md:items-start">
+              <h1 class="text-xl my-4 md:text-left lg:text-center">How to Order</h1>
+              <p class="text-4xl font-medium mb-4 w-[401px] md:text-left lg:text-center">Website Development Process at FanRay</p>
+              <p class="text-base mb-4 text-opacity-70 w-[413px] md:text-left lg:text-center">4 easy steps you need to know when ordering a Website / Application with our services.
+              </p>
+            </div>`
+              document.getElementById("scrol2").classList.add("w-2/4")
+              document.getElementById("scrol2").classList.add("hidden")
+            }
+            
+        } else {
+          document.getElementById("scrol").classList.remove("fixed")
+          document.getElementById("scrol").classList.remove("top-[80px]")
+          document.getElementById("scrol2").classList.remove("w-2/4")
+        }
+      }
+
+      function Menu() {
+        if (document.documentElement.scrollTop > 20) {
+          document.getElementById("header").classList.add("bg-white");
+          document.getElementById("header").classList.add("shadow-lg");
+          document.getElementById("header").classList.add("bg-opacity-70");
+          document.getElementById("header").classList.add("backdrop-blur-[7px]");
+          document.getElementById("header").classList.add("dark:bg-opacity-70");
+          document.getElementById("header").classList.add("dark:backdrop-blur-[7px]");
+        } else if (document.documentElement.scrollTop > -5) {
+          document.getElementById("header").classList.remove("bg-white");
+          document.getElementById("header").classList.remove("shadow-lg");
+        } else {
+          document.getElementById("header").classList.remove("shadow-lg");
+          document.getElementById("header").classList.remove("bg-white");
+          document.getElementById("header").classList.remove("bg-opacity-70");
+          document.getElementById("header").classList.remove("backdrop-blur-[7px]");
+          document.getElementById("header").classList.remove("dark:bg-opacity-70");
+          document.getElementById("header").classList.remove("dark:backdrop-blur-[7px]");
+        }
+      }
+
+      function showHideMenu() {
+        var menu = document.getElementById("daftarMenu");
+        var dropMode = document.getElementById("")
+        if (xstatus) {
+          menu.classList.add("hidden");
+          menu.classList.remove("flex");
+          
+
+          xstatus = false;
+        } else {
+          menu.classList.remove("hidden");
+          menu.classList.add("flex");
+          
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+
+      function showDrop() {
+        var daftarDrop = document.getElementById('daftarDrop');
+        if (xstatus) {
+          daftarDrop.classList.add("hidden");
+          daftarDrop.classList.remove("flex");
+
+          xstatus = false;
+        } else {
+          daftarDrop.classList.remove("hidden");
+          daftarDrop.classList.add("flex");
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+
+      function showIsi() {
+        var isi = document.getElementById('daftar');
+        if (xstatus) {
+          isi.classList.add("hidden");
+          isi.classList.remove("flex");
+
+          xstatus = false;
+        } else {
+          isi.classList.remove("hidden");
+          isi.classList.add("flex");
+          isi.classList.add("transition-all");
+          isi.classList.add("delay-300");
+          isi.classList.add("ease-in-out");
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      function showIsi1() {
+        var isi1 = document.getElementById('daftar1');
+
+        if (xstatus) {
+          isi1.classList.add("hidden");
+          isi1.classList.remove("flex");
+
+          xstatus = false;
+        } else {
+          isi1.classList.remove("hidden");
+          isi1.classList.add("flex");
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      function showIsi2() {
+        var isi2 = document.getElementById('daftar2');
+
+        if (xstatus) {
+          isi2.classList.add("hidden");
+          isi2.classList.remove("flex");
+
+          xstatus = false;
+        } else {
+          isi2.classList.remove("hidden");
+          isi2.classList.add("flex");
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      function showIsi3() {
+        var isi3 = document.getElementById('daftar3');
+
+        if (xstatus) {
+          isi3.classList.add("hidden");
+          isi3.classList.remove("flex");
+
+          xstatus = false;
+        } else {
+          isi3.classList.remove("hidden");
+          isi3.classList.add("flex");
+
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+
+      function drop() {
+        var dropMode = document.getElementById('dropMode');
+        if (xstatus) {
+          
+          dropMode.classList.add("hidden");
+          dropMode.classList.remove("flex");
+          xstatus = false;
+        } else {
+          
+          dropMode.classList.remove("hidden");
+          dropMode.classList.add("flex");
+          xstatus = true;
+        }
+        console.log(xstatus);
+      }
+      
+      function tombol1() {
+        document.getElementById("item1").classList.remove("hidden");
+        document.getElementById("item1").classList.add("flex");
+        document.getElementById("item2").classList.remove("flex");
+        document.getElementById("item2").classList.add("hidden");
+        document.getElementById("item2").classList.add("md:hidden");
+        document.getElementById("item3").classList.remove("flex");
+        document.getElementById("item3").classList.add("hidden");
+
+        //btn1
+        document.getElementById("btn1").classList.add("bg-[#0468D7]");
+        document.getElementById("btn1").classList.add("text-slate-50");
+        document.getElementById("btn1").classList.remove("bg-gray-50");
+        document.getElementById("btn1").classList.remove("text-slate-600");
+        // btn2
+        document.getElementById("btn2").classList.remove("bg-[#0468D7]");
+        document.getElementById("btn2").classList.remove("text-slate-50");
+        document.getElementById("btn2").classList.add("bg-gray-50");
+        document.getElementById("btn2").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.remove("bg-[#0468D7]");
+        document.getElementById("btn3").classList.remove("text-slate-50");
+        document.getElementById("btn3").classList.add("bg-gray-50");
+        document.getElementById("btn3").classList.add("text-slate-600");
+      }
+      function tombol2() {
+        document.getElementById("item2").classList.add("flex");
+        document.getElementById("item2").classList.add("md:flex");
+        document.getElementById("item2").classList.remove("hidden");
+        document.getElementById("item2").classList.remove("md:hidden");
+
+        document.getElementById("item1").classList.remove("flex");
+        document.getElementById("item1").classList.add("hidden");
+
+        document.getElementById("item3").classList.remove("flex");
+        document.getElementById("item3").classList.add("hidden");
+
+        //btn2
+        document.getElementById("btn2").classList.add("bg-[#0468D7]");
+        document.getElementById("btn2").classList.add("text-slate-50");
+        document.getElementById("btn2").classList.remove("bg-gray-50");
+        document.getElementById("btn2").classList.remove("text-slate-600");
+        // btn1
+        document.getElementById("btn1").classList.remove("bg-[#0468D7]");
+        document.getElementById("btn1").classList.remove("text-slate-50");
+        document.getElementById("btn1").classList.add("bg-gray-50");
+        document.getElementById("btn1").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.remove("bg-[#0468D7]");
+        document.getElementById("btn3").classList.remove("text-slate-50");
+        document.getElementById("btn3").classList.add("bg-gray-50");
+        document.getElementById("btn3").classList.add("text-slate-600");
+      }
+      function tombol3() {
+        document.getElementById("item2").classList.remove("flex");
+        document.getElementById("item2").classList.remove("md:flex");
+        document.getElementById("item2").classList.add("hidden");
+        document.getElementById("item2").classList.add("md:hidden");
+
+        document.getElementById("item1").classList.remove("flex");
+        document.getElementById("item1").classList.add("hidden");
+        document.getElementById("item3").classList.add("flex");
+        document.getElementById("item3").classList.remove("hidden");
+        // btn 1
+        document.getElementById("btn1").classList.remove("bg-[#0468D7]");
+        document.getElementById("btn1").classList.remove("text-slate-50");
+        document.getElementById("btn1").classList.add("bg-gray-50");
+        document.getElementById("btn1").classList.add("text-slate-600");
+        //btn 2
+        document.getElementById("btn2").classList.remove("bg-[#0468D7]");
+        document.getElementById("btn2").classList.remove("text-slate-50");
+        document.getElementById("btn2").classList.add("bg-gray-50");
+        document.getElementById("btn2").classList.add("text-slate-600");
+        //btn 3
+        document.getElementById("btn3").classList.add("bg-[#0468D7]");
+        document.getElementById("btn3").classList.add("text-slate-50");
+        document.getElementById("btn3").classList.remove("bg-gray-50");
+        document.getElementById("btn3").classList.remove("text-slate-600");
+      }
+    
+      
+      const isiUp = document.getElementById("dropDown");
+      isiUp.addEventListener('click', function () {
+        isiUp.classList.toggle("drop-isi");
+      });
+      
+      const isiUp1 = document.getElementById("dropDown1");
+      isiUp1.addEventListener('click', function () {
+        isiUp1.classList.toggle("drop-isi1");
+      });
+
+      const isiUp2 = document.getElementById("dropDown2");
+      isiUp2.addEventListener('click', function () {
+        isiUp2.classList.toggle("drop-isi2");
+      });
+
+      const isiUp3 = document.getElementById("dropDown3");
+      isiUp3.addEventListener('click', function () {
+        isiUp3.classList.toggle("drop-isi3");
+      });
+
+      const arrowUp = document.getElementById("drop");
+      arrowUp.addEventListener('click', function () {
+        arrowUp.classList.toggle("drop-active");
+      });
+
+      const hambuger = document.getElementById("ham");
+
+      hambuger.addEventListener("click", function () {
+        hambuger.classList.toggle("hamburger-active");
+      });
+
+
+
+      function dark() {
+        var html = document.querySelector("html");
+        if (hehe) {
+          html.classList.add("dark");
+          hehe = false;
+        } else {
+          html.classList.remove("dark");
+          hehe = true;
+        }
+        console.log(hehe);
+      }
+    </script>
   </body>
 </html>

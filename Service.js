@@ -8,34 +8,16 @@ window.onscroll = function () {
     if(xstatus) {
       daftar.classList.add('hidden');
       daftar.classList.remove('flex');
-      daftar.classList.remove("translate-y-[140px]");
-      daftar.classList.remove("delay-500");
+      daftar.classList.remove("translate-y-[152px]");
+      daftar.classList.remove("duration-500");
       daftar.classList.remove("transtion-all");
       xstatus = false;
     } else{
       daftar.classList.remove("hidden");
       daftar.classList.add("flex");
-      daftar.classList.add("translate-y-[140px]");
-      daftar.classList.add("delay-500");
+      daftar.classList.add("translate-y-[152px]");
+      daftar.classList.add("duration-500");
       daftar.classList.add("transtion-all");
-      xstatus = true;
-    }
-  }
-  function view1(){
-    var daftar1 = document.getElementById('daftarCard1');
-    if(xstatus) {
-      daftar1.classList.add('hidden');
-      daftar1.classList.remove('flex');
-      daftar1.classList.remove("translate-y-[140px]");
-      daftar1.classList.remove("delay-500");
-      daftar1.classList.remove("transtion-all");
-      xstatus = false;
-    } else{
-      daftar1.classList.remove("hidden");
-      daftar1.classList.add("flex");
-      daftar1.classList.add("translate-y-[140px]");
-      daftar1.classList.add("delay-500");
-      daftar1.classList.add("transtion-all");
       xstatus = true;
     }
   }
@@ -44,14 +26,14 @@ window.onscroll = function () {
     if(xstatus) {
       daftar2.classList.add('hidden');
       daftar2.classList.remove('flex');
-      daftar2.classList.remove("translate-y-[140px]");
+      daftar2.classList.remove("translate-y-[152px]");
       daftar2.classList.remove("delay-500");
       daftar2.classList.remove("transtion-all");
       xstatus = false;
     } else{
       daftar2.classList.remove("hidden");
       daftar2.classList.add("flex");
-      daftar2.classList.add("translate-y-[140px]");
+      daftar2.classList.add("translate-y-[152px]");
       daftar2.classList.add("delay-500");
       daftar2.classList.add("transtion-all");
       xstatus = true;
@@ -62,33 +44,170 @@ window.onscroll = function () {
     if(xstatus) {
       daftar3.classList.add('hidden');
       daftar3.classList.remove('flex');
-      daftar3.classList.remove("translate-y-[140px]");
+      daftar3.classList.remove("translate-y-[152px]");
       daftar3.classList.remove("delay-500");
       daftar3.classList.remove("transtion-all");
       xstatus = false;
     } else{
       daftar3.classList.remove("hidden");
       daftar3.classList.add("flex");
-      daftar3.classList.add("translate-y-[140px]");
+      daftar3.classList.add("translate-y-[152px]");
       daftar3.classList.add("delay-500");
       daftar3.classList.add("transtion-all");
       xstatus = true;
     }
   }
+  function view4(){
+    var daftar4 = document.getElementById('daftarCard4');
+    if(xstatus) {
+      daftar4.classList.add('hidden');
+      daftar4.classList.remove('flex');
+      daftar4.classList.remove("translate-y-[152px]");
+      daftar4.classList.remove("delay-500");
+      daftar4.classList.remove("transtion-all");
+      xstatus = false;
+    } else{
+      daftar4.classList.remove("hidden");
+      daftar4.classList.add("flex");
+      daftar4.classList.add("translate-y-[152px]");
+      daftar4.classList.add("delay-500");
+      daftar4.classList.add("transtion-all");
+      xstatus = true;
+    }
+  }
+  function view5(){
+    var daftar5 = document.getElementById('daftarCard5');
+    if(xstatus) {
+      daftar5.classList.add('hidden');
+      daftar5.classList.remove('flex');
+      daftar5.classList.remove("translate-y-[152px]");
+      daftar5.classList.remove("delay-500");
+      daftar5.classList.remove("transtion-all");
+      xstatus = false;
+    } else{
+      daftar5.classList.remove("hidden");
+      daftar5.classList.add("flex");
+      daftar5.classList.add("translate-y-[152px]");
+      daftar5.classList.add("delay-500");
+      daftar5.classList.add("transtion-all");
+      xstatus = true;
+    }
+  }
+  function view6(){
+    var daftar6 = document.getElementById('daftarCard6');
+    if(xstatus) {
+      daftar6.classList.add('hidden');
+      daftar6.classList.remove('flex');
+      daftar6.classList.remove("translate-y-[152px]");
+      daftar6.classList.remove("delay-500");
+      daftar6.classList.remove("transtion-all");
+      xstatus = false;
+    } else{
+      daftar6.classList.remove("hidden");
+      daftar6.classList.add("flex");
+      daftar6.classList.add("translate-y-[152px]");
+      daftar6.classList.add("delay-500");
+      daftar6.classList.add("transtion-all");
+      xstatus = true;
+    }
+  }
+function showIsi() {
+  var isi = document.getElementById('daftar');
+  var wel = document.getElementById('wel')
+  if (xstatus) {
+    isi.classList.add("hidden");
+    isi.classList.remove("flex");
+    wel.classList.remove('flex-col')
+    wel.classList.add('flex-row')
+    xstatus = false;
+  } else {
+    isi.classList.remove("hidden");
+    isi.classList.add("flex");
+    wel.classList.add('flex-col')
+    wel.classList.remove('flex-row')
 
+    xstatus = true;
+  }
+  console.log(xstatus);
+}
+function showIsi1() {
+  var isi1 = document.getElementById('daftar1');
+  var wel1 = document.getElementById('wel1')
+
+  if (xstatus) {
+    isi1.classList.add("hidden");
+    isi1.classList.remove("flex");
+    wel1.classList.remove('flex-col')
+    wel1.classList.add('flex-row')
+
+    xstatus = false;
+  } else {
+    isi1.classList.remove("hidden");
+    isi1.classList.add("flex");
+    wel1.classList.add('flex-col')
+    wel1.classList.remove('flex-row')
+
+    xstatus = true;
+  }
+  console.log(xstatus);
+}
+function showIsi2() {
+  var isi2 = document.getElementById('daftar2');
+  var wel2 = document.getElementById('wel2')
+
+  if (xstatus) {
+    isi2.classList.add("hidden");
+    isi2.classList.remove("flex");
+    wel2.classList.remove('flex-col')
+    wel2.classList.add('flex-row')
+
+    xstatus = false;
+  } else {
+    isi2.classList.remove("hidden");
+    isi2.classList.add("flex");
+    wel2.classList.add('flex-col')
+    wel2.classList.remove('flex-row')
+
+    xstatus = true;
+  }
+  console.log(xstatus);
+}
+function showIsi3() {
+  var isi3 = document.getElementById('daftar3');
+  var wel3 = document.getElementById('wel3')
+
+  if (xstatus) {
+    isi3.classList.add("hidden");
+    isi3.classList.remove("flex");
+    wel3.classList.remove('flex-col')
+    wel3.classList.add('flex-row')
+
+    xstatus = false;
+  } else {
+    isi3.classList.remove("hidden");
+    isi3.classList.add("flex");
+    wel3.classList.add('flex-col')
+    wel3.classList.remove('flex-row')
+    
+    xstatus = true;
+  }
+  console.log(xstatus);
+}
   function scrol() {
-    if(document.documentElement.scrollTop > 770) {
+    if(document.documentElement.scrollTop > 2630) {
       document.getElementById("scrol").classList.add("fixed")
       document.getElementById("scrol").classList.add("top-[100px]")
       document.getElementById("scrol").classList.add("lg:static")
       document.getElementById("scrol2").classList.add("w-2/4")
-        if (document.documentElement.scrollTop > 1400) {
+        if (document.documentElement.scrollTop > 2600) {
           document.getElementById("scrol").classList.add("top-[100px]")
           document.getElementById("scrol").classList.add("sticky")
           document.getElementById("scrol").classList.add("mb-12")
           document.getElementById("scrol").innerHTML = `            <div id="scrol" class="w-2/4 h-[200px] md:w-full flex flex-col lg:items-center md:items-start">
-          <h1 class="text-lg w-[400px] my-4 md:text-left lg:text-center">Benefits of Branding & Content Creation</h1>
-          <p class="text-[2rem] leading-10 font-medium mb-4 w-[475px] md:text-left lg:text-center">Here are 8 benefits of having a professional design for your business</p>
+          <h1 class="text-xl my-4 md:text-left lg:text-center">How to Order</h1>
+          <p class="text-4xl font-medium mb-4 w-[401px] md:text-left lg:text-center">Website Development Process at FanRay</p>
+          <p class="text-base mb-4 text-opacity-70 w-[413px] md:text-left lg:text-center">4 easy steps you need to know when ordering a Website / Application with our services.
+          </p>
         </div>`
           document.getElementById("scrol2").classList.add("w-2/4")
           document.getElementById("scrol2").classList.add("hidden")
@@ -100,7 +219,6 @@ window.onscroll = function () {
       document.getElementById("scrol2").classList.remove("w-2/4")
     }
   }
-
   function Menu() {
     if (document.documentElement.scrollTop > 20) {
       document.getElementById("header").classList.add("bg-white");
@@ -121,7 +239,6 @@ window.onscroll = function () {
       document.getElementById("header").classList.remove("dark:backdrop-blur-[7px]");
     }
   }
-
   function showHideMenu() {
     var menu = document.getElementById("daftarMenu");
     if (xstatus) {
@@ -139,7 +256,6 @@ window.onscroll = function () {
     }
     console.log(xstatus);
   }
-
   function ShowDaftar() {
     var daftarDrop = document.getElementById("daftarDrop");
     if (xstatus) {
@@ -152,146 +268,6 @@ window.onscroll = function () {
       xstatus = true;
     }
     console.log(xstatus);
-  }
-  function showIsi() {
-    var isi = document.getElementById('daftar');
-    if (xstatus) {
-      isi.classList.add("hidden");
-      isi.classList.remove("flex");
-
-      xstatus = false;
-    } else {
-      isi.classList.remove("hidden");
-      isi.classList.add("flex");
-      isi.classList.add("transition-all");
-      isi.classList.add("delay-300");
-      isi.classList.add("ease-in-out");
-      xstatus = true;
-    }
-    console.log(xstatus);
-  }
-  function showIsi() {
-    var isi = document.getElementById('daftar');
-    var wel = document.getElementById('wel')
-    if (xstatus) {
-      isi.classList.add("hidden");
-      isi.classList.remove("flex");
-      wel.classList.remove('flex-col')
-      wel.classList.add('flex-row')
-      xstatus = false;
-    } else {
-      isi.classList.remove("hidden");
-      isi.classList.add("flex");
-      wel.classList.add('flex-col')
-      wel.classList.remove('flex-row')
-
-      xstatus = true;
-    }
-    console.log(xstatus);
-  }
-  function showIsi1() {
-    var isi1 = document.getElementById('daftar1');
-    var wel2 = document.getElementById('wel1')
-
-    if (xstatus) {
-      isi1.classList.add("hidden");
-      isi1.classList.remove("flex");
-      wel1.classList.remove('flex-col')
-      wel1.classList.add('flex-row')
-
-      xstatus = false;
-    } else {
-      isi1.classList.remove("hidden");
-      isi1.classList.add("flex");
-      wel1.classList.add('flex-col')
-      wel1.classList.remove('flex-row')
-
-      xstatus = true;
-    }
-    console.log(xstatus);
-  }
-  function showIsi2() {
-    var isi2 = document.getElementById('daftar2');
-    var wel2 = document.getElementById('wel2')
-
-    if (xstatus) {
-      isi2.classList.add("hidden");
-      isi2.classList.remove("flex");
-      wel2.classList.remove('flex-col')
-      wel2.classList.add('flex-row')
-
-      xstatus = false;
-    } else {
-      isi2.classList.remove("hidden");
-      isi2.classList.add("flex");
-      wel2.classList.add('flex-col')
-      wel2.classList.remove('flex-row')
-
-      xstatus = true;
-    }
-    console.log(xstatus);
-  }
-  function showIsi3() {
-    var isi3 = document.getElementById('daftar3');
-    var wel3 = document.getElementById('wel3')
-
-    if (xstatus) {
-      isi3.classList.add("hidden");
-      isi3.classList.remove("flex");
-      wel3.classList.remove('flex-col')
-      wel3.classList.add('flex-row')
-
-      xstatus = false;
-    } else {
-      isi3.classList.remove("hidden");
-      isi3.classList.add("flex");
-      wel3.classList.add('flex-col')
-      wel3.classList.remove('flex-row')
-      
-      xstatus = true;
-    }
-    console.log(xstatus);
-  }
-
-  function gelap() {
-    var html = document.querySelector("html");
-    var gelapp = document.getElementById("gelapp");
-    var terang = document.getElementById("terang");
-    html.classList.add("dark");
-    gelapp.classList.remove("flex");
-    gelapp.classList.add("hidden");
-    terang.classList.remove("hidden");
-    terang.classList.add("flex");
-  }
-  function light() {
-    var html = document.querySelector("html");
-    var gelapp = document.getElementById("gelapp");
-    var terang = document.getElementById("terang");
-    html.classList.remove("dark");
-    terang.classList.remove("flex");
-    terang.classList.add("hidden");
-    gelapp.classList.remove("hidden");
-    gelapp.classList.add("flex");
-  }
-  function gelap2() {
-    var html = document.querySelector("html");
-    var gelapp2 = document.getElementById("gelapp2");
-    var terang2 = document.getElementById("terang2");
-    html.classList.add("dark");
-    gelapp2.classList.remove("flex");
-    gelapp2.classList.add("hidden");
-    terang2.classList.remove("hidden");
-    terang2.classList.add("flex");
-  }
-  function light2() {
-    var html = document.querySelector("html");
-    var gelapp2 = document.getElementById("gelapp2");
-    var terang2 = document.getElementById("terang2");
-    html.classList.remove("dark");
-    terang2.classList.remove("flex");
-    terang2.classList.add("hidden");
-    gelapp2.classList.remove("hidden");
-    gelapp2.classList.add("flex");
   }
   
   function tombol1() {
@@ -312,14 +288,6 @@ window.onscroll = function () {
     document.getElementById("item2Slider").classList.add("hidden");
     document.getElementById("item2Slider").classList.remove("flex");
     document.getElementById("item2Slider").classList.remove("md:flex");
-
-    document.getElementById("item3Slider").classList.add("hidden");
-    document.getElementById("item3Slider").classList.remove("flex");
-    document.getElementById("item3Slider").classList.remove("md:flex");
-
-    document.getElementById("item4Slider").classList.add("hidden");
-    document.getElementById("item4Slider").classList.remove("flex");
-    document.getElementById("item4Slider").classList.remove("md:flex");
 
     //btn1
     document.getElementById("btn1").classList.add("bg-[#0468D7]");
@@ -379,14 +347,6 @@ window.onscroll = function () {
     document.getElementById("item2Slider").classList.add("md:flex");
     document.getElementById("item2Slider").classList.add("hidden");
 
-    document.getElementById("item3Slider").classList.add("hidden");
-    document.getElementById("item3Slider").classList.remove("flex");
-    document.getElementById("item3Slider").classList.remove("md:flex");
-    
-    document.getElementById("item4Slider").classList.add("hidden");
-    document.getElementById("item4Slider").classList.remove("flex");
-    document.getElementById("item4Slider").classList.remove("md:flex");
-
 
     //btn2
     document.getElementById("btn2").classList.add("bg-[#0468D7]");
@@ -426,7 +386,6 @@ window.onscroll = function () {
     document.getElementById("btn4").classList.add("dark:bg-gray-300");
     document.getElementById("btn4").classList.add("dark:text-slate-800");
   }
-  
   function tombol3() {
     document.getElementById("item2").classList.remove("flex");
     document.getElementById("item2").classList.remove("md:flex");
@@ -439,24 +398,14 @@ window.onscroll = function () {
     document.getElementById("item3").classList.remove("hidden");
     document.getElementById("item4").classList.remove("flex");
     document.getElementById("item4").classList.add("hidden");
+
     // slider
     document.getElementById("item1Slider").classList.add("md:hidden");
     document.getElementById("item1Slider").classList.remove("flex");
     document.getElementById("item1Slider").classList.remove("md:flex");
 
-    document.getElementById("item2Slider").classList.add("hidden");
-    document.getElementById("item2Slider").classList.remove("flex");
+    document.getElementById("item2Slider").classList.add("md:hidden");
     document.getElementById("item2Slider").classList.remove("md:flex");
-
-    document.getElementById("item3Slider").classList.remove("flex");
-    document.getElementById("item3Slider").classList.remove("md:hidden");
-    document.getElementById("item3Slider").classList.add("md:flex");
-    document.getElementById("item3Slider").classList.add("hidden");
-    
-    document.getElementById("item4Slider").classList.add("hidden");
-    document.getElementById("item4Slider").classList.remove("flex");
-    document.getElementById("item4Slider").classList.remove("md:flex");
-
     // btn 1
     document.getElementById("btn1").classList.remove("bg-[#0468D7]");
     document.getElementById("btn1").classList.remove("text-slate-50");
@@ -493,7 +442,6 @@ window.onscroll = function () {
     document.getElementById("btn4").classList.remove("dark:text-slate-50");
     document.getElementById("btn4").classList.add("dark:bg-gray-300");
     document.getElementById("btn4").classList.add("dark:text-slate-800");
-    
   }
   function tombol4() {
     document.getElementById("item1").classList.remove("flex");
@@ -504,24 +452,6 @@ window.onscroll = function () {
     document.getElementById("item3").classList.add("hidden");
     document.getElementById("item4").classList.add("flex");
     document.getElementById("item4").classList.remove("hidden");
-    // slider
-    document.getElementById("item1Slider").classList.add("md:hidden");
-    document.getElementById("item1Slider").classList.remove("flex");
-    document.getElementById("item1Slider").classList.remove("md:flex");
-
-    document.getElementById("item2Slider").classList.add("hidden");
-    document.getElementById("item2Slider").classList.remove("flex");
-    document.getElementById("item2Slider").classList.remove("md:flex");
-
-    document.getElementById("item3Slider").classList.add("hidden");
-    document.getElementById("item3Slider").classList.remove("flex");
-    document.getElementById("item3Slider").classList.remove("md:flex");
-
-    document.getElementById("item4Slider").classList.remove("flex");
-    document.getElementById("item4Slider").classList.remove("md:hidden");
-    document.getElementById("item4Slider").classList.add("md:flex");
-    document.getElementById("item4Slider").classList.add("hidden");
-    
     // btn 1
     document.getElementById("btn1").classList.remove("bg-[#0468D7]");
     document.getElementById("btn1").classList.remove("text-slate-50");
@@ -558,9 +488,50 @@ window.onscroll = function () {
     document.getElementById("btn4").classList.add("dark:text-slate-800");
     document.getElementById("btn4").classList.remove("dark:bg-gray-300");
     document.getElementById("btn4").classList.remove("dark:text-slate-800");
-    
   }
   
+
+  
+  function gelap() {
+    var html = document.querySelector("html");
+    var gelapp = document.getElementById("gelapp");
+    var terang = document.getElementById("terang");
+    html.classList.add("dark");
+    gelapp.classList.remove("flex");
+    gelapp.classList.add("hidden");
+    terang.classList.remove("hidden");
+    terang.classList.add("flex");
+  }
+  function light() {
+    var html = document.querySelector("html");
+    var gelapp = document.getElementById("gelapp");
+    var terang = document.getElementById("terang");
+    html.classList.remove("dark");
+    terang.classList.remove("flex");
+    terang.classList.add("hidden");
+    gelapp.classList.remove("hidden");
+    gelapp.classList.add("flex");
+  }
+  function gelap2() {
+    var html = document.querySelector("html");
+    var gelapp2 = document.getElementById("gelapp2");
+    var terang2 = document.getElementById("terang2");
+    html.classList.add("dark");
+    gelapp2.classList.remove("flex");
+    gelapp2.classList.add("hidden");
+    terang2.classList.remove("hidden");
+    terang2.classList.add("flex");
+  }
+  function light2() {
+    var html = document.querySelector("html");
+    var gelapp2 = document.getElementById("gelapp2");
+    var terang2 = document.getElementById("terang2");
+    html.classList.remove("dark");
+    terang2.classList.remove("flex");
+    terang2.classList.add("hidden");
+    gelapp2.classList.remove("hidden");
+    gelapp2.classList.add("flex");
+  }
   const isiUp = document.getElementById("dropDown");
   isiUp.addEventListener('click', function () {
     isiUp.classList.toggle("drop-isi");
@@ -580,7 +551,7 @@ window.onscroll = function () {
   isiUp3.addEventListener('click', function () {
     isiUp3.classList.toggle("drop-isi3");
   });
-
+  
   const arrow = document.getElementById("drop");
   arrow.addEventListener("click", function () {
     arrow.classList.toggle("drop-menu")
@@ -592,21 +563,10 @@ window.onscroll = function () {
     hambuger.classList.toggle("hamburger-active");
   });
 
-  function dark() {
-    var html = document.querySelector("html");
-    if (hehe) {
-      html.classList.add("dark");
-      hehe = false;
-    } else {
-      html.classList.remove("dark");
-      hehe = true;
-    }
-    console.log(hehe);
-  }
+//   carddd
 
-//   cardddd
-// card 1
-function popGanti(){
+  // card 1
+  function popGanti(){
     const blurGanti = document.getElementById('blurGanti');
     const header = document.getElementById("header");
     header.classList.add('hidden')
