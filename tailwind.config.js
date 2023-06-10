@@ -13,7 +13,7 @@ module.exports = {
       'lg': {'max': '1023px'},
       // => @media (max-width: 1023px) { ... }
 
-      'md': {'max': '767px'},
+      'md': {'max': '600px'},
       // => @media (max-width: 767px) { ... }
 
       'sm': {'max': '400px'},
@@ -34,7 +34,7 @@ module.exports = {
       },
       backgroundImage : {
         'service' : "url('img/Group 27.png')",
-        'parel' : "url('img/parel_hbd-removebg-preview.png')",
+        'works1' : "url('img/thumbnail3.jpg')",
       },
       colors : {
         "primary" : ['#929292']

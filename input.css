@@ -25,7 +25,9 @@ html::-webkit-scrollbar-thumb{
   width: 100%;
   height: 100%;
 }
-
+.drop-menu{
+  @apply rotate-90
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -33,44 +35,21 @@ html::-webkit-scrollbar-thumb{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 0.85rem;
 }
 
 
 .hamburger-active > span:nth-child(1){
-    @apply rotate-[44deg]
+    @apply rotate-[45deg] w-[30px] 
 }
 .hamburger-active > span:nth-child(2){
     @apply scale-0
 }
 .hamburger-active > span:nth-child(3){
-    @apply origin-bottom-left rotate-[-44deg]
+    @apply origin-bottom-left rotate-[-44deg] w-[30px] mb-[5px]
 }
 
-.drop-active > span:nth-child(1){
-    @apply -rotate-45 origin-top-left 
-}
 
-.drop-active > span:nth-child(2){
-    @apply rotate-45 origin-top-right relative -left-1 
-}
-
-#overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-.modal {
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  transition: 200ms ease-in-out;
-  z-index: 10;
-}
-
-.modal.active {
-  transform: translate(-50%, -50%) scale(1);
-}
 
 
 .pl {
@@ -486,7 +465,7 @@ html::-webkit-scrollbar-thumb{
     @apply origin-top 
 }
 
-p, h1, h2, button, div {
+p, h1, h2, button, div{
     @apply dark:text-slate-100;
 }
 html{
@@ -514,16 +493,5 @@ html{
 }
 }
 
-.swiper {
-    width: 90%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    justify-content: center;
-    align-items: center;
-  }
 
 
