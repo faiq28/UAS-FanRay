@@ -197,12 +197,12 @@ function showIsi2() {
     isi2.classList.remove("hidden");
     isi2.classList.add("flex");
 
-      xstatus = true;
-    }
-    console.log(xstatus);
+    xstatus = true;
   }
-  function showIsi3() {
-    var isi3 = document.getElementById("daftar3");
+  console.log(xstatus);
+}
+function showIsi3() {
+  var isi3 = document.getElementById("daftar3");props
 
   if (xstatus) {
     isi3.classList.add("hidden");
