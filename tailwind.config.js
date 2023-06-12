@@ -35,6 +35,8 @@ module.exports = {
       backgroundImage : {
         'service' : "url('img/Group 27.png')",
         'works1' : "url('img/thumbnail3.jpg')",
+        'sun' : "url('icon2/sun.svg')",
+        'moon' : "url('icon2/moon.svg')",
       },
       colors : {
         "primary" : ['#929292']

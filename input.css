@@ -22,8 +22,7 @@ html::-webkit-scrollbar-thumb{
   @apply rounded-[12px] bg-sky-500
 }
 .swiper {
-  width: 100%;
-  height: 100%;
+  @apply w-full h-fit dark:bg-slate-800 rounded-xl
 }
 .drop-menu{
   @apply rotate-90
@@ -36,17 +35,18 @@ html::-webkit-scrollbar-thumb{
   justify-content: center;
   align-items: center;
   border-radius: 0.85rem;
+  @apply dark:bg-transparent rounded-2xl
 }
 
 
 .hamburger-active > span:nth-child(1){
-    @apply rotate-[44deg]
+    @apply rotate-[45deg] w-[30px] 
 }
 .hamburger-active > span:nth-child(2){
     @apply scale-0
 }
 .hamburger-active > span:nth-child(3){
-    @apply origin-bottom-left rotate-[-44deg]
+    @apply origin-bottom-left rotate-[-44deg] w-[30px] mb-[5px]
 }
 
 
