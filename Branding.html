@@ -1608,11 +1608,6 @@
                   </svg>
                 </button>
               </li>
-              <li>
-                <a href="https://wa.me/6281299398852" class="flex justify-center items-center mt-1">
-                  <img src="icon/gojo.jpeg" alt="" class="w-[28px] h-[28px] rounded-full">                                                      
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -3390,7 +3385,7 @@
               <a href="digital.html" class="py-3 px-6 w-44 hover:ring-transparent hover:bg-[#0468D7] transition-all ease-in-out hover:text-slate-100 text-center rounded-full ring-[#0468D7] ring-[1px] dark:text-slate-200 dark:hover:text-black dark:ring-[#35B6FF] dark:hover:ring-[#35B6FF] dark:hover:bg-[#35B6FF] md:scale-90">View Platform</a>
             </div>
             <div class="w-2/4 md:w-full flex">
-              <img src="img/image 13 (1).png" alt="" class="">
+              <img src="img/download-removebg-preview.png" alt="" class="">
             </div>
           </div>
         </div>
@@ -4762,19 +4757,20 @@ number10.addEventListener('input', (e) => {
     console.log(xstatus);
   }
 
-  function ShowDaftar() {
-    var daftarDrop = document.getElementById("daftarDrop");
-    if (xstatus) {
-      daftarDrop.classList.add("hidden");
-      daftarDrop.classList.remove("flex");
-      xstatus = false;
-    } else {
-      daftarDrop.classList.remove("hidden");
-      daftarDrop.classList.add("flex");
-      xstatus = true;
-    }
-    console.log(xstatus);
-  }
+  var stts = false
+      function ShowDaftar() {
+        var daftarDrop = document.getElementById("daftarDrop");
+        if (stts) {
+          daftarDrop.classList.add("hidden");
+          daftarDrop.classList.remove("flex");
+          stts = false;
+        } else {
+          daftarDrop.classList.remove("hidden");
+          daftarDrop.classList.add("flex");
+          stts = true;
+        }
+        console.log(stts);
+      }
   function showIsi() {
     var isi = document.getElementById('daftar');
     if (xstatus) {

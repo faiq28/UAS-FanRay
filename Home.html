@@ -149,11 +149,6 @@
                   </svg>
                 </button>
               </li>
-              <li>
-                <a href="https://api.whatsapp.com/send/?phone=6281299398852&text=Hello+FanRay+I+want+to+consult&type=phone_number&app_absent=0" class="flex justify-center items-center mt-1">
-                  <img src="icon/gojo.jpeg" alt="" class="w-[28px] h-[28px] rounded-full" />
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -274,7 +269,7 @@
                 >
               </div>
               <div class="w-2/4 md:w-full flex">
-                <img src="img/image 13 (1).png" alt="" class="" />
+                <img src="img/download-removebg-preview.png" alt="" class="" />
               </div>
             </div>
           </div>
@@ -1069,19 +1064,19 @@
         }
         console.log(xstatus);
       }
-
+      var stts = false
       function ShowDaftar() {
         var daftarDrop = document.getElementById("daftarDrop");
-        if (xstatus) {
+        if (stts) {
           daftarDrop.classList.add("hidden");
           daftarDrop.classList.remove("flex");
-          xstatus = false;
+          stts = false;
         } else {
           daftarDrop.classList.remove("hidden");
           daftarDrop.classList.add("flex");
-          xstatus = true;
+          stts = true;
         }
-        console.log(xstatus);
+        console.log(stts);
       }
 
       function showIsi() {

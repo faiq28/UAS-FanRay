@@ -451,18 +451,19 @@ function showHideMenu() {
   }
   console.log(xstatus);
 }
+var stts = false
 function ShowDaftar() {
   var daftarDrop = document.getElementById("daftarDrop");
-  if (xstatus) {
+  if (stts) {
     daftarDrop.classList.add("hidden");
     daftarDrop.classList.remove("flex");
-    xstatus = false;
+    stts = false;
   } else {
     daftarDrop.classList.remove("hidden");
     daftarDrop.classList.add("flex");
-    xstatus = true;
+    stts = true;
   }
-  console.log(xstatus);
+  console.log(stts);
 }
 
 function showIsi() {

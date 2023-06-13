@@ -1058,11 +1058,6 @@
                   </svg>
                 </button>
               </li>
-              <li>
-                <a href="https://wa.me/6281299398852" class="flex justify-center items-center mt-1">
-                  <img src="icon/gojo.jpeg" alt="" class="w-[28px] h-[28px] rounded-full">                                                      
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -1181,7 +1176,7 @@
             </div>
             <div class="w-full md:gap-28 flex items-center justify-center flex-row md:flex-col gap-14 md:mt-2 mt-40">
               <div data-aos="fade-right" class="w-[50%] md:w-full flex h-[230px] rounded-xl justify-center flex-col p-6 md:-mb-14 hover:scale-105 transition-all ease-in-out">
-                  <img src="img/responsive-1536x789 1 (1).png" alt="" class="scale-90 md:scale-100">
+                  <img src="img/download-removebg-preview.png" alt="" class="scale-90 md:scale-100">
               </div>
 
               <div data-aos="fade-left" class="w-[50%] md:w-full flex flex-col justify-center">
@@ -2271,7 +2266,7 @@
               <a href="digital.html" class="py-3 px-6 w-44 hover:ring-transparent hover:bg-[#0468D7] transition-all ease-in-out hover:text-slate-100 text-center rounded-full ring-[#0468D7] ring-[1px] dark:text-slate-200 dark:hover:text-black dark:ring-[#35B6FF] dark:hover:ring-[#35B6FF] dark:hover:bg-[#35B6FF] md:scale-90">View Platform</a>
             </div>
             <div class="w-2/4 md:w-full flex">
-              <img src="img/image 13 (1).png" alt="" class="">
+              <img src="img/download-removebg-preview.png" alt="" class="">
             </div>
           </div>
           <div class="w-full flex flex-row-reverse lg:flex-col-reverse lg:mx-auto md:flex-col-reverse justify-center gap-10 mb-28">
@@ -3153,18 +3148,19 @@ function showHideMenu() {
   }
   console.log(xstatus);
 }
+var stts = false
 function ShowDaftar() {
   var daftarDrop = document.getElementById("daftarDrop");
-  if (xstatus) {
+  if (stts) {
     daftarDrop.classList.add("hidden");
     daftarDrop.classList.remove("flex");
-    xstatus = false;
+    stts = false;
   } else {
     daftarDrop.classList.remove("hidden");
     daftarDrop.classList.add("flex");
-    xstatus = true;
+    stts = true;
   }
-  console.log(xstatus);
+  console.log(stts);
 }
 function tombol1() {
   document.getElementById("item1").classList.remove("hidden");
