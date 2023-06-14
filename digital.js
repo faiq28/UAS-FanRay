@@ -434,120 +434,133 @@ function Menu() {
   }
 }
 
+var sttsMenu = false
 function showHideMenu() {
   var menu = document.getElementById("daftarMenu");
-  if (xstatus) {
+  if (sttsMenu) {
     menu.classList.add("hidden");
     menu.classList.remove("flex");
     menu.classList.add("transition");
     menu.classList.add("duration-300");
-    xstatus = false;
+    sttsMenu = false;
   } else {
     menu.classList.remove("hidden");
     menu.classList.add("flex");
     menu.classList.remove("transition");
     menu.classList.remove("duration-300");
-    xstatus = true;
+    sttsMenu = true;
   }
-  console.log(xstatus);
+  console.log(sttsMenu);
 }
-var stts = false
+var sttsDaftar = false
 function ShowDaftar() {
+  var arrow = document.getElementById("drop");
   var daftarDrop = document.getElementById("daftarDrop");
-  if (stts) {
+  if (sttsDaftar) {
     daftarDrop.classList.add("hidden");
     daftarDrop.classList.remove("flex");
-    stts = false;
+    arrow.classList.remove("drop-menu");
+    sttsDaftar = false;
   } else {
     daftarDrop.classList.remove("hidden");
     daftarDrop.classList.add("flex");
-    stts = true;
+    arrow.classList.add("drop-menu");
+    sttsDaftar = true;
   }
-  console.log(stts);
+  console.log(sttsDaftar);
 }
 
-function showIsi() {
-  var isi = document.getElementById('daftar');
-  var wel = document.getElementById('wel')
-  if (xstatus) {
-    isi.classList.add("hidden");
-    isi.classList.remove("flex");
-    wel.classList.remove('flex-col')
-    wel.classList.add('flex-row')
-    xstatus = false;
-  } else {
-    isi.classList.remove("hidden");
-    isi.classList.add("flex");
-    wel.classList.add('flex-col')
-    wel.classList.remove('flex-row')
+var statusIsi = false
+  function showIsi() {
+    var isi = document.getElementById('daftar');
+    var wel = document.getElementById('wel')
+    if (statusIsi) {
+      isi.classList.add("hidden");
+      isi.classList.remove("flex");
+      wel.classList.remove('flex-col')
+      wel.classList.add('flex-row')
+      statusIsi = false;
+    } else {
+      isi.classList.remove("hidden");
+      isi.classList.add("flex");
+      wel.classList.add('flex-col')
+      wel.classList.remove('flex-row')
 
-    xstatus = true;
+      statusIsi = true;
+    }
+    console.log(statusIsi);
   }
-  console.log(xstatus);
-}
-function showIsi1() {
-  var isi1 = document.getElementById('daftar1');
-  var wel1 = document.getElementById('wel1')
 
-  if (xstatus) {
-    isi1.classList.add("hidden");
-    isi1.classList.remove("flex");
-    wel1.classList.remove('flex-col')
-    wel1.classList.add('flex-row')
+  var statusIsi1 = false
 
-    xstatus = false;
-  } else {
-    isi1.classList.remove("hidden");
-    isi1.classList.add("flex");
-    wel1.classList.add('flex-col')
-    wel1.classList.remove('flex-row')
+  function showIsi1() {
+    var isi1 = document.getElementById('daftar1');
+    var wel1 = document.getElementById('wel1')
 
-    xstatus = true;
+    if (statusIsi1) {
+      isi1.classList.add("hidden");
+      isi1.classList.remove("flex");
+      wel1.classList.remove('flex-col')
+      wel1.classList.add('flex-row')
+
+      statusIsi1 = false;
+    } else {
+      isi1.classList.remove("hidden");
+      isi1.classList.add("flex");
+      wel1.classList.add('flex-col')
+      wel1.classList.remove('flex-row')
+
+      statusIsi1 = true;
+    }
+    console.log(statusIsi1);
   }
-  console.log(xstatus);
-}
-function showIsi2() {
-  var isi2 = document.getElementById('daftar2');
-  var wel2 = document.getElementById('wel2')
 
-  if (xstatus) {
-    isi2.classList.add("hidden");
-    isi2.classList.remove("flex");
-    wel2.classList.remove('flex-col')
-    wel2.classList.add('flex-row')
+var statusIsi2 = false
 
-    xstatus = false;
-  } else {
-    isi2.classList.remove("hidden");
-    isi2.classList.add("flex");
-    wel2.classList.add('flex-col')
-    wel2.classList.remove('flex-row')
+  function showIsi2() {
+    var isi2 = document.getElementById('daftar2');
+    var wel2 = document.getElementById('wel2')
 
-    xstatus = true;
+    if (statusIsi2) {
+      isi2.classList.add("hidden");
+      isi2.classList.remove("flex");
+      wel2.classList.remove('flex-col')
+      wel2.classList.add('flex-row')
+
+      statusIsi2 = false;
+    } else {
+      isi2.classList.remove("hidden");
+      isi2.classList.add("flex");
+      wel2.classList.add('flex-col')
+      wel2.classList.remove('flex-row')
+
+      statusIsi2 = true;
+    }
+    console.log(statusIsi2);
   }
-  console.log(xstatus);
-}
-function showIsi3() {
-  var isi3 = document.getElementById('daftar3');
-  var wel3 = document.getElementById('wel3')
+var statusIsi3 = false
 
-  if (xstatus) {
-    isi3.classList.add("hidden");
-    isi3.classList.remove("flex");
-    wel3.classList.remove('flex-col')
-    wel3.classList.add('flex-row')
+  function showIsi3() {
+    var isi3 = document.getElementById('daftar3');
+    var wel3 = document.getElementById('wel3')
 
-    xstatus = false;
-  } else {
-    isi3.classList.remove("hidden");
-    isi3.classList.add("flex");
-    wel3.classList.add('flex-col')
-    wel3.classList.remove('flex-row')
-    
-    xstatus = true;
+    if (statusIsi3) {
+      isi3.classList.add("hidden");
+      isi3.classList.remove("flex");
+      wel3.classList.remove('flex-col')
+      wel3.classList.add('flex-row')
+
+      statusIsi3 = false;
+    } else {
+      isi3.classList.remove("hidden");
+      isi3.classList.add("flex");
+      wel3.classList.add('flex-col')
+      wel3.classList.remove('flex-row')
+      
+      statusIsi3 = true;
+    }
+    console.log(statusIsi3);
   }
-  console.log(xstatus);
-}
 
 
 function tombol1() {
@@ -691,94 +704,103 @@ function tombol3() {
   document.getElementById("btn3").classList.remove("dark:text-slate-800");
 }
 
+var sttsView = false
 function view(){
   var daftar = document.getElementById('daftarCard');
-  if(xstatus) {
+  if(sttsView) {
     daftar.classList.add('hidden');
     daftar.classList.remove('flex');
     daftar.classList.remove("translate-y-[152px]");
     daftar.classList.remove("duration-500");
     daftar.classList.remove("transtion-all");
-    xstatus = false;
+    sttsView = false;
   } else{
     daftar.classList.remove("hidden");
     daftar.classList.add("flex");
     daftar.classList.add("translate-y-[152px]");
     daftar.classList.add("duration-500");
     daftar.classList.add("transtion-all");
-    xstatus = true;
+    sttsView = true;
   }
 }
+var sttsView2 = false
+
 function view2(){
   var daftar2 = document.getElementById('daftarCard2');
-  if(xstatus) {
+  if(sttsView2) {
     daftar2.classList.add('hidden');
     daftar2.classList.remove('flex');
     daftar2.classList.remove("translate-y-[152px]");
     daftar2.classList.remove("delay-500");
     daftar2.classList.remove("transtion-all");
-    xstatus = false;
+    sttsView2 = false;
   } else{
     daftar2.classList.remove("hidden");
     daftar2.classList.add("flex");
     daftar2.classList.add("translate-y-[152px]");
     daftar2.classList.add("delay-500");
     daftar2.classList.add("transtion-all");
-    xstatus = true;
+    sttsView2 = true;
   }
 }
+var sttsView3 = false
+
 function view3(){
   var daftar3 = document.getElementById('daftarCard3');
-  if(xstatus) {
+  if(sttsView3) {
     daftar3.classList.add('hidden');
     daftar3.classList.remove('flex');
     daftar3.classList.remove("translate-y-[152px]");
     daftar3.classList.remove("delay-500");
     daftar3.classList.remove("transtion-all");
-    xstatus = false;
+    sttsView3 = false;
   } else{
     daftar3.classList.remove("hidden");
     daftar3.classList.add("flex");
     daftar3.classList.add("translate-y-[152px]");
     daftar3.classList.add("delay-500");
     daftar3.classList.add("transtion-all");
-    xstatus = true;
+    sttsView3 = true;
   }
 }
+var sttsView4 = false
+
 function view4(){
   var daftar4 = document.getElementById('daftarCard4');
-  if(xstatus) {
+  if(sttsView4) {
     daftar4.classList.add('hidden');
     daftar4.classList.remove('flex');
     daftar4.classList.remove("translate-y-[152px]");
     daftar4.classList.remove("delay-500");
     daftar4.classList.remove("transtion-all");
-    xstatus = false;
+    sttsView4 = false;
   } else{
     daftar4.classList.remove("hidden");
     daftar4.classList.add("flex");
     daftar4.classList.add("translate-y-[152px]");
     daftar4.classList.add("delay-500");
     daftar4.classList.add("transtion-all");
-    xstatus = true;
+    sttsView4 = true;
   }
 }
+var sttsView5 = false
+
 function view5(){
   var daftar5 = document.getElementById('daftarCard5');
-  if(xstatus) {
+  if(sttsView5) {
     daftar5.classList.add('hidden');
     daftar5.classList.remove('flex');
     daftar5.classList.remove("translate-y-[152px]");
     daftar5.classList.remove("delay-500");
     daftar5.classList.remove("transtion-all");
-    xstatus = false;
+    sttsView5 = false;
   } else{
     daftar5.classList.remove("hidden");
     daftar5.classList.add("flex");
     daftar5.classList.add("translate-y-[152px]");
     daftar5.classList.add("delay-500");
     daftar5.classList.add("transtion-all");
-    xstatus = true;
+    sttsView5 = true;
   }
 }
 

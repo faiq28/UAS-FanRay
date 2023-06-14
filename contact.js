@@ -81,36 +81,40 @@ function showDrop() {
   }
   console.log(xstatus);
 }
+var sttsMenu = false
 function showHideMenu() {
   var menu = document.getElementById("daftarMenu");
-  if (xstatus) {
+  if (sttsMenu) {
     menu.classList.add("hidden");
     menu.classList.remove("flex");
     menu.classList.add("transition");
     menu.classList.add("duration-300");
-    xstatus = false;
+    sttsMenu = false;
   } else {
     menu.classList.remove("hidden");
     menu.classList.add("flex");
     menu.classList.remove("transition");
     menu.classList.remove("duration-300");
-    xstatus = true;
+    sttsMenu = true;
   }
-  console.log(xstatus);
+  console.log(sttsMenu);
 }
-
+var sttsDaftar = false
 function ShowDaftar() {
+  var arrow = document.getElementById("drop");
   var daftarDrop = document.getElementById("daftarDrop");
-  if (xstatus) {
+  if (sttsDaftar) {
     daftarDrop.classList.add("hidden");
     daftarDrop.classList.remove("flex");
-    xstatus = false;
+    arrow.classList.remove("drop-menu");
+    sttsDaftar = false;
   } else {
     daftarDrop.classList.remove("hidden");
     daftarDrop.classList.add("flex");
-    xstatus = true;
+    arrow.classList.add("drop-menu");
+    sttsDaftar = true;
   }
-  console.log(xstatus);
+  console.log(sttsDaftar);
 }
 function gelap() {
   var html = document.querySelector("html");
